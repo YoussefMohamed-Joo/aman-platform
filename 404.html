@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>404 - أمان</title>
+
+  <!-- Google Fonts: Cairo -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS v3 CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'aman-blue': '#1e40af',
+            'aman-dark-blue': '#1e3a8a',
+            'aman-red': '#dc2626',
+            'aman-gray': '#64748b'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Cairo', sans-serif; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.2; }
+      25% { transform: translateY(-25px) rotate(90deg); opacity: 0.35; }
+      50% { transform: translateY(-10px) rotate(180deg); opacity: 0.25; }
+      75% { transform: translateY(-35px) rotate(270deg); opacity: 0.4; }
+    }
+    @keyframes float-delayed {
+      0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.15; }
+      25% { transform: translateY(25px) rotate(-90deg); opacity: 0.3; }
+      50% { transform: translateY(10px) rotate(-180deg); opacity: 0.2; }
+      75% { transform: translateY(35px) rotate(-270deg); opacity: 0.35; }
+    }
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.12; transform: scale(1); }
+      50% { opacity: 0.25; transform: scale(1.08); }
+    }
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      14% { transform: scale(1.12); }
+      28% { transform: scale(1); }
+      42% { transform: scale(1.08); }
+      56% { transform: scale(1); }
+    }
+    .heart-icon { animation: heartbeat 2s ease-in-out infinite; }
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      background: #1e40af;
+    }
+    .particle:nth-child(1) { width: 60px; height: 60px; top: 12%; left: 8%; animation: float 6s ease-in-out infinite; opacity: 0.15; }
+    .particle:nth-child(2) { width: 35px; height: 35px; top: 20%; right: 12%; animation: float-delayed 8s ease-in-out infinite; background: #dc2626; }
+    .particle:nth-child(3) { width: 80px; height: 80px; top: 65%; left: 3%; animation: float 7s ease-in-out infinite 1s; opacity: 0.1; }
+    .particle:nth-child(4) { width: 28px; height: 28px; top: 75%; right: 18%; animation: float-delayed 9s ease-in-out infinite 0.5s; background: #64748b; }
+    .particle:nth-child(5) { width: 50px; height: 50px; top: 40%; left: 85%; animation: float 10s ease-in-out infinite 2s; opacity: 0.12; }
+    .particle:nth-child(6) { width: 30px; height: 30px; top: 82%; left: 45%; animation: float-delayed 7s ease-in-out infinite 1.5s; background: #dc2626; }
+    .particle:nth-child(7) { width: 70px; height: 70px; top: 8%; left: 55%; animation: float 8s ease-in-out infinite 3s; opacity: 0.1; background: #64748b; }
+    .particle:nth-child(8) { width: 22px; height: 22px; top: 88%; left: 78%; animation: float-delayed 6s ease-in-out infinite 0.8s; }
+    .particle:nth-child(9) { width: 45px; height: 45px; top: 50%; left: 20%; animation: float 9s ease-in-out infinite 2.5s; background: #dc2626; opacity: 0.12; }
+    .particle:nth-child(10) { width: 55px; height: 55px; top: 5%; left: 30%; animation: float-delayed 11s ease-in-out infinite 1.2s; opacity: 0.1; background: #64748b; }
+  </style>
+
+</head>
+<body class="text-slate-800">
+
+  <!-- ============================================
+       HEADER
+       ============================================ -->
+  <header class="sticky top-0 z-50 bg-white shadow-sm border-b border-slate-100">
+    <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Right Side: Logo -->
+      <div class="flex items-center gap-2">
+        <img alt="Aman Logo" class="h-12 w-auto object-contain"
+             src="https://lh3.googleusercontent.com/aida/AP1WRLtsAXYg1KpXLlTbNo5XPskZZWcMhTNS8Q_n8HtJ10BcoAD7GrZNEb6JxilmDa9_rHgMCbnHoShK4m3FLnvtLl1Ah-iklPabORDFndHZr4ARAmn8dAhPGk73Kq22Fj9hys9l1SQWSb11vBklIpdFdP2nWE20WcJhL8BKma7xAQXYx-eTUwg9ehj-jPuWOzMY4uPSG18iHRW497Qtcq0OgIoT6omS3w0rvQBklL7UR1XNtKoqfvqs3elxo0G9" />
+        <div class="flex flex-col">
+          <span class="text-xl font-bold text-aman-blue leading-none">أمان</span>
+          <span class="text-[10px] text-aman-gray">معاً لنعيد الأمل</span>
+        </div>
+      </div>
+
+      <!-- Center: Navigation Links -->
+      <ul class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <li><a class="hover:text-aman-blue transition-colors" href="index.html">الرئيسية</a></li>
+        <li><a class="hover:text-aman-blue transition-colors" href="missing.html">المفقودين</a></li>
+        <li><a class="hover:text-aman-blue transition-colors" href="reports.html">البلاغات والمشاهدات</a></li>
+        <li><a class="hover:text-aman-blue transition-colors" href="about.html">من نحن</a></li>
+        <li><a class="hover:text-aman-blue transition-colors" href="contact.html">اتصل بنا</a></li>
+      </ul>
+
+      <!-- Left Side: Auth Buttons -->
+      <div class="flex items-center gap-3">
+        <button class="px-5 py-2 text-sm font-bold text-white bg-aman-blue rounded-md hover:bg-aman-dark-blue transition-all">إنشاء حساب</button>
+        <button class="px-5 py-2 text-sm font-bold text-aman-blue border border-aman-blue rounded-md hover:bg-blue-50 transition-all">تسجيل الدخول</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============================================
+       404 MAIN CONTENT
+       ============================================ -->
+  <main class="relative min-h-[calc(100vh-180px)] flex items-center justify-center overflow-hidden">
+
+    <!-- Animated Floating Particles -->
+    <div class="absolute inset-0 z-0">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+
+    <!-- 404 Content -->
+    <div class="relative z-10 text-center px-4 max-w-2xl mx-auto">
+
+      <!-- Broken Heart Icon -->
+      <div class="heart-icon mb-8">
+        <svg class="mx-auto text-aman-red" fill="currentColor" height="88" viewBox="0 0 24 24" width="88" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" opacity="0.2"/>
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1 0 1.97.23 2.83.65L12 12l-1 5 3-4 4 1-2.5-3.5c1.17-1.1 2.5-1.5 4.5-1.5C19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+          <path d="M20 8.5c0-.67-.15-1.31-.42-1.89L12 12l2-6-6 4 3-2.5C10.09 4.79 9.34 4.5 8.5 4.5c-.67 0-1.31.15-1.89.42L12 12 9 16l4-5-2.5 2.5c-.82.89-1.5 1.5-2.5 2.5l-1.05-.95C5.4 12.48 3.5 10.05 3.5 8.5c0-1.58.81-3 2.07-3.91L12 12 9 6l4 3-2-1.5c.29-.63.46-1.32.46-2.05C10.21 3.63 9.18 2.5 7.5 2.5 4.42 2.5 2 4.92 2 8c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32c.72-.65 1.42-1.32 2.1-2 .68-.68 1.28-1.36 1.82-2.02l-1.37-1.31c-.58.66-1.2 1.31-1.85 1.94L14 17l1-5 4 1.5L16 11l3 1c.63-1.08 1-2.31 1-3.5z" opacity="0.6"/>
+        </svg>
+      </div>
+
+      <!-- 404 -->
+      <h1 class="text-8xl font-extrabold text-aman-blue mb-4">404</h1>
+
+      <!-- Title -->
+      <h2 class="text-3xl font-bold text-slate-800 mb-4">الصفحة غير موجودة</h2>
+
+      <!-- Subtitle -->
+      <p class="text-lg text-slate-500 mb-10 leading-relaxed">
+        عذراً، الصفحة التي تبحث عنها غير موجودة أو تم نقلها.
+      </p>
+
+      <!-- Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="index.html" class="px-8 py-3 bg-aman-blue text-white font-bold rounded-xl hover:bg-aman-dark-blue transition-colors shadow-lg shadow-aman-blue/25">
+          العودة إلى الرئيسية
+        </a>
+        <a href="contact.html" class="px-8 py-3 border-2 border-aman-blue text-aman-blue font-bold rounded-xl hover:bg-blue-50 transition-colors">
+          الإبلاغ عن مشكلة
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="bg-slate-900 text-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+
+        <!-- Brand -->
+        <div class="col-span-1">
+          <div class="flex items-center gap-2 mb-6">
+            <img alt="Aman Logo" class="h-10 w-auto brightness-0 invert"
+                 src="https://lh3.googleusercontent.com/aida/AP1WRLtsAXYg1KpXLlTbNo5XPskZZWcMhTNS8Q_n8HtJ10BcoAD7GrZNEb6JxilmDa9_rHgMCbnHoShK4m3FLnvtLl1Ah-iklPabORDFndHZr4ARAmn8dAhPGk73Kq22Fj9hys9l1SQWSb11vBklIpdFdP2nWE20WcJhL8BKma7xAQXYx-eTUwg9ehj-jPuWOzMY4uPSG18iHRW497Qtcq0OgIoT6omS3w0rvQBklL7UR1XNtKoqfvqs3elxo0G9" />
+            <span class="text-2xl font-bold">أمان</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            منصة مجتمعية غير ربحية تهدف إلى مساعدة العائلات في العثور على مفقوديهم من خلال التعاون والمصداقية.
+          </p>
+          <div class="flex gap-4">
+            <a class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-aman-blue transition-colors" href="#">
+              <svg fill="currentColor" height="20" viewBox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+              </svg>
+            </a>
+            <a class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-aman-blue transition-colors" href="#">
+              <svg fill="currentColor" height="20" viewBox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h5 class="text-lg font-bold mb-6">روابط سريعة</h5>
+          <ul class="space-y-4 text-slate-400 text-sm">
+            <li><a class="hover:text-white transition-colors" href="index.html">الرئيسية</a></li>
+            <li><a class="hover:text-white transition-colors" href="missing.html">المفقودين</a></li>
+            <li><a class="hover:text-white transition-colors" href="reports.html">البلاغات والمشاهدات</a></li>
+            <li><a class="hover:text-white transition-colors" href="report-case.html">تقديم بلاغ</a></li>
+              <li><a class="hover:text-white transition-colors" href="report-sighting.html">الإبلاغ عن مشاهدة</a></li>
+            <li><a class="hover:text-white transition-colors" href="about.html">من نحن</a></li>
+            <li><a class="hover:text-white transition-colors" href="contact.html">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div>
+          <h5 class="text-lg font-bold mb-6">معلومات قانونية</h5>
+          <ul class="space-y-4 text-slate-400 text-sm">
+            <li><a class="hover:text-white transition-colors" href="terms.html">شروط الاستخدام</a></li>
+            <li><a class="hover:text-white transition-colors" href="privacy.html">سياسة الخصوصية</a></li>
+            <li><a class="hover:text-white transition-colors" href="disclaimer.html">إخلاء المسؤولية</a></li>
+            <li><a class="hover:text-white transition-colors" href="faq.html">الأسئلة الشائعة</a></li>
+          </ul>
+        </div>
+
+        <!-- Emergency Numbers -->
+        <div>
+          <h5 class="text-lg font-bold mb-6">أرقام الطوارئ في مصر</h5>
+          <ul class="space-y-4 text-slate-400 text-sm">
+            <li class="flex items-center justify-between">
+              <span>الشرطة</span>
+              <span class="font-bold text-white">122</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>النجدة</span>
+              <span class="font-bold text-white">123</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>الإسعاف</span>
+              <span class="font-bold text-white">123</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>خط نجدة الطفل</span>
+              <span class="font-bold text-white">16000</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="pt-8 border-t border-slate-800 text-center text-slate-500 text-xs">
+        جميع الحقوق محفوظة © 2026 © دليل المفقودين
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/toast.js"></script>
+  <script src="assets/js/notifications.js"></script>
+</body>
+</html>
