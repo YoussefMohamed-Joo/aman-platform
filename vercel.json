@@ -2,6 +2,26 @@
   "version": 2,
   "buildCommand": null,
   "outputDirectory": ".",
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/admin", "destination": "/admin.html" },
+    { "source": "/missing", "destination": "/missing.html" },
+    { "source": "/reports", "destination": "/reports.html" },
+    { "source": "/case", "destination": "/case-detail.html" },
+    { "source": "/login", "destination": "/login.html" },
+    { "source": "/signup", "destination": "/signup.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/faq", "destination": "/faq.html" },
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/terms", "destination": "/terms.html" },
+    { "source": "/disclaimer", "destination": "/disclaimer.html" },
+    { "source": "/404", "destination": "/404.html" },
+    { "source": "/visual-search", "destination": "/visual-search.html" },
+    { "source": "/report-sighting", "destination": "/report-sighting.html" },
+    { "source": "/report-case", "destination": "/report-case.html" },
+    { "source": "/profile", "destination": "/profile.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
