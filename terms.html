@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>شروط الاستخدام - أمان</title>
+
+  <!-- Tailwind CSS v3 CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'aman-blue': '#1e40af',
+            'aman-dark-blue': '#1e3a8a',
+            'aman-red': '#dc2626',
+            'aman-gray': '#64748b'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="text-slate-800">
+
+  <!-- ============================================
+       HEADER
+       ============================================ -->
+  <header class="sticky top-0 z-50 bg-white shadow-sm border-b border-slate-100">
+    <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Right Side: Logo -->
+      <div class="flex items-center gap-2">
+        <img alt="Aman Logo" class="h-12 w-auto object-contain"
+             src="https://lh3.googleusercontent.com/aida/AP1WRLtsAXYg1KpXLlTbNo5XPskZZWcMhTNS8Q_n8HtJ10BcoAD7GrZNEb6JxilmDa9_rHgMCbnHoShK4m3FLnvtLl1Ah-iklPabORDFndHZr4ARAmn8dAhPGk73Kq22Fj9hys9l1SQWSb11vBklIpdFdP2nWE20WcJhL8BKma7xAQXYx-eTUwg9ehj-jPuWOzMY4uPSG18iHRW497Qtcq0OgIoT6omS3w0rvQBklL7UR1XNtKoqfvqs3elxo0G9" />
+        <div class="flex flex-col">
+          <span class="text-xl font-bold text-aman-blue leading-none">أمان</span>
+          <span class="text-[10px] text-aman-gray">معاً لنعيد الأمل</span>
+        </div>
+      </div>
+
+      <!-- Center: Navigation Links -->
+      <ul class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <li><a class="hover:text-aman-blue transition-colors" href="index.html">الرئيسية</a></li>
+        <li><a class="hover:text-aman-blue transition-colors" href="missing.html">المفقودين</a></li>
+        <li><a class="hover:text-aman-blue transition-colors" href="reports.html">البلاغات والمشاهدات</a></li>
+        <li><a class="hover:text-aman-blue transition-colors" href="about.html">من نحن</a></li>
+        <li><a class="hover:text-aman-blue transition-colors" href="contact.html">اتصل بنا</a></li>
+      </ul>
+
+      <!-- Left Side: Auth Buttons -->
+      <div class="flex items-center gap-3">
+        <button class="px-5 py-2 text-sm font-bold text-white bg-aman-blue rounded-md hover:bg-aman-dark-blue transition-all">إنشاء حساب</button>
+        <button class="px-5 py-2 text-sm font-bold text-aman-blue border border-aman-blue rounded-md hover:bg-blue-50 transition-all">تسجيل الدخول</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="hero-gradient pt-20 pb-20 relative overflow-hidden">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">شروط الاستخدام</h1>
+      <p class="text-lg text-slate-700 max-w-2xl mx-auto">يرجى قراءة هذه الشروط بعناية قبل استخدام منصة أمان</p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTENT
+       ============================================ -->
+  <section class="py-16 container mx-auto px-4 -mt-16 relative z-10">
+    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-100 p-8 md:p-12 space-y-10">
+
+      <div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <span class="w-2 h-8 bg-aman-blue rounded-full inline-block"></span>
+          قبول الشروط
+        </h2>
+        <p class="text-slate-600 leading-relaxed">
+          باستخدامك لمنصة أمان، فإنك توافق على هذه الشروط والأحكام. إذا كنت لا توافق على أي جزء من هذه الشروط، فيجب عليك التوقف عن استخدام المنصة فوراً. تحتفظ أمان بالحق في تحديث هذه الشروط في أي وقت، ويعتبر استمرار استخدامك للمنصة بعد التحديث موافقة ضمنية على التعديلات.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <span class="w-2 h-8 bg-aman-blue rounded-full inline-block"></span>
+          التسجيل والحسابات
+        </h2>
+        <p class="text-slate-600 leading-relaxed">
+          يجب أن تقدم معلومات دقيقة وكاملة عند إنشاء حساب على المنصة. أنت المسؤول الوحيد عن الحفاظ على سرية معلومات حسابك وكلمة المرور. يحق للمنصة تعليق أو إلغاء أي حساب يخالف هذه الشروط أو يقدم معلومات مضللة.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <span class="w-2 h-8 bg-aman-blue rounded-full inline-block"></span>
+          المسؤوليات
+        </h2>
+        <p class="text-slate-600 leading-relaxed">
+          المنصة مجرد وسيط للتواصل ولا تتحمل مسؤولية دقة المعلومات المقدمة من المستخدمين. يجب على المستخدمين التحقق من صحة أي معلومات قبل الاعتماد عليها. أمان غير مسؤولة عن أي أضرار مباشرة أو غير مباشرة ناتجة عن استخدام المنصة.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <span class="w-2 h-8 bg-aman-blue rounded-full inline-block"></span>
+          الخصوصية
+        </h2>
+        <p class="text-slate-600 leading-relaxed">
+          استخدام الموقع يخضع لسياسة الخصوصية المنفصلة. نحن نلتزم بحماية بياناتك الشخصية وعدم مشاركتها مع أطراف ثالثة دون موافقتك، إلا عندما يقتضي القانون ذلك.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <span class="w-2 h-8 bg-aman-blue rounded-full inline-block"></span>
+          التعديلات
+        </h2>
+        <p class="text-slate-600 leading-relaxed">
+          نحتفظ بالحق في تعديل هذه الشروط في أي وقت. سيتم إخطار المستخدمين بالتغييرات الجوهرية عبر البريد الإلكتروني أو من خلال إشعار على المنصة. يتحمل المستخدم مسؤولية مراجعة الشروط بشكل دوري.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <span class="w-2 h-8 bg-aman-blue rounded-full inline-block"></span>
+          اتصل بنا
+        </h2>
+        <p class="text-slate-600 leading-relaxed">
+          للاستفسارات، تواصل معنا عبر صفحة <a class="text-aman-blue font-semibold hover:underline" href="contact.html">اتصل بنا</a> أو عبر البريد الإلكتروني support@aman-platform.com.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="bg-slate-900 text-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+
+        <!-- Brand -->
+        <div class="col-span-1">
+          <div class="flex items-center gap-2 mb-6">
+            <img alt="Aman Logo" class="h-10 w-auto brightness-0 invert"
+                 src="https://lh3.googleusercontent.com/aida/AP1WRLtsAXYg1KpXLlTbNo5XPskZZWcMhTNS8Q_n8HtJ10BcoAD7GrZNEb6JxilmDa9_rHgMCbnHoShK4m3FLnvtLl1Ah-iklPabORDFndHZr4ARAmn8dAhPGk73Kq22Fj9hys9l1SQWSb11vBklIpdFdP2nWE20WcJhL8BKma7xAQXYx-eTUwg9ehj-jPuWOzMY4uPSG18iHRW497Qtcq0OgIoT6omS3w0rvQBklL7UR1XNtKoqfvqs3elxo0G9" />
+            <span class="text-2xl font-bold">أمان</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            منصة مجتمعية غير ربحية تهدف إلى مساعدة العائلات في العثور على مفقوديهم من خلال التعاون والمصداقية.
+          </p>
+          <div class="flex gap-4">
+            <a class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-aman-blue transition-colors" href="#">
+              <svg fill="currentColor" height="20" viewBox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+              </svg>
+            </a>
+            <a class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-aman-blue transition-colors" href="#">
+              <svg fill="currentColor" height="20" viewBox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h5 class="text-lg font-bold mb-6">روابط سريعة</h5>
+          <ul class="space-y-4 text-slate-400 text-sm">
+            <li><a class="hover:text-white transition-colors" href="index.html">الرئيسية</a></li>
+            <li><a class="hover:text-white transition-colors" href="missing.html">المفقودين</a></li>
+            <li><a class="hover:text-white transition-colors" href="reports.html">البلاغات والمشاهدات</a></li>
+            <li><a class="hover:text-white transition-colors" href="report-case.html">تقديم بلاغ</a></li>
+              <li><a class="hover:text-white transition-colors" href="report-sighting.html">الإبلاغ عن مشاهدة</a></li>
+            <li><a class="hover:text-white transition-colors" href="about.html">من نحن</a></li>
+            <li><a class="hover:text-white transition-colors" href="contact.html">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div>
+          <h5 class="text-lg font-bold mb-6">معلومات قانونية</h5>
+          <ul class="space-y-4 text-slate-400 text-sm">
+            <li><a class="hover:text-white transition-colors" href="terms.html">شروط الاستخدام</a></li>
+            <li><a class="hover:text-white transition-colors" href="privacy.html">سياسة الخصوصية</a></li>
+            <li><a class="hover:text-white transition-colors" href="disclaimer.html">إخلاء المسؤولية</a></li>
+            <li><a class="hover:text-white transition-colors" href="faq.html">الأسئلة الشائعة</a></li>
+          </ul>
+        </div>
+
+        <!-- Emergency Numbers -->
+        <div>
+          <h5 class="text-lg font-bold mb-6">أرقام الطوارئ في مصر</h5>
+          <ul class="space-y-4 text-slate-400 text-sm">
+            <li class="flex items-center justify-between">
+              <span>الشرطة</span>
+              <span class="font-bold text-white">122</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>النجدة</span>
+              <span class="font-bold text-white">123</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>الإسعاف</span>
+              <span class="font-bold text-white">123</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>خط نجدة الطفل</span>
+              <span class="font-bold text-white">16000</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="pt-8 border-t border-slate-800 text-center text-slate-500 text-xs">
+        جميع الحقوق محفوظة © 2026 © دليل المفقودين
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="assets/js/toast.js"></script>
+  <script src="assets/js/notifications.js"></script>
+  <script src="assets/js/script.js"></script>
+<script src="assets/js/backtotop.js"></script>
+</body>
+</html>
