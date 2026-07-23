@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html dir="rtl" lang="ar">
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>تسجيل الدخول - أمان</title>
+  <title>ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„ - Ø£Ù…Ø§Ù†</title>
 
   <!-- Tailwind CSS v3 CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -57,19 +57,7 @@
   <!-- ============================================
        TOP NAV BAR
        ============================================ -->
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100/50">
-    <nav class="container mx-auto px-4 py-2 flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <img alt="Aman Logo" class="h-10 w-auto object-contain"
-             src="https://lh3.googleusercontent.com/aida/AP1WRLtsAXYg1KpXLlTbNo5XPskZZWcMhTNS8Q_n8HtJ10BcoAD7GrZNEb6JxilmDa9_rHgMCbnHoShK4m3FLnvtLl1Ah-iklPabORDFndHZr4ARAmn8dAhPGk73Kq22Fj9hys9l1SQWSb11vBklIpdFdP2nWE20WcJhL8BKma7xAQXYx-eTUwg9ehj-jPuWOzMY4uPSG18iHRW497Qtcq0OgIoT6omS3w0rvQBklL7UR1XNtKoqfvqs3elxo0G9" />
-        <a href="index.html" class="text-lg font-bold text-aman-blue">أمان</a>
-      </div>
-      <a href="index.html" class="flex items-center gap-1 text-sm text-slate-500 hover:text-aman-blue transition-colors">
-        <span class="material-symbols-outlined text-base">arrow_forward</span>
-        العودة إلى الرئيسية
-      </a>
-    </nav>
-  </header>
+  <div id="navbar-root"></div>
 
   <!-- ============================================
        LOGIN SECTION - LEFT IMAGE / RIGHT FORM
@@ -79,8 +67,8 @@
     <div class="hidden lg:block w-1/2 login-image relative">
       <div class="absolute inset-0 bg-gradient-to-t from-aman-dark-blue/40 to-transparent"></div>
       <div class="absolute bottom-12 right-12 text-white">
-        <h2 class="text-3xl font-bold mb-2">مرحباً بعودتك</h2>
-        <p class="text-lg text-white/80">سجل دخولك وكن جزءاً من مجتمع أمان</p>
+        <h2 class="text-3xl font-bold mb-2">Ù…Ø±Ø­Ø¨Ø§Ù‹ Ø¨Ø¹ÙˆØ¯ØªÙƒ</h2>
+        <p class="text-lg text-white/80">Ø³Ø¬Ù„ Ø¯Ø®ÙˆÙ„Ùƒ ÙˆÙƒÙ† Ø¬Ø²Ø¡Ø§Ù‹ Ù…Ù† Ù…Ø¬ØªÙ…Ø¹ Ø£Ù…Ø§Ù†</p>
       </div>
     </div>
 
@@ -92,8 +80,8 @@
         <div class="text-center mb-10">
           <img alt="Aman Logo" class="h-16 mx-auto mb-4"
                src="https://lh3.googleusercontent.com/aida/AP1WRLtsAXYg1KpXLlTbNo5XPskZZWcMhTNS8Q_n8HtJ10BcoAD7GrZNEb6JxilmDa9_rHgMCbnHoShK4m3FLnvtLl1Ah-iklPabORDFndHZr4ARAmn8dAhPGk73Kq22Fj9hys9l1SQWSb11vBklIpdFdP2nWE20WcJhL8BKma7xAQXYx-eTUwg9ehj-jPuWOzMY4uPSG18iHRW497Qtcq0OgIoT6omS3w0rvQBklL7UR1XNtKoqfvqs3elxo0G9" />
-          <h1 class="text-2xl font-bold text-slate-900">تسجيل الدخول</h1>
-          <p class="text-slate-500 mt-1">أهلاً بك في منصة أمان</p>
+          <h1 class="text-2xl font-bold text-slate-900">ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„</h1>
+          <p class="text-slate-500 mt-1">Ø£Ù‡Ù„Ø§Ù‹ Ø¨Ùƒ ÙÙŠ Ù…Ù†ØµØ© Ø£Ù…Ø§Ù†</p>
         </div>
 
         <!-- Login Form -->
@@ -104,7 +92,7 @@
             <span class="material-symbols-outlined input-icon right-4">mail</span>
             <input type="email" id="email" name="email" required
                    class="w-full pr-12 pl-4 py-3.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-aman-blue focus:border-aman-blue text-sm transition-all bg-white"
-                   placeholder="البريد الإلكتروني" />
+                   placeholder="Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ" />
           </div>
 
           <!-- Password -->
@@ -112,7 +100,7 @@
             <span class="material-symbols-outlined input-icon right-4">lock</span>
             <input type="password" id="password" name="password" required
                    class="w-full pr-12 pl-4 py-3.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-aman-blue focus:border-aman-blue text-sm transition-all bg-white"
-                   placeholder="كلمة المرور" />
+                   placeholder="ÙƒÙ„Ù…Ø© Ø§Ù„Ù…Ø±ÙˆØ±" />
             <button type="button" id="togglePassword"
                     class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 transition-colors">
               <span class="material-symbols-outlined text-lg">visibility_off</span>
@@ -124,15 +112,15 @@
             <label class="flex items-center gap-2 cursor-pointer">
               <input type="checkbox" name="remember"
                      class="rounded border-slate-300 text-aman-blue focus:ring-aman-blue" />
-              <span class="text-slate-600">تذكرني</span>
+              <span class="text-slate-600">ØªØ°ÙƒØ±Ù†ÙŠ</span>
             </label>
-            <a href="#" class="text-aman-blue hover:underline">نسيت كلمة المرور؟</a>
+            <a href="#" class="text-aman-blue hover:underline">Ù†Ø³ÙŠØª ÙƒÙ„Ù…Ø© Ø§Ù„Ù…Ø±ÙˆØ±ØŸ</a>
           </div>
 
           <!-- Submit -->
           <button type="submit"
                   class="w-full py-3.5 bg-aman-blue hover:bg-aman-dark-blue text-white font-bold rounded-xl transition-all shadow-md shadow-blue-200 hover:shadow-lg active:scale-[0.98]">
-            تسجيل الدخول
+            ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„
           </button>
 
           <!-- Divider -->
@@ -141,7 +129,7 @@
               <div class="w-full border-t border-slate-200"></div>
             </div>
             <div class="relative flex justify-center">
-              <span class="bg-white px-4 text-sm text-slate-400">أو</span>
+              <span class="bg-white px-4 text-sm text-slate-400">Ø£Ùˆ</span>
             </div>
           </div>
 
@@ -168,8 +156,8 @@
 
         <!-- Signup Link -->
         <p class="text-center text-sm text-slate-500 mt-8">
-          ليس لديك حساب؟
-          <a href="signup.html" class="text-aman-blue font-bold hover:underline">إنشاء حساب جديد</a>
+          Ù„ÙŠØ³ Ù„Ø¯ÙŠÙƒ Ø­Ø³Ø§Ø¨ØŸ
+          <a href="/signup" class="text-aman-blue font-bold hover:underline">Ø¥Ù†Ø´Ø§Ø¡ Ø­Ø³Ø§Ø¨ Ø¬Ø¯ÙŠØ¯</a>
         </p>
 
       </div>
@@ -188,10 +176,10 @@
           <div class="flex items-center gap-2 mb-6">
             <img alt="Aman Logo" class="h-10 w-auto brightness-0 invert"
                  src="https://lh3.googleusercontent.com/aida/AP1WRLtsAXYg1KpXLlTbNo5XPskZZWcMhTNS8Q_n8HtJ10BcoAD7GrZNEb6JxilmDa9_rHgMCbnHoShK4m3FLnvtLl1Ah-iklPabORDFndHZr4ARAmn8dAhPGk73Kq22Fj9hys9l1SQWSb11vBklIpdFdP2nWE20WcJhL8BKma7xAQXYx-eTUwg9ehj-jPuWOzMY4uPSG18iHRW497Qtcq0OgIoT6omS3w0rvQBklL7UR1XNtKoqfvqs3elxo0G9" />
-            <span class="text-2xl font-bold">أمان</span>
+            <span class="text-2xl font-bold">Ø£Ù…Ø§Ù†</span>
           </div>
           <p class="text-slate-400 text-sm leading-relaxed mb-6">
-            منصة مجتمعية غير ربحية تهدف إلى مساعدة العائلات في العثور على مفقوديهم من خلال التعاون والمصداقية.
+            Ù…Ù†ØµØ© Ù…Ø¬ØªÙ…Ø¹ÙŠØ© ØºÙŠØ± Ø±Ø¨Ø­ÙŠØ© ØªÙ‡Ø¯Ù Ø¥Ù„Ù‰ Ù…Ø³Ø§Ø¹Ø¯Ø© Ø§Ù„Ø¹Ø§Ø¦Ù„Ø§Øª ÙÙŠ Ø§Ù„Ø¹Ø«ÙˆØ± Ø¹Ù„Ù‰ Ù…ÙÙ‚ÙˆØ¯ÙŠÙ‡Ù… Ù…Ù† Ø®Ù„Ø§Ù„ Ø§Ù„ØªØ¹Ø§ÙˆÙ† ÙˆØ§Ù„Ù…ØµØ¯Ø§Ù‚ÙŠØ©.
           </p>
           <div class="flex gap-4">
             <a class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-aman-blue transition-colors" href="#">
@@ -209,47 +197,47 @@
 
         <!-- Quick Links -->
         <div>
-          <h5 class="text-lg font-bold mb-6">روابط سريعة</h5>
+          <h5 class="text-lg font-bold mb-6">Ø±ÙˆØ§Ø¨Ø· Ø³Ø±ÙŠØ¹Ø©</h5>
           <ul class="space-y-4 text-slate-400 text-sm">
-            <li><a class="hover:text-white transition-colors" href="index.html">الرئيسية</a></li>
-            <li><a class="hover:text-white transition-colors" href="missing.html">المفقودين</a></li>
-            <li><a class="hover:text-white transition-colors" href="reports.html">البلاغات والمشاهدات</a></li>
-            <li><a class="hover:text-white transition-colors" href="report-case.html">تقديم بلاغ</a></li>
-              <li><a class="hover:text-white transition-colors" href="report-sighting.html">الإبلاغ عن مشاهدة</a></li>
-            <li><a class="hover:text-white transition-colors" href="about.html">من نحن</a></li>
-            <li><a class="hover:text-white transition-colors" href="contact.html">اتصل بنا</a></li>
+            <li><a class="hover:text-white transition-colors" href="/index">Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©</a></li>
+            <li><a class="hover:text-white transition-colors" href="/missing">Ø§Ù„Ù…ÙÙ‚ÙˆØ¯ÙŠÙ†</a></li>
+            <li><a class="hover:text-white transition-colors" href="/reports">Ø§Ù„Ø¨Ù„Ø§ØºØ§Øª ÙˆØ§Ù„Ù…Ø´Ø§Ù‡Ø¯Ø§Øª</a></li>
+            <li><a class="hover:text-white transition-colors" href="/report-case">ØªÙ‚Ø¯ÙŠÙ… Ø¨Ù„Ø§Øº</a></li>
+              <li><a class="hover:text-white transition-colors" href="/report-sighting">Ø§Ù„Ø¥Ø¨Ù„Ø§Øº Ø¹Ù† Ù…Ø´Ø§Ù‡Ø¯Ø©</a></li>
+            <li><a class="hover:text-white transition-colors" href="/about">Ù…Ù† Ù†Ø­Ù†</a></li>
+            <li><a class="hover:text-white transition-colors" href="/contact">Ø§ØªØµÙ„ Ø¨Ù†Ø§</a></li>
           </ul>
         </div>
 
         <!-- Legal -->
         <div>
-          <h5 class="text-lg font-bold mb-6">معلومات قانونية</h5>
+          <h5 class="text-lg font-bold mb-6">Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ù‚Ø§Ù†ÙˆÙ†ÙŠØ©</h5>
           <ul class="space-y-4 text-slate-400 text-sm">
-            <li><a class="hover:text-white transition-colors" href="terms.html">شروط الاستخدام</a></li>
-            <li><a class="hover:text-white transition-colors" href="privacy.html">سياسة الخصوصية</a></li>
-            <li><a class="hover:text-white transition-colors" href="disclaimer.html">إخلاء المسؤولية</a></li>
-            <li><a class="hover:text-white transition-colors" href="faq.html">الأسئلة الشائعة</a></li>
+            <li><a class="hover:text-white transition-colors" href="/terms">Ø´Ø±ÙˆØ· Ø§Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù…</a></li>
+            <li><a class="hover:text-white transition-colors" href="/privacy">Ø³ÙŠØ§Ø³Ø© Ø§Ù„Ø®ØµÙˆØµÙŠØ©</a></li>
+            <li><a class="hover:text-white transition-colors" href="/disclaimer">Ø¥Ø®Ù„Ø§Ø¡ Ø§Ù„Ù…Ø³Ø¤ÙˆÙ„ÙŠØ©</a></li>
+            <li><a class="hover:text-white transition-colors" href="/faq">Ø§Ù„Ø£Ø³Ø¦Ù„Ø© Ø§Ù„Ø´Ø§Ø¦Ø¹Ø©</a></li>
           </ul>
         </div>
 
         <!-- Emergency Numbers -->
         <div>
-          <h5 class="text-lg font-bold mb-6">أرقام الطوارئ في مصر</h5>
+          <h5 class="text-lg font-bold mb-6">Ø£Ø±Ù‚Ø§Ù… Ø§Ù„Ø·ÙˆØ§Ø±Ø¦ ÙÙŠ Ù…ØµØ±</h5>
           <ul class="space-y-4 text-slate-400 text-sm">
             <li class="flex items-center justify-between">
-              <span>الشرطة</span>
+              <span>Ø§Ù„Ø´Ø±Ø·Ø©</span>
               <span class="font-bold text-white">122</span>
             </li>
             <li class="flex items-center justify-between">
-              <span>النجدة</span>
+              <span>Ø§Ù„Ù†Ø¬Ø¯Ø©</span>
               <span class="font-bold text-white">123</span>
             </li>
             <li class="flex items-center justify-between">
-              <span>الإسعاف</span>
+              <span>Ø§Ù„Ø¥Ø³Ø¹Ø§Ù</span>
               <span class="font-bold text-white">123</span>
             </li>
             <li class="flex items-center justify-between">
-              <span>خط نجدة الطفل</span>
+              <span>Ø®Ø· Ù†Ø¬Ø¯Ø© Ø§Ù„Ø·ÙÙ„</span>
               <span class="font-bold text-white">16000</span>
             </li>
           </ul>
@@ -257,7 +245,7 @@
 
       </div>
       <div class="pt-8 border-t border-slate-800 text-center text-slate-500 text-xs">
-        جميع الحقوق محفوظة &copy; 2026 &copy; دليل المفقودين
+        Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø­Ù‚ÙˆÙ‚ Ù…Ø­ÙÙˆØ¸Ø© &copy; 2026 &copy; Ø¯Ù„ÙŠÙ„ Ø§Ù„Ù…ÙÙ‚ÙˆØ¯ÙŠÙ†
       </div>
     </div>
   </footer>
@@ -287,7 +275,7 @@
         const email = document.getElementById('email').value.trim();
         const password = document.getElementById('password').value.trim();
         if (!email || !password) {
-          AmanToast.error('يرجى ملء جميع الحقول');
+          AmanToast.error('ÙŠØ±Ø¬Ù‰ Ù…Ù„Ø¡ Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø­Ù‚ÙˆÙ„');
           return;
         }
         // Dispatch custom event for login.js
@@ -316,5 +304,5 @@
   <script src="assets/js/api.js"></script>
   <script src="assets/js/notifications.js"></script>
 <script src="assets/js/backtotop.js"></script>
-</body>
+<script src="assets/js/navbar.js"></script></body>
 </html>
