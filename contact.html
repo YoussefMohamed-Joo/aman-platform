@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html dir="rtl" lang="ar">
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>اتصل بنا - أمان</title>
+  <title>Ø§ØªØµÙ„ Ø¨Ù†Ø§ - Ø£Ù…Ø§Ù†</title>
 
   <!-- Tailwind CSS v3 CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -31,34 +31,7 @@
   <!-- ============================================
        HEADER
        ============================================ -->
-  <header class="sticky top-0 z-50 bg-white shadow-sm border-b border-slate-100">
-    <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
-      <!-- Right Side: Logo -->
-      <div class="flex items-center gap-2">
-        <img alt="Aman Logo" class="h-12 w-auto object-contain"
-             src="https://lh3.googleusercontent.com/aida/AP1WRLtsAXYg1KpXLlTbNo5XPskZZWcMhTNS8Q_n8HtJ10BcoAD7GrZNEb6JxilmDa9_rHgMCbnHoShK4m3FLnvtLl1Ah-iklPabORDFndHZr4ARAmn8dAhPGk73Kq22Fj9hys9l1SQWSb11vBklIpdFdP2nWE20WcJhL8BKma7xAQXYx-eTUwg9ehj-jPuWOzMY4uPSG18iHRW497Qtcq0OgIoT6omS3w0rvQBklL7UR1XNtKoqfvqs3elxo0G9" />
-        <div class="flex flex-col">
-          <span class="text-xl font-bold text-aman-blue leading-none">أمان</span>
-          <span class="text-[10px] text-aman-gray">معاً لنعيد الأمل</span>
-        </div>
-      </div>
-
-      <!-- Center: Navigation Links -->
-      <ul class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
-        <li><a class="hover:text-aman-blue transition-colors" href="index.html">الرئيسية</a></li>
-        <li><a class="hover:text-aman-blue transition-colors" href="missing.html">المفقودين</a></li>
-        <li><a class="hover:text-aman-blue transition-colors" href="reports.html">البلاغات والمشاهدات</a></li>
-        <li><a class="hover:text-aman-blue transition-colors" href="about.html">من نحن</a></li>
-        <li><a class="text-aman-blue border-b-2 border-aman-blue pb-1" href="contact.html">اتصل بنا</a></li>
-      </ul>
-
-      <!-- Left Side: Auth Buttons -->
-      <div class="flex items-center gap-3">
-        <button class="px-5 py-2 text-sm font-bold text-white bg-aman-blue rounded-md hover:bg-aman-dark-blue transition-all">إنشاء حساب</button>
-        <button class="px-5 py-2 text-sm font-bold text-aman-blue border border-aman-blue rounded-md hover:bg-blue-50 transition-all">تسجيل الدخول</button>
-      </div>
-    </nav>
-  </header>
+  <div id="navbar-root"></div>
 
   <!-- ============================================
        HERO
@@ -66,10 +39,10 @@
   <section class="hero-gradient pt-20 pb-24 relative overflow-hidden">
     <div class="container mx-auto px-4 text-center">
       <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">
-        اتصل بنا
+        Ø§ØªØµÙ„ Ø¨Ù†Ø§
       </h1>
       <p class="text-lg md:text-xl text-slate-700 max-w-2xl mx-auto mb-12">
-        فريق أمان في خدمتك على مدار الساعة. تواصل معنا لأي استفسار أو بلاغ أو اقتراح.
+        ÙØ±ÙŠÙ‚ Ø£Ù…Ø§Ù† ÙÙŠ Ø®Ø¯Ù…ØªÙƒ Ø¹Ù„Ù‰ Ù…Ø¯Ø§Ø± Ø§Ù„Ø³Ø§Ø¹Ø©. ØªÙˆØ§ØµÙ„ Ù…Ø¹Ù†Ø§ Ù„Ø£ÙŠ Ø§Ø³ØªÙØ³Ø§Ø± Ø£Ùˆ Ø¨Ù„Ø§Øº Ø£Ùˆ Ø§Ù‚ØªØ±Ø§Ø­.
       </p>
     </div>
   </section>
@@ -85,34 +58,34 @@
         <form class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 space-y-6">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label class="block text-sm font-bold text-slate-700 mb-2" for="fullName">الاسم الكامل</label>
-              <input class="w-full px-4 py-3 rounded-xl border-slate-200 focus:ring-aman-blue focus:border-aman-blue text-sm" id="fullName" name="fullName" placeholder="أدخل اسمك الكامل" type="text" />
+              <label class="block text-sm font-bold text-slate-700 mb-2" for="fullName">Ø§Ù„Ø§Ø³Ù… Ø§Ù„ÙƒØ§Ù…Ù„</label>
+              <input class="w-full px-4 py-3 rounded-xl border-slate-200 focus:ring-aman-blue focus:border-aman-blue text-sm" id="fullName" name="fullName" placeholder="Ø£Ø¯Ø®Ù„ Ø§Ø³Ù…Ùƒ Ø§Ù„ÙƒØ§Ù…Ù„" type="text" />
             </div>
             <div>
-              <label class="block text-sm font-bold text-slate-700 mb-2" for="email">البريد الإلكتروني</label>
+              <label class="block text-sm font-bold text-slate-700 mb-2" for="email">Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ</label>
               <input class="w-full px-4 py-3 rounded-xl border-slate-200 focus:ring-aman-blue focus:border-aman-blue text-sm" id="email" name="email" placeholder="example@domain.com" type="email" />
             </div>
           </div>
           <div>
-            <label class="block text-sm font-bold text-slate-700 mb-2" for="phone">رقم الهاتف</label>
+            <label class="block text-sm font-bold text-slate-700 mb-2" for="phone">Ø±Ù‚Ù… Ø§Ù„Ù‡Ø§ØªÙ</label>
             <input class="w-full px-4 py-3 rounded-xl border-slate-200 focus:ring-aman-blue focus:border-aman-blue text-sm" id="phone" name="phone" placeholder="01xxxxxxxxx" type="tel" />
           </div>
           <div>
-            <label class="block text-sm font-bold text-slate-700 mb-2" for="subject">الموضوع</label>
+            <label class="block text-sm font-bold text-slate-700 mb-2" for="subject">Ø§Ù„Ù…ÙˆØ¶ÙˆØ¹</label>
             <select class="w-full px-4 py-3 rounded-xl border-slate-200 focus:ring-aman-blue focus:border-aman-blue text-sm" id="subject" name="subject">
-              <option value="">اختر الموضوع</option>
-              <option value="استفسار">استفسار</option>
-              <option value="بلاغ">بلاغ</option>
-              <option value="اقتراح">اقتراح</option>
-              <option value="شكوى">شكوى</option>
-              <option value="أخرى">أخرى</option>
+              <option value="">Ø§Ø®ØªØ± Ø§Ù„Ù…ÙˆØ¶ÙˆØ¹</option>
+              <option value="Ø§Ø³ØªÙØ³Ø§Ø±">Ø§Ø³ØªÙØ³Ø§Ø±</option>
+              <option value="Ø¨Ù„Ø§Øº">Ø¨Ù„Ø§Øº</option>
+              <option value="Ø§Ù‚ØªØ±Ø§Ø­">Ø§Ù‚ØªØ±Ø§Ø­</option>
+              <option value="Ø´ÙƒÙˆÙ‰">Ø´ÙƒÙˆÙ‰</option>
+              <option value="Ø£Ø®Ø±Ù‰">Ø£Ø®Ø±Ù‰</option>
             </select>
           </div>
           <div>
-            <label class="block text-sm font-bold text-slate-700 mb-2" for="message">الرسالة</label>
-            <textarea class="w-full px-4 py-3 rounded-xl border-slate-200 focus:ring-aman-blue focus:border-aman-blue text-sm" id="message" name="message" placeholder="اكتب رسالتك هنا..." rows="6"></textarea>
+            <label class="block text-sm font-bold text-slate-700 mb-2" for="message">Ø§Ù„Ø±Ø³Ø§Ù„Ø©</label>
+            <textarea class="w-full px-4 py-3 rounded-xl border-slate-200 focus:ring-aman-blue focus:border-aman-blue text-sm" id="message" name="message" placeholder="Ø§ÙƒØªØ¨ Ø±Ø³Ø§Ù„ØªÙƒ Ù‡Ù†Ø§..." rows="6"></textarea>
           </div>
-          <button class="w-full py-3 bg-aman-blue text-white font-bold rounded-xl hover:bg-aman-dark-blue transition-all text-sm" type="submit">إرسال</button>
+          <button class="w-full py-3 bg-aman-blue text-white font-bold rounded-xl hover:bg-aman-dark-blue transition-all text-sm" type="submit">Ø¥Ø±Ø³Ø§Ù„</button>
         </form>
       </div>
 
@@ -128,9 +101,9 @@
             </svg>
           </div>
           <div>
-            <h4 class="font-bold text-slate-900 mb-1">العنوان</h4>
-            <p class="text-slate-600 text-sm leading-relaxed">المقر الرئيسي: ٥ شارع النيل، الجيزة، جمهورية مصر العربية</p>
-            <p class="text-slate-500 text-xs mt-1">صندوق بريد: ١١٥٦٢</p>
+            <h4 class="font-bold text-slate-900 mb-1">Ø§Ù„Ø¹Ù†ÙˆØ§Ù†</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">Ø§Ù„Ù…Ù‚Ø± Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠ: Ù¥ Ø´Ø§Ø±Ø¹ Ø§Ù„Ù†ÙŠÙ„ØŒ Ø§Ù„Ø¬ÙŠØ²Ø©ØŒ Ø¬Ù…Ù‡ÙˆØ±ÙŠØ© Ù…ØµØ± Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©</p>
+            <p class="text-slate-500 text-xs mt-1">ØµÙ†Ø¯ÙˆÙ‚ Ø¨Ø±ÙŠØ¯: Ù¡Ù¡Ù¥Ù¦Ù¢</p>
           </div>
         </div>
 
@@ -142,7 +115,7 @@
             </svg>
           </div>
           <div>
-            <h4 class="font-bold text-slate-900 mb-1">البريد الإلكتروني</h4>
+            <h4 class="font-bold text-slate-900 mb-1">Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ</h4>
             <p class="text-aman-blue font-semibold text-sm">info@aman-eg.com</p>
           </div>
         </div>
@@ -155,8 +128,8 @@
             </svg>
           </div>
           <div>
-            <h4 class="font-bold text-slate-900 mb-1">رقم الهاتف</h4>
-            <p class="text-aman-blue font-semibold text-sm">15544 <span class="text-slate-500 font-normal">(خط ساخن)</span></p>
+            <h4 class="font-bold text-slate-900 mb-1">Ø±Ù‚Ù… Ø§Ù„Ù‡Ø§ØªÙ</h4>
+            <p class="text-aman-blue font-semibold text-sm">15544 <span class="text-slate-500 font-normal">(Ø®Ø· Ø³Ø§Ø®Ù†)</span></p>
           </div>
         </div>
 
@@ -168,8 +141,8 @@
             </svg>
           </div>
           <div>
-            <h4 class="font-bold text-slate-900 mb-1">ساعات العمل</h4>
-            <p class="text-slate-600 text-sm">السبت - الخميس ٩ صباحاً - ٩ مساءً</p>
+            <h4 class="font-bold text-slate-900 mb-1">Ø³Ø§Ø¹Ø§Øª Ø§Ù„Ø¹Ù…Ù„</h4>
+            <p class="text-slate-600 text-sm">Ø§Ù„Ø³Ø¨Øª - Ø§Ù„Ø®Ù…ÙŠØ³ Ù© ØµØ¨Ø§Ø­Ø§Ù‹ - Ù© Ù…Ø³Ø§Ø¡Ù‹</p>
           </div>
         </div>
 
@@ -189,10 +162,10 @@
           <div class="flex items-center gap-2 mb-6">
             <img alt="Aman Logo" class="h-10 w-auto brightness-0 invert"
                  src="https://lh3.googleusercontent.com/aida/AP1WRLtsAXYg1KpXLlTbNo5XPskZZWcMhTNS8Q_n8HtJ10BcoAD7GrZNEb6JxilmDa9_rHgMCbnHoShK4m3FLnvtLl1Ah-iklPabORDFndHZr4ARAmn8dAhPGk73Kq22Fj9hys9l1SQWSb11vBklIpdFdP2nWE20WcJhL8BKma7xAQXYx-eTUwg9ehj-jPuWOzMY4uPSG18iHRW497Qtcq0OgIoT6omS3w0rvQBklL7UR1XNtKoqfvqs3elxo0G9" />
-            <span class="text-2xl font-bold">أمان</span>
+            <span class="text-2xl font-bold">Ø£Ù…Ø§Ù†</span>
           </div>
           <p class="text-slate-400 text-sm leading-relaxed mb-6">
-            منصة مجتمعية غير ربحية تهدف إلى مساعدة العائلات في العثور على مفقوديهم من خلال التعاون والمصداقية.
+            Ù…Ù†ØµØ© Ù…Ø¬ØªÙ…Ø¹ÙŠØ© ØºÙŠØ± Ø±Ø¨Ø­ÙŠØ© ØªÙ‡Ø¯Ù Ø¥Ù„Ù‰ Ù…Ø³Ø§Ø¹Ø¯Ø© Ø§Ù„Ø¹Ø§Ø¦Ù„Ø§Øª ÙÙŠ Ø§Ù„Ø¹Ø«ÙˆØ± Ø¹Ù„Ù‰ Ù…ÙÙ‚ÙˆØ¯ÙŠÙ‡Ù… Ù…Ù† Ø®Ù„Ø§Ù„ Ø§Ù„ØªØ¹Ø§ÙˆÙ† ÙˆØ§Ù„Ù…ØµØ¯Ø§Ù‚ÙŠØ©.
           </p>
           <div class="flex gap-4">
             <a class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-aman-blue transition-colors" href="#">
@@ -210,47 +183,47 @@
 
         <!-- Quick Links -->
         <div>
-          <h5 class="text-lg font-bold mb-6">روابط سريعة</h5>
+          <h5 class="text-lg font-bold mb-6">Ø±ÙˆØ§Ø¨Ø· Ø³Ø±ÙŠØ¹Ø©</h5>
           <ul class="space-y-4 text-slate-400 text-sm">
-            <li><a class="hover:text-white transition-colors" href="index.html">الرئيسية</a></li>
-            <li><a class="hover:text-white transition-colors" href="missing.html">المفقودين</a></li>
-            <li><a class="hover:text-white transition-colors" href="reports.html">البلاغات والمشاهدات</a></li>
-            <li><a class="hover:text-white transition-colors" href="report-case.html">تقديم بلاغ</a></li>
-              <li><a class="hover:text-white transition-colors" href="report-sighting.html">الإبلاغ عن مشاهدة</a></li>
-            <li><a class="hover:text-white transition-colors" href="about.html">من نحن</a></li>
-            <li><a class="hover:text-white transition-colors" href="contact.html">اتصل بنا</a></li>
+            <li><a class="hover:text-white transition-colors" href="/index">Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©</a></li>
+            <li><a class="hover:text-white transition-colors" href="/missing">Ø§Ù„Ù…ÙÙ‚ÙˆØ¯ÙŠÙ†</a></li>
+            <li><a class="hover:text-white transition-colors" href="/reports">Ø§Ù„Ø¨Ù„Ø§ØºØ§Øª ÙˆØ§Ù„Ù…Ø´Ø§Ù‡Ø¯Ø§Øª</a></li>
+            <li><a class="hover:text-white transition-colors" href="/report-case">ØªÙ‚Ø¯ÙŠÙ… Ø¨Ù„Ø§Øº</a></li>
+              <li><a class="hover:text-white transition-colors" href="/report-sighting">Ø§Ù„Ø¥Ø¨Ù„Ø§Øº Ø¹Ù† Ù…Ø´Ø§Ù‡Ø¯Ø©</a></li>
+            <li><a class="hover:text-white transition-colors" href="/about">Ù…Ù† Ù†Ø­Ù†</a></li>
+            <li><a class="hover:text-white transition-colors" href="/contact">Ø§ØªØµÙ„ Ø¨Ù†Ø§</a></li>
           </ul>
         </div>
 
         <!-- Legal -->
         <div>
-          <h5 class="text-lg font-bold mb-6">معلومات قانونية</h5>
+          <h5 class="text-lg font-bold mb-6">Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ù‚Ø§Ù†ÙˆÙ†ÙŠØ©</h5>
           <ul class="space-y-4 text-slate-400 text-sm">
-            <li><a class="hover:text-white transition-colors" href="terms.html">شروط الاستخدام</a></li>
-            <li><a class="hover:text-white transition-colors" href="privacy.html">سياسة الخصوصية</a></li>
-            <li><a class="hover:text-white transition-colors" href="disclaimer.html">إخلاء المسؤولية</a></li>
-            <li><a class="hover:text-white transition-colors" href="faq.html">الأسئلة الشائعة</a></li>
+            <li><a class="hover:text-white transition-colors" href="/terms">Ø´Ø±ÙˆØ· Ø§Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù…</a></li>
+            <li><a class="hover:text-white transition-colors" href="/privacy">Ø³ÙŠØ§Ø³Ø© Ø§Ù„Ø®ØµÙˆØµÙŠØ©</a></li>
+            <li><a class="hover:text-white transition-colors" href="/disclaimer">Ø¥Ø®Ù„Ø§Ø¡ Ø§Ù„Ù…Ø³Ø¤ÙˆÙ„ÙŠØ©</a></li>
+            <li><a class="hover:text-white transition-colors" href="/faq">Ø§Ù„Ø£Ø³Ø¦Ù„Ø© Ø§Ù„Ø´Ø§Ø¦Ø¹Ø©</a></li>
           </ul>
         </div>
 
         <!-- Emergency Numbers -->
         <div>
-          <h5 class="text-lg font-bold mb-6">أرقام الطوارئ في مصر</h5>
+          <h5 class="text-lg font-bold mb-6">Ø£Ø±Ù‚Ø§Ù… Ø§Ù„Ø·ÙˆØ§Ø±Ø¦ ÙÙŠ Ù…ØµØ±</h5>
           <ul class="space-y-4 text-slate-400 text-sm">
             <li class="flex items-center justify-between">
-              <span>الشرطة</span>
+              <span>Ø§Ù„Ø´Ø±Ø·Ø©</span>
               <span class="font-bold text-white">122</span>
             </li>
             <li class="flex items-center justify-between">
-              <span>النجدة</span>
+              <span>Ø§Ù„Ù†Ø¬Ø¯Ø©</span>
               <span class="font-bold text-white">123</span>
             </li>
             <li class="flex items-center justify-between">
-              <span>الإسعاف</span>
+              <span>Ø§Ù„Ø¥Ø³Ø¹Ø§Ù</span>
               <span class="font-bold text-white">123</span>
             </li>
             <li class="flex items-center justify-between">
-              <span>خط نجدة الطفل</span>
+              <span>Ø®Ø· Ù†Ø¬Ø¯Ø© Ø§Ù„Ø·ÙÙ„</span>
               <span class="font-bold text-white">16000</span>
             </li>
           </ul>
@@ -258,7 +231,7 @@
 
       </div>
       <div class="pt-8 border-t border-slate-800 text-center text-slate-500 text-xs">
-        جميع الحقوق محفوظة © 2026 © دليل المفقودين
+        Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø­Ù‚ÙˆÙ‚ Ù…Ø­ÙÙˆØ¸Ø© Â© 2026 Â© Ø¯Ù„ÙŠÙ„ Ø§Ù„Ù…ÙÙ‚ÙˆØ¯ÙŠÙ†
       </div>
     </div>
   </footer>
@@ -269,5 +242,5 @@
   <script src="assets/js/notifications.js"></script>
   <script src="assets/js/contact.js"></script>
 <script src="assets/js/backtotop.js"></script>
-</body>
+<script src="assets/js/navbar.js"></script></body>
 </html>
