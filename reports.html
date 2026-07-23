@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>أمان - البلاغات والمشاهدات</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { cairo: ['Cairo', 'sans-serif'] },
+          colors: {
+            'aman-blue': '#1e40af',
+            'aman-dark-blue': '#1e3a8a',
+            'aman-red': '#dc2626',
+            'aman-green': '#16a34a',
+            'aman-amber': '#d97706',
+            'aman-gray': '#64748b'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { font-family: 'Cairo', sans-serif; }
+    .status-verified { background: #dcfce7; color: #166534; }
+    .status-pending { background: #fef3c7; color: #92400e; }
+    .status-rejected { background: #fce4ec; color: #b71c1c; }
+    .card-hover { transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -12px rgba(0,0,0,0.15); }
+    .tab-active { background: #1e40af; color: white; box-shadow: 0 4px 14px rgba(30,64,175,0.3); }
+    .tab-inactive { background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
+    .tab-inactive:hover { background: #e2e8f0; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .card-animate { animation: fadeIn 0.4s ease forwards; }
+    .card-animate:nth-child(2) { animation-delay: 0.05s; }
+    .card-animate:nth-child(3) { animation-delay: 0.1s; }
+    .card-animate:nth-child(4) { animation-delay: 0.15s; }
+    .card-animate:nth-child(5) { animation-delay: 0.2s; }
+    .card-animate:nth-child(6) { animation-delay: 0.25s; }
+    .skeleton { background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 12px; }
+    @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+  </style>
+</head>
+<body class="font-cairo text-slate-800 bg-slate-50">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-white shadow-sm border-b border-slate-100">
+    <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <img alt="Aman Logo" class="h-12 w-auto object-contain"
+             src="https://lh3.googleusercontent.com/aida/AP1WRLtsAXYg1KpXLlTbNo5XPskZZWcMhTNS8Q_n8HtJ10BcoAD7GrZNEb6JxilmDa9_rHgMCbnHoShK4m3FLnvtLl1Ah-iklPabORDFndHZr4ARAmn8dAhPGk73Kq22Fj9hys9l1SQWSb11vBklIpdFdP2nWE20WcJhL8BKma7xAQXYx-eTUwg9ehj-jPuWOzMY4uPSG18iHRW497Qtcq0OgIoT6omS3w0rvQBklL7UR1XNtKoqfvqs3elxo0G9" />
+        <div class="flex flex-col">
+          <span class="text-xl font-bold text-aman-blue leading-none">أمان</span>
+          <span class="text-[10px] text-aman-gray">معاً لنعيد الأمل</span>
+        </div>
+      </div>
+      <ul class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <li><a class="hover:text-aman-blue transition-colors" href="index.html">الرئيسية</a></li>
+        <li><a class="hover:text-aman-blue transition-colors" href="missing.html">المفقودين</a></li>
+        <li><a class="text-aman-blue border-b-2 border-aman-blue pb-1" href="reports.html">البلاغات والمشاهدات</a></li>
+        <li><a class="hover:text-aman-blue transition-colors" href="about.html">من نحن</a></li>
+        <li><a class="hover:text-aman-blue transition-colors" href="contact.html">اتصل بنا</a></li>
+      </ul>
+      <div class="flex items-center gap-3">
+        <button class="px-5 py-2 text-sm font-bold text-white bg-aman-blue rounded-md hover:bg-aman-dark-blue transition-all">إنشاء حساب</button>
+        <button class="px-5 py-2 text-sm font-bold text-aman-blue border border-aman-blue rounded-md hover:bg-blue-50 transition-all">تسجيل الدخول</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-indigo-100 pt-24 pb-20">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-blue-200/30 blur-3xl"></div>
+      <div class="absolute -bottom-20 -left-20 w-96 h-96 rounded-full bg-indigo-300/20 blur-3xl"></div>
+    </div>
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-blue-200 rounded-full px-5 py-2 text-sm font-semibold text-aman-blue mb-8 shadow-sm">
+        <span class="material-symbols-outlined text-base">verified</span>
+        منصة موثوقة معتمدة
+      </div>
+      <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">البلاغات والمشاهدات</h1>
+      <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-4 leading-relaxed">
+        سجل المجتمع الموثق من بلاغات الفقدان والمشاهدات. تصفّح الحالات، وتابع التحديثات، وساهم في إعادة الأمل.
+      </p>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="container mx-auto px-4 -mt-10 relative z-20">
+    <div class="bg-white rounded-2xl shadow-lg border border-slate-100 p-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="text-center">
+        <div class="text-3xl font-extrabold text-aman-green" id="statFound">0</div>
+        <div class="text-xs text-slate-500 mt-1">تم العثور عليهم</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-extrabold text-aman-red" id="statActive">0</div>
+        <div class="text-xs text-slate-500 mt-1">حالة نشطة</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-extrabold text-aman-blue" id="statVerified">0</div>
+        <div class="text-xs text-slate-500 mt-1">بلاغ تم التحقق منه</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-extrabold text-amber-600" id="statMembers">0</div>
+        <div class="text-xs text-slate-500 mt-1">عضو في المجتمع</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="container mx-auto px-4 py-12">
+
+    <!-- Filter Bar -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-4 mb-8">
+      <div class="flex flex-col md:flex-row gap-4">
+        <div class="flex-1 relative">
+          <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+          <input id="searchInput" type="text" placeholder="ابحث بالاسم أو الموقع..." class="w-full pr-10 pl-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-aman-blue/20 focus:border-aman-blue outline-none" />
+        </div>
+        <select id="statusFilter" class="px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-aman-blue/20 focus:border-aman-blue outline-none bg-white">
+          <option value="">كل الحالات</option>
+          <option value="verified">تم التحقق</option>
+          <option value="pending">قيد المراجعة</option>
+          <option value="rejected">مرفوض</option>
+        </select>
+        <div class="flex gap-2">
+          <button id="clearBtn" class="px-5 py-2.5 border border-slate-200 rounded-xl text-sm font-bold text-slate-500 hover:bg-slate-100 transition-all">مسح</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab Buttons -->
+    <div class="flex justify-center gap-3 mb-10">
+      <button id="tabMissing" class="tab-active px-10 py-3.5 rounded-xl font-bold transition-all text-sm md:text-base flex items-center gap-2">
+        <span class="material-symbols-outlined text-lg">person_search</span>
+        بلاغات فقدان
+      </button>
+      <button id="tabSighting" class="tab-inactive px-10 py-3.5 rounded-xl font-bold transition-all text-sm md:text-base flex items-center gap-2">
+        <span class="material-symbols-outlined text-lg">remove_red_eye</span>
+        بلاغات مشاهدة
+      </button>
+    </div>
+
+    <!-- Skeleton Loader -->
+    <div id="skeletonGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="skeleton h-64"></div>
+      <div class="skeleton h-64"></div>
+      <div class="skeleton h-64"></div>
+    </div>
+
+    <!-- Missing Reports Tab -->
+    <div id="missingReports" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    <div id="missingEmpty" class="hidden text-center py-20 col-span-full">
+      <div class="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6">
+        <span class="material-symbols-outlined text-4xl text-slate-400">search_off</span>
+      </div>
+      <h3 class="text-xl font-bold text-slate-600 mb-2">لا توجد بلاغات فقدان</h3>
+      <p class="text-slate-400">لم يتم تقديم أي بلاغات فقدان حتى الآن.</p>
+    </div>
+
+    <!-- Sighting Reports Tab -->
+    <div id="sightingReports" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    <div id="sightingEmpty" class="hidden text-center py-20 col-span-full">
+      <div class="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6">
+        <span class="material-symbols-outlined text-4xl text-slate-400">visibility_off</span>
+      </div>
+      <h3 class="text-xl font-bold text-slate-600 mb-2">لا توجد بلاغات مشاهدة</h3>
+      <p class="text-slate-400">لم يتم تقديم أي بلاغات مشاهدة حتى الآن.</p>
+    </div>
+
+    <!-- Pagination -->
+    <div id="pagination" class="hidden flex justify-center items-center gap-3 mt-10">
+      <button id="prevPage" class="px-4 py-2 border border-slate-200 rounded-lg text-sm font-bold text-slate-500 hover:bg-slate-100 transition-all disabled:opacity-30" disabled>السابق</button>
+      <span id="pageInfo" class="text-sm text-slate-500">الصفحة 1</span>
+      <button id="nextPage" class="px-4 py-2 border border-slate-200 rounded-lg text-sm font-bold text-slate-500 hover:bg-slate-100 transition-all disabled:opacity-30">التالي</button>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-red-50 via-orange-50 to-amber-50 py-20">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full bg-red-200/20 blur-3xl"></div>
+      <div class="absolute -bottom-40 -right-40 w-[500px] h-[500px] rounded-full bg-orange-200/20 blur-3xl"></div>
+    </div>
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <div class="max-w-2xl mx-auto">
+        <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+          <span class="material-symbols-outlined text-3xl text-aman-red">error_outline</span>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">هل لديك معلومة؟ ساهم في البحث</h2>
+        <p class="text-slate-600 text-lg mb-10 max-w-lg mx-auto">
+          كل معلومة صغيرة قد تكون المفتاح لعودة شخص مفقود إلى أهله. لا تتردد في الإبلاغ.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-5">
+          <a href="report-case.html" class="inline-flex items-center gap-2 bg-aman-red hover:bg-red-700 text-white px-10 py-4 rounded-xl font-bold text-lg shadow-xl transition-all hover:shadow-2xl hover:-translate-y-0.5">
+            <span class="text-2xl leading-none">+</span>
+            الإبلاغ عن فقدان
+          </a>
+          <a href="report-sighting.html" class="inline-flex items-center gap-2 border-2 border-aman-red text-aman-red hover:bg-red-50 px-10 py-4 rounded-xl font-bold text-lg transition-all hover:-translate-y-0.5">
+            <span class="material-symbols-outlined">visibility</span>
+            الإبلاغ عن مشاهدة
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div class="col-span-1">
+          <div class="flex items-center gap-2 mb-6">
+            <img alt="Aman Logo" class="h-10 w-auto brightness-0 invert"
+                 src="https://lh3.googleusercontent.com/aida/AP1WRLtsAXYg1KpXLlTbNo5XPskZZWcMhTNS8Q_n8HtJ10BcoAD7GrZNEb6JxilmDa9_rHgMCbnHoShK4m3FLnvtLl1Ah-iklPabORDFndHZr4ARAmn8dAhPGk73Kq22Fj9hys9l1SQWSb11vBklIpdFdP2nWE20WcJhL8BKma7xAQXYx-eTUwg9ehj-jPuWOzMY4uPSG18iHRW497Qtcq0OgIoT6omS3w0rvQBklL7UR1XNtKoqfvqs3elxo0G9" />
+            <span class="text-2xl font-bold">أمان</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            منصة مجتمعية غير ربحية تهدف إلى مساعدة العائلات في العثور على مفقوديهم من خلال التعاون والمصداقية.
+          </p>
+        </div>
+        <div>
+          <h5 class="text-lg font-bold mb-6">روابط سريعة</h5>
+          <ul class="space-y-4 text-slate-400 text-sm">
+            <li><a class="hover:text-white transition-colors" href="index.html">الرئيسية</a></li>
+            <li><a class="hover:text-white transition-colors" href="missing.html">المفقودين</a></li>
+            <li><a class="hover:text-white transition-colors" href="reports.html">البلاغات والمشاهدات</a></li>
+            <li><a class="hover:text-white transition-colors" href="report-case.html">تقديم بلاغ</a></li>
+            <li><a class="hover:text-white transition-colors" href="report-sighting.html">الإبلاغ عن مشاهدة</a></li>
+            <li><a class="hover:text-white transition-colors" href="about.html">من نحن</a></li>
+            <li><a class="hover:text-white transition-colors" href="contact.html">اتصل بنا</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-lg font-bold mb-6">معلومات قانونية</h5>
+          <ul class="space-y-4 text-slate-400 text-sm">
+            <li><a class="hover:text-white transition-colors" href="terms.html">شروط الاستخدام</a></li>
+            <li><a class="hover:text-white transition-colors" href="privacy.html">سياسة الخصوصية</a></li>
+            <li><a class="hover:text-white transition-colors" href="disclaimer.html">إخلاء المسؤولية</a></li>
+            <li><a class="hover:text-white transition-colors" href="faq.html">الأسئلة الشائعة</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-lg font-bold mb-6">أرقام الطوارئ في مصر</h5>
+          <ul class="space-y-4 text-slate-400 text-sm">
+            <li class="flex items-center justify-between"><span>الشرطة</span><span class="font-bold text-white">122</span></li>
+            <li class="flex items-center justify-between"><span>النجدة</span><span class="font-bold text-white">123</span></li>
+            <li class="flex items-center justify-between"><span>الإسعاف</span><span class="font-bold text-white">123</span></li>
+            <li class="flex items-center justify-between"><span>خط نجدة الطفل</span><span class="font-bold text-white">16000</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-slate-800 text-center text-slate-500 text-xs">
+        جميع الحقوق محفوظة © 2026 © أمان - دليل المفقودين
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/sanitize.js"></script>
+  <script src="assets/js/toast.js"></script>
+  <script src="assets/js/notifications.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/reports.js"></script>
+<script src="assets/js/backtotop.js"></script>
+</body>
+</html>
