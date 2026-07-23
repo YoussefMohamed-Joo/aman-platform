@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html dir="rtl" lang="ar">
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>تقديم بلاغ - أمان</title>
+  <title>ØªÙ‚Ø¯ÙŠÙ… Ø¨Ù„Ø§Øº - Ø£Ù…Ø§Ù†</title>
 
   <!-- Google Fonts: IBM Plex Sans Arabic -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -144,34 +144,7 @@
   <!-- ============================================
        HEADER (exact from index.html lines 31-61)
        ============================================ -->
-  <header class="sticky top-0 z-50 bg-white shadow-sm border-b border-slate-100">
-    <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
-      <!-- Right Side: Logo -->
-      <div class="flex items-center gap-2">
-        <img alt="Aman Logo" class="h-12 w-auto object-contain"
-             src="https://lh3.googleusercontent.com/aida/AP1WRLtsAXYg1KpXLlTbNo5XPskZZWcMhTNS8Q_n8HtJ10BcoAD7GrZNEb6JxilmDa9_rHgMCbnHoShK4m3FLnvtLl1Ah-iklPabORDFndHZr4ARAmn8dAhPGk73Kq22Fj9hys9l1SQWSb11vBklIpdFdP2nWE20WcJhL8BKma7xAQXYx-eTUwg9ehj-jPuWOzMY4uPSG18iHRW497Qtcq0OgIoT6omS3w0rvQBklL7UR1XNtKoqfvqs3elxo0G9" />
-        <div class="flex flex-col">
-          <span class="text-xl font-bold text-aman-blue leading-none">أمان</span>
-          <span class="text-[10px] text-aman-gray">معاً لنعيد الأمل</span>
-        </div>
-      </div>
-
-      <!-- Center: Navigation Links -->
-      <ul class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
-        <li><a class="hover:text-aman-blue transition-colors" href="index.html">الرئيسية</a></li>
-        <li><a class="hover:text-aman-blue transition-colors" href="missing.html">المفقودين</a></li>
-        <li><a class="text-aman-blue border-b-2 border-aman-blue pb-1" href="reports.html">البلاغات والمشاهدات</a></li>
-        <li><a class="hover:text-aman-blue transition-colors" href="about.html">من نحن</a></li>
-        <li><a class="hover:text-aman-blue transition-colors" href="contact.html">اتصل بنا</a></li>
-      </ul>
-
-      <!-- Left Side: Auth Buttons -->
-      <div class="flex items-center gap-3">
-        <button onclick="window.location.href='signup.html'" class="px-5 py-2 text-sm font-bold text-white bg-aman-blue rounded-md hover:bg-aman-dark-blue transition-all">إنشاء حساب</button>
-        <button onclick="window.location.href='login.html'" class="px-5 py-2 text-sm font-bold text-aman-blue border border-aman-blue rounded-md hover:bg-blue-50 transition-all">تسجيل الدخول</button>
-      </div>
-    </nav>
-  </header>
+  <div id="navbar-root"></div>
 
   <!-- ============================================
        MAIN CONTENT - Multi-Step Form
@@ -182,9 +155,9 @@
     <div class="text-center mb-10">
       <div class="flex items-center justify-center gap-2 text-aman-blue mb-2">
         <span class="material-symbols-outlined text-3xl">assignment_add</span>
-        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900">تقديم بلاغ عن مفقود</h1>
+        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900">ØªÙ‚Ø¯ÙŠÙ… Ø¨Ù„Ø§Øº Ø¹Ù† Ù…ÙÙ‚ÙˆØ¯</h1>
       </div>
-      <p class="text-slate-500 text-sm">املأ البيانات التالية لتقديم بلاغ رسمي عن حالة فقدان. جميع البيانات تُعامل بسرية تامة.</p>
+      <p class="text-slate-500 text-sm">Ø§Ù…Ù„Ø£ Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„ØªØ§Ù„ÙŠØ© Ù„ØªÙ‚Ø¯ÙŠÙ… Ø¨Ù„Ø§Øº Ø±Ø³Ù…ÙŠ Ø¹Ù† Ø­Ø§Ù„Ø© ÙÙ‚Ø¯Ø§Ù†. Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª ØªÙØ¹Ø§Ù…Ù„ Ø¨Ø³Ø±ÙŠØ© ØªØ§Ù…Ø©.</p>
     </div>
 
     <!-- ===================== -->
@@ -197,8 +170,8 @@
         <div class="flex items-center gap-2 md:gap-4 flex-1">
           <div class="step-circle bg-aman-blue text-white shadow-md" id="stepCircle1">1</div>
           <div class="hidden sm:block">
-            <p class="text-xs text-slate-400">الخطوة 1</p>
-            <p class="text-sm font-bold text-slate-800" id="stepLabel1">البيانات الشخصية</p>
+            <p class="text-xs text-slate-400">Ø§Ù„Ø®Ø·ÙˆØ© 1</p>
+            <p class="text-sm font-bold text-slate-800" id="stepLabel1">Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ø´Ø®ØµÙŠØ©</p>
           </div>
         </div>
         <div class="step-line bg-slate-200" id="stepLine1"></div>
@@ -207,8 +180,8 @@
         <div class="flex items-center gap-2 md:gap-4 flex-1">
           <div class="step-circle bg-slate-200 text-slate-500" id="stepCircle2">2</div>
           <div class="hidden sm:block">
-            <p class="text-xs text-slate-400">الخطوة 2</p>
-            <p class="text-sm font-bold text-slate-800" id="stepLabel2">تفاصيل الاختفاء</p>
+            <p class="text-xs text-slate-400">Ø§Ù„Ø®Ø·ÙˆØ© 2</p>
+            <p class="text-sm font-bold text-slate-800" id="stepLabel2">ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ø§Ø®ØªÙØ§Ø¡</p>
           </div>
         </div>
         <div class="step-line bg-slate-200" id="stepLine2"></div>
@@ -217,8 +190,8 @@
         <div class="flex items-center gap-2 md:gap-4 flex-1">
           <div class="step-circle bg-slate-200 text-slate-500" id="stepCircle3">3</div>
           <div class="hidden sm:block">
-            <p class="text-xs text-slate-400">الخطوة 3</p>
-            <p class="text-sm font-bold text-slate-800" id="stepLabel3">الصور والوثائق</p>
+            <p class="text-xs text-slate-400">Ø§Ù„Ø®Ø·ÙˆØ© 3</p>
+            <p class="text-sm font-bold text-slate-800" id="stepLabel3">Ø§Ù„ØµÙˆØ± ÙˆØ§Ù„ÙˆØ«Ø§Ø¦Ù‚</p>
           </div>
         </div>
         <div class="step-line bg-slate-200" id="stepLine3"></div>
@@ -227,8 +200,8 @@
         <div class="flex items-center gap-2 md:gap-4 flex-1">
           <div class="step-circle bg-slate-200 text-slate-500" id="stepCircle4">4</div>
           <div class="hidden sm:block">
-            <p class="text-xs text-slate-400">الخطوة 4</p>
-            <p class="text-sm font-bold text-slate-800" id="stepLabel4">بيانات المبلغ</p>
+            <p class="text-xs text-slate-400">Ø§Ù„Ø®Ø·ÙˆØ© 4</p>
+            <p class="text-sm font-bold text-slate-800" id="stepLabel4">Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ù…Ø¨Ù„Øº</p>
           </div>
         </div>
 
@@ -240,7 +213,7 @@
     <!-- ===================== -->
     <form id="reportForm" novalidate>
 
-      <!-- ===== STEP 1: البيانات الشخصية ===== -->
+      <!-- ===== STEP 1: Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ø´Ø®ØµÙŠØ© ===== -->
       <div class="step-card active" id="step1">
         <div class="glass-card rounded-2xl shadow-lg p-6 md:p-8">
           <div class="flex items-center gap-3 mb-8">
@@ -248,59 +221,59 @@
               <span class="material-symbols-outlined">person</span>
             </div>
             <div>
-              <h2 class="text-xl font-bold text-slate-900">البيانات الشخصية للمفقود</h2>
-              <p class="text-sm text-slate-500">أدخل المعلومات الأساسية عن الشخص المفقود</p>
+              <h2 class="text-xl font-bold text-slate-900">Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ø´Ø®ØµÙŠØ© Ù„Ù„Ù…ÙÙ‚ÙˆØ¯</h2>
+              <p class="text-sm text-slate-500">Ø£Ø¯Ø®Ù„ Ø§Ù„Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„Ø£Ø³Ø§Ø³ÙŠØ© Ø¹Ù† Ø§Ù„Ø´Ø®Øµ Ø§Ù„Ù…ÙÙ‚ÙˆØ¯</p>
             </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="md:col-span-2">
-              <label class="block text-sm font-bold text-slate-700 mb-2">الاسم الرباعي للمفقود <span class="text-aman-red">*</span></label>
+              <label class="block text-sm font-bold text-slate-700 mb-2">Ø§Ù„Ø§Ø³Ù… Ø§Ù„Ø±Ø¨Ø§Ø¹ÙŠ Ù„Ù„Ù…ÙÙ‚ÙˆØ¯ <span class="text-aman-red">*</span></label>
               <input type="text" id="fullName" required
                      class="form-input w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-white/80 focus:outline-none transition-all text-sm"
-                     placeholder="مثال: أحمد محمد علي حسن" />
-              <p class="text-xs text-slate-400 mt-1">يُفضل كتابة الاسم كاملاً رباعياً</p>
+                     placeholder="Ù…Ø«Ø§Ù„: Ø£Ø­Ù…Ø¯ Ù…Ø­Ù…Ø¯ Ø¹Ù„ÙŠ Ø­Ø³Ù†" />
+              <p class="text-xs text-slate-400 mt-1">ÙŠÙÙØ¶Ù„ ÙƒØªØ§Ø¨Ø© Ø§Ù„Ø§Ø³Ù… ÙƒØ§Ù…Ù„Ø§Ù‹ Ø±Ø¨Ø§Ø¹ÙŠØ§Ù‹</p>
             </div>
 
             <div>
-              <label class="block text-sm font-bold text-slate-700 mb-2">العمر التقريبي <span class="text-aman-red">*</span></label>
+              <label class="block text-sm font-bold text-slate-700 mb-2">Ø§Ù„Ø¹Ù…Ø± Ø§Ù„ØªÙ‚Ø±ÙŠØ¨ÙŠ <span class="text-aman-red">*</span></label>
               <input type="number" id="age" required min="1" max="120"
                      class="form-input w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-white/80 focus:outline-none transition-all text-sm"
-                     placeholder="مثال: 25" />
+                     placeholder="Ù…Ø«Ø§Ù„: 25" />
             </div>
 
             <div>
-              <label class="block text-sm font-bold text-slate-700 mb-2">الجنس <span class="text-aman-red">*</span></label>
+              <label class="block text-sm font-bold text-slate-700 mb-2">Ø§Ù„Ø¬Ù†Ø³ <span class="text-aman-red">*</span></label>
               <select id="gender" required
                       class="form-input w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-white/80 focus:outline-none transition-all text-sm appearance-none">
-                <option value="">-- اختر --</option>
-                <option value="ذكر">ذكر</option>
-                <option value="أنثى">أنثى</option>
+                <option value="">-- Ø§Ø®ØªØ± --</option>
+                <option value="Ø°ÙƒØ±">Ø°ÙƒØ±</option>
+                <option value="Ø£Ù†Ø«Ù‰">Ø£Ù†Ø«Ù‰</option>
               </select>
             </div>
 
             <div class="md:col-span-2">
-              <label class="block text-sm font-bold text-slate-700 mb-2">الحالة الصحية</label>
+              <label class="block text-sm font-bold text-slate-700 mb-2">Ø§Ù„Ø­Ø§Ù„Ø© Ø§Ù„ØµØ­ÙŠØ©</label>
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <label class="flex items-center gap-3 p-4 rounded-xl border border-slate-200 cursor-pointer hover:border-aman-blue transition-all has-[:checked]:border-aman-blue has-[:checked]:bg-blue-50">
-                  <input type="radio" name="health" value="جيدة" class="accent-aman-blue" />
+                  <input type="radio" name="health" value="Ø¬ÙŠØ¯Ø©" class="accent-aman-blue" />
                   <div>
-                    <span class="text-sm font-semibold">جيدة</span>
-                    <p class="text-xs text-slate-400">لا توجد مشاكل صحية</p>
+                    <span class="text-sm font-semibold">Ø¬ÙŠØ¯Ø©</span>
+                    <p class="text-xs text-slate-400">Ù„Ø§ ØªÙˆØ¬Ø¯ Ù…Ø´Ø§ÙƒÙ„ ØµØ­ÙŠØ©</p>
                   </div>
                 </label>
                 <label class="flex items-center gap-3 p-4 rounded-xl border border-slate-200 cursor-pointer hover:border-aman-blue transition-all has-[:checked]:border-aman-blue has-[:checked]:bg-blue-50">
-                  <input type="radio" name="health" value="متوسطة" class="accent-aman-blue" />
+                  <input type="radio" name="health" value="Ù…ØªÙˆØ³Ø·Ø©" class="accent-aman-blue" />
                   <div>
-                    <span class="text-sm font-semibold">متوسطة</span>
-                    <p class="text-xs text-slate-400">بحاجة لرعاية صحية</p>
+                    <span class="text-sm font-semibold">Ù…ØªÙˆØ³Ø·Ø©</span>
+                    <p class="text-xs text-slate-400">Ø¨Ø­Ø§Ø¬Ø© Ù„Ø±Ø¹Ø§ÙŠØ© ØµØ­ÙŠØ©</p>
                   </div>
                 </label>
                 <label class="flex items-center gap-3 p-4 rounded-xl border border-slate-200 cursor-pointer hover:border-aman-blue transition-all has-[:checked]:border-aman-blue has-[:checked]:bg-blue-50">
-                  <input type="radio" name="health" value="حرجة" class="accent-aman-blue" />
+                  <input type="radio" name="health" value="Ø­Ø±Ø¬Ø©" class="accent-aman-blue" />
                   <div>
-                    <span class="text-sm font-semibold">حرجة</span>
-                    <p class="text-xs text-slate-400">حالة طبية طارئة</p>
+                    <span class="text-sm font-semibold">Ø­Ø±Ø¬Ø©</span>
+                    <p class="text-xs text-slate-400">Ø­Ø§Ù„Ø© Ø·Ø¨ÙŠØ© Ø·Ø§Ø±Ø¦Ø©</p>
                   </div>
                 </label>
               </div>
@@ -311,13 +284,13 @@
         <div class="flex justify-end mt-6">
           <button type="button" onclick="nextStep()"
                   class="px-8 py-3.5 bg-aman-blue text-white font-bold rounded-xl hover:bg-aman-dark-blue transition-all flex items-center gap-2 shadow-md">
-            التالي
+            Ø§Ù„ØªØ§Ù„ÙŠ
             <span class="material-symbols-outlined text-lg">arrow_forward</span>
           </button>
         </div>
       </div>
 
-      <!-- ===== STEP 2: تفاصيل الاختفاء ===== -->
+      <!-- ===== STEP 2: ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ø§Ø®ØªÙØ§Ø¡ ===== -->
       <div class="step-card" id="step2">
         <div class="glass-card rounded-2xl shadow-lg p-6 md:p-8">
           <div class="flex items-center gap-3 mb-8">
@@ -325,65 +298,65 @@
               <span class="material-symbols-outlined">search</span>
             </div>
             <div>
-              <h2 class="text-xl font-bold text-slate-900">تفاصيل الاختفاء</h2>
-              <p class="text-sm text-slate-500">أدخل المعلومات المتعلقة بمكان وزمان الاختفاء</p>
+              <h2 class="text-xl font-bold text-slate-900">ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ø§Ø®ØªÙØ§Ø¡</h2>
+              <p class="text-sm text-slate-500">Ø£Ø¯Ø®Ù„ Ø§Ù„Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„Ù…ØªØ¹Ù„Ù‚Ø© Ø¨Ù…ÙƒØ§Ù† ÙˆØ²Ù…Ø§Ù† Ø§Ù„Ø§Ø®ØªÙØ§Ø¡</p>
             </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label class="block text-sm font-bold text-slate-700 mb-2">تاريخ الاختفاء <span class="text-aman-red">*</span></label>
+              <label class="block text-sm font-bold text-slate-700 mb-2">ØªØ§Ø±ÙŠØ® Ø§Ù„Ø§Ø®ØªÙØ§Ø¡ <span class="text-aman-red">*</span></label>
               <input type="date" id="disappearanceDate" required
                      class="form-input w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-white/80 focus:outline-none transition-all text-sm" />
             </div>
 
             <div>
-              <label class="block text-sm font-bold text-slate-700 mb-2">المحافظة / المدينة <span class="text-aman-red">*</span></label>
+              <label class="block text-sm font-bold text-slate-700 mb-2">Ø§Ù„Ù…Ø­Ø§ÙØ¸Ø© / Ø§Ù„Ù…Ø¯ÙŠÙ†Ø© <span class="text-aman-red">*</span></label>
               <select id="city" required
                       class="form-input w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-white/80 focus:outline-none transition-all text-sm appearance-none">
-                <option value="">-- اختر المحافظة --</option>
-                <option value="القاهرة">القاهرة</option>
-                <option value="الإسكندرية">الإسكندرية</option>
-                <option value="الجيزة">الجيزة</option>
-                <option value="الدقهلية">الدقهلية</option>
-                <option value="الشرقية">الشرقية</option>
-                <option value="القليوبية">القليوبية</option>
-                <option value="الغربية">الغربية</option>
-                <option value="المنوفية">المنوفية</option>
-                <option value="البحيرة">البحيرة</option>
-                <option value="كفر الشيخ">كفر الشيخ</option>
-                <option value="دمياط">دمياط</option>
-                <option value="بورسعيد">بورسعيد</option>
-                <option value="الإسماعيلية">الإسماعيلية</option>
-                <option value="السويس">السويس</option>
-                <option value="بني سويف">بني سويف</option>
-                <option value="الفيوم">الفيوم</option>
-                <option value="المنيا">المنيا</option>
-                <option value="أسيوط">أسيوط</option>
-                <option value="سوهاج">سوهاج</option>
-                <option value="قنا">قنا</option>
-                <option value="الأقصر">الأقصر</option>
-                <option value="أسوان">أسوان</option>
-                <option value="الوادي الجديد">الوادي الجديد</option>
-                <option value="مرسى مطروح">مرسى مطروح</option>
-                <option value="شمال سيناء">شمال سيناء</option>
-                <option value="جنوب سيناء">جنوب سيناء</option>
-                <option value="البحر الأحمر">البحر الأحمر</option>
+                <option value="">-- Ø§Ø®ØªØ± Ø§Ù„Ù…Ø­Ø§ÙØ¸Ø© --</option>
+                <option value="Ø§Ù„Ù‚Ø§Ù‡Ø±Ø©">Ø§Ù„Ù‚Ø§Ù‡Ø±Ø©</option>
+                <option value="Ø§Ù„Ø¥Ø³ÙƒÙ†Ø¯Ø±ÙŠØ©">Ø§Ù„Ø¥Ø³ÙƒÙ†Ø¯Ø±ÙŠØ©</option>
+                <option value="Ø§Ù„Ø¬ÙŠØ²Ø©">Ø§Ù„Ø¬ÙŠØ²Ø©</option>
+                <option value="Ø§Ù„Ø¯Ù‚Ù‡Ù„ÙŠØ©">Ø§Ù„Ø¯Ù‚Ù‡Ù„ÙŠØ©</option>
+                <option value="Ø§Ù„Ø´Ø±Ù‚ÙŠØ©">Ø§Ù„Ø´Ø±Ù‚ÙŠØ©</option>
+                <option value="Ø§Ù„Ù‚Ù„ÙŠÙˆØ¨ÙŠØ©">Ø§Ù„Ù‚Ù„ÙŠÙˆØ¨ÙŠØ©</option>
+                <option value="Ø§Ù„ØºØ±Ø¨ÙŠØ©">Ø§Ù„ØºØ±Ø¨ÙŠØ©</option>
+                <option value="Ø§Ù„Ù…Ù†ÙˆÙÙŠØ©">Ø§Ù„Ù…Ù†ÙˆÙÙŠØ©</option>
+                <option value="Ø§Ù„Ø¨Ø­ÙŠØ±Ø©">Ø§Ù„Ø¨Ø­ÙŠØ±Ø©</option>
+                <option value="ÙƒÙØ± Ø§Ù„Ø´ÙŠØ®">ÙƒÙØ± Ø§Ù„Ø´ÙŠØ®</option>
+                <option value="Ø¯Ù…ÙŠØ§Ø·">Ø¯Ù…ÙŠØ§Ø·</option>
+                <option value="Ø¨ÙˆØ±Ø³Ø¹ÙŠØ¯">Ø¨ÙˆØ±Ø³Ø¹ÙŠØ¯</option>
+                <option value="Ø§Ù„Ø¥Ø³Ù…Ø§Ø¹ÙŠÙ„ÙŠØ©">Ø§Ù„Ø¥Ø³Ù…Ø§Ø¹ÙŠÙ„ÙŠØ©</option>
+                <option value="Ø§Ù„Ø³ÙˆÙŠØ³">Ø§Ù„Ø³ÙˆÙŠØ³</option>
+                <option value="Ø¨Ù†ÙŠ Ø³ÙˆÙŠÙ">Ø¨Ù†ÙŠ Ø³ÙˆÙŠÙ</option>
+                <option value="Ø§Ù„ÙÙŠÙˆÙ…">Ø§Ù„ÙÙŠÙˆÙ…</option>
+                <option value="Ø§Ù„Ù…Ù†ÙŠØ§">Ø§Ù„Ù…Ù†ÙŠØ§</option>
+                <option value="Ø£Ø³ÙŠÙˆØ·">Ø£Ø³ÙŠÙˆØ·</option>
+                <option value="Ø³ÙˆÙ‡Ø§Ø¬">Ø³ÙˆÙ‡Ø§Ø¬</option>
+                <option value="Ù‚Ù†Ø§">Ù‚Ù†Ø§</option>
+                <option value="Ø§Ù„Ø£Ù‚ØµØ±">Ø§Ù„Ø£Ù‚ØµØ±</option>
+                <option value="Ø£Ø³ÙˆØ§Ù†">Ø£Ø³ÙˆØ§Ù†</option>
+                <option value="Ø§Ù„ÙˆØ§Ø¯ÙŠ Ø§Ù„Ø¬Ø¯ÙŠØ¯">Ø§Ù„ÙˆØ§Ø¯ÙŠ Ø§Ù„Ø¬Ø¯ÙŠØ¯</option>
+                <option value="Ù…Ø±Ø³Ù‰ Ù…Ø·Ø±ÙˆØ­">Ù…Ø±Ø³Ù‰ Ù…Ø·Ø±ÙˆØ­</option>
+                <option value="Ø´Ù…Ø§Ù„ Ø³ÙŠÙ†Ø§Ø¡">Ø´Ù…Ø§Ù„ Ø³ÙŠÙ†Ø§Ø¡</option>
+                <option value="Ø¬Ù†ÙˆØ¨ Ø³ÙŠÙ†Ø§Ø¡">Ø¬Ù†ÙˆØ¨ Ø³ÙŠÙ†Ø§Ø¡</option>
+                <option value="Ø§Ù„Ø¨Ø­Ø± Ø§Ù„Ø£Ø­Ù…Ø±">Ø§Ù„Ø¨Ø­Ø± Ø§Ù„Ø£Ø­Ù…Ø±</option>
               </select>
             </div>
 
             <div class="md:col-span-2">
-              <label class="block text-sm font-bold text-slate-700 mb-2">وصف ملابس المفقود <span class="text-aman-red">*</span></label>
+              <label class="block text-sm font-bold text-slate-700 mb-2">ÙˆØµÙ Ù…Ù„Ø§Ø¨Ø³ Ø§Ù„Ù…ÙÙ‚ÙˆØ¯ <span class="text-aman-red">*</span></label>
               <textarea id="clothingDescription" required rows="4"
                         class="form-input w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-white/80 focus:outline-none transition-all text-sm resize-none"
-                        placeholder="اذكر تفاصيل الملابس التي كان يرتديها وقت الاختفاء (الألوان، النوع، العلامات المميزة...)"></textarea>
+                        placeholder="Ø§Ø°ÙƒØ± ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ù…Ù„Ø§Ø¨Ø³ Ø§Ù„ØªÙŠ ÙƒØ§Ù† ÙŠØ±ØªØ¯ÙŠÙ‡Ø§ ÙˆÙ‚Øª Ø§Ù„Ø§Ø®ØªÙØ§Ø¡ (Ø§Ù„Ø£Ù„ÙˆØ§Ù†ØŒ Ø§Ù„Ù†ÙˆØ¹ØŒ Ø§Ù„Ø¹Ù„Ø§Ù…Ø§Øª Ø§Ù„Ù…Ù…ÙŠØ²Ø©...)"></textarea>
             </div>
 
             <div class="md:col-span-2">
-              <label class="block text-sm font-bold text-slate-700 mb-2">تفاصيل إضافية</label>
+              <label class="block text-sm font-bold text-slate-700 mb-2">ØªÙØ§ØµÙŠÙ„ Ø¥Ø¶Ø§ÙÙŠØ©</label>
               <textarea id="extraDetails" rows="3"
                         class="form-input w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-white/80 focus:outline-none transition-all text-sm resize-none"
-                        placeholder="أي معلومات إضافية قد تساعد في البحث (اختياري)"></textarea>
+                        placeholder="Ø£ÙŠ Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø¥Ø¶Ø§ÙÙŠØ© Ù‚Ø¯ ØªØ³Ø§Ø¹Ø¯ ÙÙŠ Ø§Ù„Ø¨Ø­Ø« (Ø§Ø®ØªÙŠØ§Ø±ÙŠ)"></textarea>
             </div>
           </div>
         </div>
@@ -392,17 +365,17 @@
           <button type="button" onclick="prevStep()"
                   class="px-8 py-3.5 border border-slate-300 text-slate-700 font-bold rounded-xl hover:bg-slate-50 transition-all flex items-center gap-2">
             <span class="material-symbols-outlined text-lg">arrow_back</span>
-            السابق
+            Ø§Ù„Ø³Ø§Ø¨Ù‚
           </button>
           <button type="button" onclick="nextStep()"
                   class="px-8 py-3.5 bg-aman-blue text-white font-bold rounded-xl hover:bg-aman-dark-blue transition-all flex items-center gap-2 shadow-md">
-            التالي
+            Ø§Ù„ØªØ§Ù„ÙŠ
             <span class="material-symbols-outlined text-lg">arrow_forward</span>
           </button>
         </div>
       </div>
 
-      <!-- ===== STEP 3: الصور والوثائق ===== -->
+      <!-- ===== STEP 3: Ø§Ù„ØµÙˆØ± ÙˆØ§Ù„ÙˆØ«Ø§Ø¦Ù‚ ===== -->
       <div class="step-card" id="step3">
         <div class="glass-card rounded-2xl shadow-lg p-6 md:p-8">
           <div class="flex items-center gap-3 mb-8">
@@ -410,8 +383,8 @@
               <span class="material-symbols-outlined">image</span>
             </div>
             <div>
-              <h2 class="text-xl font-bold text-slate-900">الصور والوثائق</h2>
-              <p class="text-sm text-slate-500">أضف صورة للمفقود أو أي وثائق قد تساعد (اختياري)</p>
+              <h2 class="text-xl font-bold text-slate-900">Ø§Ù„ØµÙˆØ± ÙˆØ§Ù„ÙˆØ«Ø§Ø¦Ù‚</h2>
+              <p class="text-sm text-slate-500">Ø£Ø¶Ù ØµÙˆØ±Ø© Ù„Ù„Ù…ÙÙ‚ÙˆØ¯ Ø£Ùˆ Ø£ÙŠ ÙˆØ«Ø§Ø¦Ù‚ Ù‚Ø¯ ØªØ³Ø§Ø¹Ø¯ (Ø§Ø®ØªÙŠØ§Ø±ÙŠ)</p>
             </div>
           </div>
 
@@ -421,14 +394,14 @@
             <div class="bg-white border border-slate-200 rounded-xl p-4">
               <label class="block text-sm font-bold text-slate-700 mb-3 flex items-center gap-2">
                 <span class="material-symbols-outlined text-aman-blue">person</span>
-                صورة الشخص المفقود
-                <span class="text-xs text-slate-400 font-normal">(اختياري)</span>
+                ØµÙˆØ±Ø© Ø§Ù„Ø´Ø®Øµ Ø§Ù„Ù…ÙÙ‚ÙˆØ¯
+                <span class="text-xs text-slate-400 font-normal">(Ø§Ø®ØªÙŠØ§Ø±ÙŠ)</span>
               </label>
               <div class="upload-zone-sm" data-target="personPreview" data-input="personInput">
                 <input type="file" class="image-input hidden" accept="image/*" data-target="personPreview" />
                 <div class="upload-placeholder text-center py-6">
                   <span class="material-symbols-outlined text-3xl text-slate-300">add_photo_alternate</span>
-                  <p class="text-sm text-slate-500 mt-2">اختر صورة أو اسحبها</p>
+                  <p class="text-sm text-slate-500 mt-2">Ø§Ø®ØªØ± ØµÙˆØ±Ø© Ø£Ùˆ Ø§Ø³Ø­Ø¨Ù‡Ø§</p>
                 </div>
                 <div class="upload-preview hidden relative"></div>
               </div>
@@ -438,14 +411,14 @@
             <div class="bg-white border border-slate-200 rounded-xl p-4">
               <label class="block text-sm font-bold text-slate-700 mb-3 flex items-center gap-2">
                 <span class="material-symbols-outlined text-aman-blue">checkroom</span>
-                صورة الملابس التي كان يرتديها
-                <span class="text-xs text-slate-400 font-normal">(اختياري)</span>
+                ØµÙˆØ±Ø© Ø§Ù„Ù…Ù„Ø§Ø¨Ø³ Ø§Ù„ØªÙŠ ÙƒØ§Ù† ÙŠØ±ØªØ¯ÙŠÙ‡Ø§
+                <span class="text-xs text-slate-400 font-normal">(Ø§Ø®ØªÙŠØ§Ø±ÙŠ)</span>
               </label>
               <div class="upload-zone-sm" data-target="clothingPreview" data-input="clothingInput">
                 <input type="file" class="image-input hidden" accept="image/*" data-target="clothingPreview" />
                 <div class="upload-placeholder text-center py-6">
                   <span class="material-symbols-outlined text-3xl text-slate-300">checkroom</span>
-                  <p class="text-sm text-slate-500 mt-2">صورة القميص، البنطلون، الحذاء...</p>
+                  <p class="text-sm text-slate-500 mt-2">ØµÙˆØ±Ø© Ø§Ù„Ù‚Ù…ÙŠØµØŒ Ø§Ù„Ø¨Ù†Ø·Ù„ÙˆÙ†ØŒ Ø§Ù„Ø­Ø°Ø§Ø¡...</p>
                 </div>
                 <div class="upload-preview hidden relative"></div>
               </div>
@@ -455,14 +428,14 @@
             <div class="bg-white border border-slate-200 rounded-xl p-4">
               <label class="block text-sm font-bold text-slate-700 mb-3 flex items-center gap-2">
                 <span class="material-symbols-outlined text-aman-blue">tattoo</span>
-                علامات فارقة (وشم، وحمة، ندبة)
-                <span class="text-xs text-slate-400 font-normal">(اختياري)</span>
+                Ø¹Ù„Ø§Ù…Ø§Øª ÙØ§Ø±Ù‚Ø© (ÙˆØ´Ù…ØŒ ÙˆØ­Ù…Ø©ØŒ Ù†Ø¯Ø¨Ø©)
+                <span class="text-xs text-slate-400 font-normal">(Ø§Ø®ØªÙŠØ§Ø±ÙŠ)</span>
               </label>
               <div class="upload-zone-sm" data-target="featurePreview" data-input="featureInput">
                 <input type="file" class="image-input hidden" accept="image/*" data-target="featurePreview" />
                 <div class="upload-placeholder text-center py-6">
                   <span class="material-symbols-outlined text-3xl text-slate-300">tattoo</span>
-                  <p class="text-sm text-slate-500 mt-2">صورة الوشم، الوحمة، الندبة...</p>
+                  <p class="text-sm text-slate-500 mt-2">ØµÙˆØ±Ø© Ø§Ù„ÙˆØ´Ù…ØŒ Ø§Ù„ÙˆØ­Ù…Ø©ØŒ Ø§Ù„Ù†Ø¯Ø¨Ø©...</p>
                 </div>
                 <div class="upload-preview hidden relative"></div>
               </div>
@@ -472,8 +445,8 @@
           <div class="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-xl flex items-start gap-3">
             <span class="material-symbols-outlined text-amber-600">info</span>
             <div>
-              <p class="text-sm text-amber-800 font-bold mb-1">نصيحة: الصور تزيد فرص التعرف</p>
-              <p class="text-xs text-amber-700">كلما زادت الصور المرفوعة (شخص + ملابس + علامات فارقة)، زادت دقة نظام البحث البصري في إيجاد التطابقات مع بلاغات المشاهدات.</p>
+              <p class="text-sm text-amber-800 font-bold mb-1">Ù†ØµÙŠØ­Ø©: Ø§Ù„ØµÙˆØ± ØªØ²ÙŠØ¯ ÙØ±Øµ Ø§Ù„ØªØ¹Ø±Ù</p>
+              <p class="text-xs text-amber-700">ÙƒÙ„Ù…Ø§ Ø²Ø§Ø¯Øª Ø§Ù„ØµÙˆØ± Ø§Ù„Ù…Ø±ÙÙˆØ¹Ø© (Ø´Ø®Øµ + Ù…Ù„Ø§Ø¨Ø³ + Ø¹Ù„Ø§Ù…Ø§Øª ÙØ§Ø±Ù‚Ø©)ØŒ Ø²Ø§Ø¯Øª Ø¯Ù‚Ø© Ù†Ø¸Ø§Ù… Ø§Ù„Ø¨Ø­Ø« Ø§Ù„Ø¨ØµØ±ÙŠ ÙÙŠ Ø¥ÙŠØ¬Ø§Ø¯ Ø§Ù„ØªØ·Ø§Ø¨Ù‚Ø§Øª Ù…Ø¹ Ø¨Ù„Ø§ØºØ§Øª Ø§Ù„Ù…Ø´Ø§Ù‡Ø¯Ø§Øª.</p>
             </div>
           </div>
         </div>
@@ -482,17 +455,17 @@
           <button type="button" onclick="prevStep()"
                   class="px-8 py-3.5 border border-slate-300 text-slate-700 font-bold rounded-xl hover:bg-slate-50 transition-all flex items-center gap-2">
             <span class="material-symbols-outlined text-lg">arrow_back</span>
-            السابق
+            Ø§Ù„Ø³Ø§Ø¨Ù‚
           </button>
           <button type="button" onclick="nextStep()"
                   class="px-8 py-3.5 bg-aman-blue text-white font-bold rounded-xl hover:bg-aman-dark-blue transition-all flex items-center gap-2 shadow-md">
-            التالي
+            Ø§Ù„ØªØ§Ù„ÙŠ
             <span class="material-symbols-outlined text-lg">arrow_forward</span>
           </button>
         </div>
       </div>
 
-      <!-- ===== STEP 4: بيانات المبلغ ===== -->
+      <!-- ===== STEP 4: Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ù…Ø¨Ù„Øº ===== -->
       <div class="step-card" id="step4">
         <div class="glass-card rounded-2xl shadow-lg p-6 md:p-8">
           <div class="flex items-center gap-3 mb-8">
@@ -500,48 +473,48 @@
               <span class="material-symbols-outlined">badge</span>
             </div>
             <div>
-              <h2 class="text-xl font-bold text-slate-900">بيانات المبلغ</h2>
-              <p class="text-sm text-slate-500">معلومات الشخص المُقدم للبلاغ (سيتم التعامل معها بسرية)</p>
+              <h2 class="text-xl font-bold text-slate-900">Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ù…Ø¨Ù„Øº</h2>
+              <p class="text-sm text-slate-500">Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„Ø´Ø®Øµ Ø§Ù„Ù…ÙÙ‚Ø¯Ù… Ù„Ù„Ø¨Ù„Ø§Øº (Ø³ÙŠØªÙ… Ø§Ù„ØªØ¹Ø§Ù…Ù„ Ù…Ø¹Ù‡Ø§ Ø¨Ø³Ø±ÙŠØ©)</p>
             </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label class="block text-sm font-bold text-slate-700 mb-2">اسم المبلغ <span class="text-aman-red">*</span></label>
+              <label class="block text-sm font-bold text-slate-700 mb-2">Ø§Ø³Ù… Ø§Ù„Ù…Ø¨Ù„Øº <span class="text-aman-red">*</span></label>
               <input type="text" id="reporterName" required
                      class="form-input w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-white/80 focus:outline-none transition-all text-sm"
-                     placeholder="الاسم الكامل" />
+                     placeholder="Ø§Ù„Ø§Ø³Ù… Ø§Ù„ÙƒØ§Ù…Ù„" />
             </div>
 
             <div>
-              <label class="block text-sm font-bold text-slate-700 mb-2">رقم الهاتف <span class="text-aman-red">*</span></label>
+              <label class="block text-sm font-bold text-slate-700 mb-2">Ø±Ù‚Ù… Ø§Ù„Ù‡Ø§ØªÙ <span class="text-aman-red">*</span></label>
               <input type="tel" id="phone" required
                      class="form-input w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-white/80 focus:outline-none transition-all text-sm"
-                     placeholder="مثال: 01012345678" />
-              <p class="text-xs text-slate-400 mt-1">يجب أن يكون 10 أرقام على الأقل</p>
+                     placeholder="Ù…Ø«Ø§Ù„: 01012345678" />
+              <p class="text-xs text-slate-400 mt-1">ÙŠØ¬Ø¨ Ø£Ù† ÙŠÙƒÙˆÙ† 10 Ø£Ø±Ù‚Ø§Ù… Ø¹Ù„Ù‰ Ø§Ù„Ø£Ù‚Ù„</p>
             </div>
 
             <div>
-              <label class="block text-sm font-bold text-slate-700 mb-2">البريد الإلكتروني</label>
+              <label class="block text-sm font-bold text-slate-700 mb-2">Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ</label>
               <input type="email" id="email"
                      class="form-input w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-white/80 focus:outline-none transition-all text-sm"
                      placeholder="example@email.com" />
-              <p class="text-xs text-slate-400 mt-1">اختياري - للتواصل في حال وجود مستجدات</p>
+              <p class="text-xs text-slate-400 mt-1">Ø§Ø®ØªÙŠØ§Ø±ÙŠ - Ù„Ù„ØªÙˆØ§ØµÙ„ ÙÙŠ Ø­Ø§Ù„ ÙˆØ¬ÙˆØ¯ Ù…Ø³ØªØ¬Ø¯Ø§Øª</p>
             </div>
 
             <div>
-              <label class="block text-sm font-bold text-slate-700 mb-2">صلة القرابة</label>
+              <label class="block text-sm font-bold text-slate-700 mb-2">ØµÙ„Ø© Ø§Ù„Ù‚Ø±Ø§Ø¨Ø©</label>
               <select id="relation"
                       class="form-input w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-white/80 focus:outline-none transition-all text-sm appearance-none">
-                <option value="">-- اختر --</option>
-                <option value="أب">أب</option>
-                <option value="أم">أم</option>
-                <option value="أخ">أخ</option>
-                <option value="أخت">أخت</option>
-                <option value="قريب">قريب</option>
-                <option value="جار">جار</option>
-                <option value="صديق">صديق</option>
-                <option value="آخر">آخر</option>
+                <option value="">-- Ø§Ø®ØªØ± --</option>
+                <option value="Ø£Ø¨">Ø£Ø¨</option>
+                <option value="Ø£Ù…">Ø£Ù…</option>
+                <option value="Ø£Ø®">Ø£Ø®</option>
+                <option value="Ø£Ø®Øª">Ø£Ø®Øª</option>
+                <option value="Ù‚Ø±ÙŠØ¨">Ù‚Ø±ÙŠØ¨</option>
+                <option value="Ø¬Ø§Ø±">Ø¬Ø§Ø±</option>
+                <option value="ØµØ¯ÙŠÙ‚">ØµØ¯ÙŠÙ‚</option>
+                <option value="Ø¢Ø®Ø±">Ø¢Ø®Ø±</option>
               </select>
             </div>
           </div>
@@ -551,9 +524,9 @@
             <label class="flex items-start gap-3 cursor-pointer">
               <input type="checkbox" id="agreeTerms" required class="mt-1 accent-aman-blue" />
               <p class="text-sm text-slate-600 leading-relaxed">
-                أقر بأن جميع المعلومات المذكورة أعلاه صحيحة ودقيقة، وأتحمل المسؤولية القانونية الكاملة عن صحة هذا البلاغ. كما أوافق على
-                <a href="terms.html" class="text-aman-blue underline font-semibold">شروط الاستخدام</a> و
-                <a href="privacy.html" class="text-aman-blue underline font-semibold">سياسة الخصوصية</a>.
+                Ø£Ù‚Ø± Ø¨Ø£Ù† Ø¬Ù…ÙŠØ¹ Ø§Ù„Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„Ù…Ø°ÙƒÙˆØ±Ø© Ø£Ø¹Ù„Ø§Ù‡ ØµØ­ÙŠØ­Ø© ÙˆØ¯Ù‚ÙŠÙ‚Ø©ØŒ ÙˆØ£ØªØ­Ù…Ù„ Ø§Ù„Ù…Ø³Ø¤ÙˆÙ„ÙŠØ© Ø§Ù„Ù‚Ø§Ù†ÙˆÙ†ÙŠØ© Ø§Ù„ÙƒØ§Ù…Ù„Ø© Ø¹Ù† ØµØ­Ø© Ù‡Ø°Ø§ Ø§Ù„Ø¨Ù„Ø§Øº. ÙƒÙ…Ø§ Ø£ÙˆØ§ÙÙ‚ Ø¹Ù„Ù‰
+                <a href="/terms" class="text-aman-blue underline font-semibold">Ø´Ø±ÙˆØ· Ø§Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù…</a> Ùˆ
+                <a href="/privacy" class="text-aman-blue underline font-semibold">Ø³ÙŠØ§Ø³Ø© Ø§Ù„Ø®ØµÙˆØµÙŠØ©</a>.
               </p>
             </label>
           </div>
@@ -571,12 +544,12 @@
           <button type="button" onclick="prevStep()"
                   class="px-8 py-3.5 border border-slate-300 text-slate-700 font-bold rounded-xl hover:bg-slate-50 transition-all flex items-center gap-2">
             <span class="material-symbols-outlined text-lg">arrow_back</span>
-            السابق
+            Ø§Ù„Ø³Ø§Ø¨Ù‚
           </button>
           <button type="button" onclick="submitReport()"
                   class="px-8 py-3.5 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all flex items-center gap-2 shadow-md">
             <span class="material-symbols-outlined text-lg">send</span>
-            إرسال البلاغ
+            Ø¥Ø±Ø³Ø§Ù„ Ø§Ù„Ø¨Ù„Ø§Øº
           </button>
         </div>
       </div>
@@ -592,8 +565,8 @@
         <!-- Loading State -->
         <div id="loadingState">
           <div class="loading-spinner mx-auto mb-6"></div>
-          <h3 class="text-xl font-bold text-slate-900 mb-2">جاري إرسال البلاغ</h3>
-          <p class="text-sm text-slate-500">يرجى الانتظار قليلاً... يتم معالجة طلبك</p>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Ø¬Ø§Ø±ÙŠ Ø¥Ø±Ø³Ø§Ù„ Ø§Ù„Ø¨Ù„Ø§Øº</h3>
+          <p class="text-sm text-slate-500">ÙŠØ±Ø¬Ù‰ Ø§Ù„Ø§Ù†ØªØ¸Ø§Ø± Ù‚Ù„ÙŠÙ„Ø§Ù‹... ÙŠØªÙ… Ù…Ø¹Ø§Ù„Ø¬Ø© Ø·Ù„Ø¨Ùƒ</p>
         </div>
 
         <!-- Success State -->
@@ -601,17 +574,17 @@
           <div class="success-check mb-6">
             <span class="material-symbols-outlined">check</span>
           </div>
-          <h3 class="text-2xl font-extrabold text-slate-900 mb-2">تم إرسال البلاغ بنجاح!</h3>
-          <p class="text-sm text-slate-500 mb-2">شكراً لك. تم استلام بلاغك وسيتم مراجعته من قبل فريق أمان.</p>
-          <p class="text-sm text-slate-400 mb-8">سيتم إعلامكم بأي مستجدات عبر وسائل التواصل المسجلة.</p>
+          <h3 class="text-2xl font-extrabold text-slate-900 mb-2">ØªÙ… Ø¥Ø±Ø³Ø§Ù„ Ø§Ù„Ø¨Ù„Ø§Øº Ø¨Ù†Ø¬Ø§Ø­!</h3>
+          <p class="text-sm text-slate-500 mb-2">Ø´ÙƒØ±Ø§Ù‹ Ù„Ùƒ. ØªÙ… Ø§Ø³ØªÙ„Ø§Ù… Ø¨Ù„Ø§ØºÙƒ ÙˆØ³ÙŠØªÙ… Ù…Ø±Ø§Ø¬Ø¹ØªÙ‡ Ù…Ù† Ù‚Ø¨Ù„ ÙØ±ÙŠÙ‚ Ø£Ù…Ø§Ù†.</p>
+          <p class="text-sm text-slate-400 mb-8">Ø³ÙŠØªÙ… Ø¥Ø¹Ù„Ø§Ù…ÙƒÙ… Ø¨Ø£ÙŠ Ù…Ø³ØªØ¬Ø¯Ø§Øª Ø¹Ø¨Ø± ÙˆØ³Ø§Ø¦Ù„ Ø§Ù„ØªÙˆØ§ØµÙ„ Ø§Ù„Ù…Ø³Ø¬Ù„Ø©.</p>
           <div class="flex flex-col gap-3">
-            <a href="index.html"
+            <a href="/index"
                class="w-full py-3 bg-aman-blue text-white font-bold rounded-xl hover:bg-aman-dark-blue transition-all text-center">
-              العودة إلى الرئيسية
+              Ø§Ù„Ø¹ÙˆØ¯Ø© Ø¥Ù„Ù‰ Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©
             </a>
             <button onclick="location.reload()"
                     class="w-full py-3 border-2 border-aman-blue text-aman-blue font-bold rounded-xl hover:bg-blue-50 transition-all">
-              تقديم بلاغ آخر
+              ØªÙ‚Ø¯ÙŠÙ… Ø¨Ù„Ø§Øº Ø¢Ø®Ø±
             </button>
           </div>
         </div>
@@ -629,9 +602,9 @@
           <span class="material-symbols-outlined">lock</span>
         </div>
         <div>
-          <h4 class="text-base font-bold text-slate-900 mb-1">خصوصية البيانات</h4>
+          <h4 class="text-base font-bold text-slate-900 mb-1">Ø®ØµÙˆØµÙŠØ© Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª</h4>
           <p class="text-sm text-slate-500 leading-relaxed">
-            جميع البيانات التي تقدمها في هذا النموذج محمية وفقاً لسياسة الخصوصية ولن تُستخدم إلا لغرض المساعدة في البحث عن المفقود.
+            Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„ØªÙŠ ØªÙ‚Ø¯Ù…Ù‡Ø§ ÙÙŠ Ù‡Ø°Ø§ Ø§Ù„Ù†Ù…ÙˆØ°Ø¬ Ù…Ø­Ù…ÙŠØ© ÙˆÙÙ‚Ø§Ù‹ Ù„Ø³ÙŠØ§Ø³Ø© Ø§Ù„Ø®ØµÙˆØµÙŠØ© ÙˆÙ„Ù† ØªÙØ³ØªØ®Ø¯Ù… Ø¥Ù„Ø§ Ù„ØºØ±Ø¶ Ø§Ù„Ù…Ø³Ø§Ø¹Ø¯Ø© ÙÙŠ Ø§Ù„Ø¨Ø­Ø« Ø¹Ù† Ø§Ù„Ù…ÙÙ‚ÙˆØ¯.
           </p>
         </div>
       </div>
@@ -641,9 +614,9 @@
           <span class="material-symbols-outlined">support_agent</span>
         </div>
         <div>
-          <h4 class="text-base font-bold text-slate-900 mb-1">تحتاج مساعدة؟</h4>
+          <h4 class="text-base font-bold text-slate-900 mb-1">ØªØ­ØªØ§Ø¬ Ù…Ø³Ø§Ø¹Ø¯Ø©ØŸ</h4>
           <p class="text-sm text-slate-500 leading-relaxed">
-            إذا كنت تواجه صعوبة في تعبئة النموذج، يمكنك الاتصال بفريق الدعم على الرقم <span class="font-bold text-aman-blue">16000</span> أو زيارة صفحة <a href="contact.html" class="text-aman-blue underline">اتصل بنا</a>.
+            Ø¥Ø°Ø§ ÙƒÙ†Øª ØªÙˆØ§Ø¬Ù‡ ØµØ¹ÙˆØ¨Ø© ÙÙŠ ØªØ¹Ø¨Ø¦Ø© Ø§Ù„Ù†Ù…ÙˆØ°Ø¬ØŒ ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ù„Ø§ØªØµØ§Ù„ Ø¨ÙØ±ÙŠÙ‚ Ø§Ù„Ø¯Ø¹Ù… Ø¹Ù„Ù‰ Ø§Ù„Ø±Ù‚Ù… <span class="font-bold text-aman-blue">16000</span> Ø£Ùˆ Ø²ÙŠØ§Ø±Ø© ØµÙØ­Ø© <a href="/contact" class="text-aman-blue underline">Ø§ØªØµÙ„ Ø¨Ù†Ø§</a>.
           </p>
         </div>
       </div>
@@ -664,10 +637,10 @@
           <div class="flex items-center gap-2 mb-6">
             <img alt="Aman Logo" class="h-10 w-auto brightness-0 invert"
                  src="https://lh3.googleusercontent.com/aida/AP1WRLtsAXYg1KpXLlTbNo5XPskZZWcMhTNS8Q_n8HtJ10BcoAD7GrZNEb6JxilmDa9_rHgMCbnHoShK4m3FLnvtLl1Ah-iklPabORDFndHZr4ARAmn8dAhPGk73Kq22Fj9hys9l1SQWSb11vBklIpdFdP2nWE20WcJhL8BKma7xAQXYx-eTUwg9ehj-jPuWOzMY4uPSG18iHRW497Qtcq0OgIoT6omS3w0rvQBklL7UR1XNtKoqfvqs3elxo0G9" />
-            <span class="text-2xl font-bold">أمان</span>
+            <span class="text-2xl font-bold">Ø£Ù…Ø§Ù†</span>
           </div>
           <p class="text-slate-400 text-sm leading-relaxed mb-6">
-            منصة مجتمعية غير ربحية تهدف إلى مساعدة العائلات في العثور على مفقوديهم من خلال التعاون والمصداقية.
+            Ù…Ù†ØµØ© Ù…Ø¬ØªÙ…Ø¹ÙŠØ© ØºÙŠØ± Ø±Ø¨Ø­ÙŠØ© ØªÙ‡Ø¯Ù Ø¥Ù„Ù‰ Ù…Ø³Ø§Ø¹Ø¯Ø© Ø§Ù„Ø¹Ø§Ø¦Ù„Ø§Øª ÙÙŠ Ø§Ù„Ø¹Ø«ÙˆØ± Ø¹Ù„Ù‰ Ù…ÙÙ‚ÙˆØ¯ÙŠÙ‡Ù… Ù…Ù† Ø®Ù„Ø§Ù„ Ø§Ù„ØªØ¹Ø§ÙˆÙ† ÙˆØ§Ù„Ù…ØµØ¯Ø§Ù‚ÙŠØ©.
           </p>
           <div class="flex gap-4">
             <a class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-aman-blue transition-colors" href="#">
@@ -685,47 +658,47 @@
 
         <!-- Quick Links -->
         <div>
-          <h5 class="text-lg font-bold mb-6">روابط سريعة</h5>
+          <h5 class="text-lg font-bold mb-6">Ø±ÙˆØ§Ø¨Ø· Ø³Ø±ÙŠØ¹Ø©</h5>
           <ul class="space-y-4 text-slate-400 text-sm">
-            <li><a class="hover:text-white transition-colors" href="index.html">الرئيسية</a></li>
-            <li><a class="hover:text-white transition-colors" href="missing.html">المفقودين</a></li>
-            <li><a class="hover:text-white transition-colors" href="reports.html">البلاغات والمشاهدات</a></li>
-            <li><a class="hover:text-white transition-colors" href="report-case.html">تقديم بلاغ</a></li>
-              <li><a class="hover:text-white transition-colors" href="report-sighting.html">الإبلاغ عن مشاهدة</a></li>
-            <li><a class="hover:text-white transition-colors" href="about.html">من نحن</a></li>
-            <li><a class="hover:text-white transition-colors" href="contact.html">اتصل بنا</a></li>
+            <li><a class="hover:text-white transition-colors" href="/index">Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©</a></li>
+            <li><a class="hover:text-white transition-colors" href="/missing">Ø§Ù„Ù…ÙÙ‚ÙˆØ¯ÙŠÙ†</a></li>
+            <li><a class="hover:text-white transition-colors" href="/reports">Ø§Ù„Ø¨Ù„Ø§ØºØ§Øª ÙˆØ§Ù„Ù…Ø´Ø§Ù‡Ø¯Ø§Øª</a></li>
+            <li><a class="hover:text-white transition-colors" href="/report-case">ØªÙ‚Ø¯ÙŠÙ… Ø¨Ù„Ø§Øº</a></li>
+              <li><a class="hover:text-white transition-colors" href="/report-sighting">Ø§Ù„Ø¥Ø¨Ù„Ø§Øº Ø¹Ù† Ù…Ø´Ø§Ù‡Ø¯Ø©</a></li>
+            <li><a class="hover:text-white transition-colors" href="/about">Ù…Ù† Ù†Ø­Ù†</a></li>
+            <li><a class="hover:text-white transition-colors" href="/contact">Ø§ØªØµÙ„ Ø¨Ù†Ø§</a></li>
           </ul>
         </div>
 
         <!-- Legal -->
         <div>
-          <h5 class="text-lg font-bold mb-6">معلومات قانونية</h5>
+          <h5 class="text-lg font-bold mb-6">Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ù‚Ø§Ù†ÙˆÙ†ÙŠØ©</h5>
           <ul class="space-y-4 text-slate-400 text-sm">
-            <li><a class="hover:text-white transition-colors" href="terms.html">شروط الاستخدام</a></li>
-            <li><a class="hover:text-white transition-colors" href="privacy.html">سياسة الخصوصية</a></li>
-            <li><a class="hover:text-white transition-colors" href="disclaimer.html">إخلاء المسؤولية</a></li>
-            <li><a class="hover:text-white transition-colors" href="faq.html">الأسئلة الشائعة</a></li>
+            <li><a class="hover:text-white transition-colors" href="/terms">Ø´Ø±ÙˆØ· Ø§Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù…</a></li>
+            <li><a class="hover:text-white transition-colors" href="/privacy">Ø³ÙŠØ§Ø³Ø© Ø§Ù„Ø®ØµÙˆØµÙŠØ©</a></li>
+            <li><a class="hover:text-white transition-colors" href="/disclaimer">Ø¥Ø®Ù„Ø§Ø¡ Ø§Ù„Ù…Ø³Ø¤ÙˆÙ„ÙŠØ©</a></li>
+            <li><a class="hover:text-white transition-colors" href="/faq">Ø§Ù„Ø£Ø³Ø¦Ù„Ø© Ø§Ù„Ø´Ø§Ø¦Ø¹Ø©</a></li>
           </ul>
         </div>
 
         <!-- Emergency Numbers -->
         <div>
-          <h5 class="text-lg font-bold mb-6">أرقام الطوارئ في مصر</h5>
+          <h5 class="text-lg font-bold mb-6">Ø£Ø±Ù‚Ø§Ù… Ø§Ù„Ø·ÙˆØ§Ø±Ø¦ ÙÙŠ Ù…ØµØ±</h5>
           <ul class="space-y-4 text-slate-400 text-sm">
             <li class="flex items-center justify-between">
-              <span>الشرطة</span>
+              <span>Ø§Ù„Ø´Ø±Ø·Ø©</span>
               <span class="font-bold text-white">122</span>
             </li>
             <li class="flex items-center justify-between">
-              <span>النجدة</span>
+              <span>Ø§Ù„Ù†Ø¬Ø¯Ø©</span>
               <span class="font-bold text-white">123</span>
             </li>
             <li class="flex items-center justify-between">
-              <span>الإسعاف</span>
+              <span>Ø§Ù„Ø¥Ø³Ø¹Ø§Ù</span>
               <span class="font-bold text-white">123</span>
             </li>
             <li class="flex items-center justify-between">
-              <span>خط نجدة الطفل</span>
+              <span>Ø®Ø· Ù†Ø¬Ø¯Ø© Ø§Ù„Ø·ÙÙ„</span>
               <span class="font-bold text-white">16000</span>
             </li>
           </ul>
@@ -733,7 +706,7 @@
 
       </div>
       <div class="pt-8 border-t border-slate-800 text-center text-slate-500 text-xs">
-        جميع الحقوق محفوظة &copy; 2026 &copy; دليل المفقودين
+        Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø­Ù‚ÙˆÙ‚ Ù…Ø­ÙÙˆØ¸Ø© &copy; 2026 &copy; Ø¯Ù„ÙŠÙ„ Ø§Ù„Ù…ÙÙ‚ÙˆØ¯ÙŠÙ†
       </div>
     </div>
   </footer>
@@ -794,7 +767,7 @@
           if (i < currentStep) {
             // Completed
             circle.classList.add('bg-green-500', 'text-white', 'shadow-sm');
-            circle.textContent = '✓';
+            circle.textContent = 'âœ“';
           } else if (i === currentStep) {
             // Active
             circle.classList.add('bg-aman-blue', 'text-white', 'shadow-md');
@@ -837,10 +810,10 @@
           const age = document.getElementById('age').value.trim();
           const gender = document.getElementById('gender').value;
 
-          if (!name) errors.push('الاسم الرباعي للمفقود مطلوب');
-          if (!age) errors.push('العمر التقريبي مطلوب');
-          else if (parseInt(age) < 1 || parseInt(age) > 120) errors.push('العمر يجب أن يكون بين 1 و 120');
-          if (!gender) errors.push('الجنس مطلوب');
+          if (!name) errors.push('Ø§Ù„Ø§Ø³Ù… Ø§Ù„Ø±Ø¨Ø§Ø¹ÙŠ Ù„Ù„Ù…ÙÙ‚ÙˆØ¯ Ù…Ø·Ù„ÙˆØ¨');
+          if (!age) errors.push('Ø§Ù„Ø¹Ù…Ø± Ø§Ù„ØªÙ‚Ø±ÙŠØ¨ÙŠ Ù…Ø·Ù„ÙˆØ¨');
+          else if (parseInt(age) < 1 || parseInt(age) > 120) errors.push('Ø§Ù„Ø¹Ù…Ø± ÙŠØ¬Ø¨ Ø£Ù† ÙŠÙƒÙˆÙ† Ø¨ÙŠÙ† 1 Ùˆ 120');
+          if (!gender) errors.push('Ø§Ù„Ø¬Ù†Ø³ Ù…Ø·Ù„ÙˆØ¨');
         }
 
         if (step === 2) {
@@ -848,9 +821,9 @@
           const city = document.getElementById('city').value;
           const clothing = document.getElementById('clothingDescription').value.trim();
 
-          if (!date) errors.push('تاريخ الاختفاء مطلوب');
-          if (!city) errors.push('المحافظة / المدينة مطلوبة');
-          if (!clothing) errors.push('وصف ملابس المفقود مطلوب');
+          if (!date) errors.push('ØªØ§Ø±ÙŠØ® Ø§Ù„Ø§Ø®ØªÙØ§Ø¡ Ù…Ø·Ù„ÙˆØ¨');
+          if (!city) errors.push('Ø§Ù„Ù…Ø­Ø§ÙØ¸Ø© / Ø§Ù„Ù…Ø¯ÙŠÙ†Ø© Ù…Ø·Ù„ÙˆØ¨Ø©');
+          if (!clothing) errors.push('ÙˆØµÙ Ù…Ù„Ø§Ø¨Ø³ Ø§Ù„Ù…ÙÙ‚ÙˆØ¯ Ù…Ø·Ù„ÙˆØ¨');
         }
 
         if (step === 3) {
@@ -862,11 +835,11 @@
           const phone = document.getElementById('phone').value.trim();
           const agree = document.getElementById('agreeTerms').checked;
 
-          if (!name) errors.push('اسم المبلغ مطلوب');
-          if (!phone) errors.push('رقم الهاتف مطلوب');
-          else if (phone.replace(/\s/g, '').length < 10) errors.push('رقم الهاتف يجب أن يحتوي على 10 أرقام على الأقل');
-          else if (!/^\d{10,}$/.test(phone.replace(/\s/g, ''))) errors.push('رقم الهاتف يجب أن يحتوي على أرقام فقط');
-          if (!agree) errors.push('يجب الموافقة على شروط الاستخدام وسياسة الخصوصية');
+          if (!name) errors.push('Ø§Ø³Ù… Ø§Ù„Ù…Ø¨Ù„Øº Ù…Ø·Ù„ÙˆØ¨');
+          if (!phone) errors.push('Ø±Ù‚Ù… Ø§Ù„Ù‡Ø§ØªÙ Ù…Ø·Ù„ÙˆØ¨');
+          else if (phone.replace(/\s/g, '').length < 10) errors.push('Ø±Ù‚Ù… Ø§Ù„Ù‡Ø§ØªÙ ÙŠØ¬Ø¨ Ø£Ù† ÙŠØ­ØªÙˆÙŠ Ø¹Ù„Ù‰ 10 Ø£Ø±Ù‚Ø§Ù… Ø¹Ù„Ù‰ Ø§Ù„Ø£Ù‚Ù„');
+          else if (!/^\d{10,}$/.test(phone.replace(/\s/g, ''))) errors.push('Ø±Ù‚Ù… Ø§Ù„Ù‡Ø§ØªÙ ÙŠØ¬Ø¨ Ø£Ù† ÙŠØ­ØªÙˆÙŠ Ø¹Ù„Ù‰ Ø£Ø±Ù‚Ø§Ù… ÙÙ‚Ø·');
+          if (!agree) errors.push('ÙŠØ¬Ø¨ Ø§Ù„Ù…ÙˆØ§ÙÙ‚Ø© Ø¹Ù„Ù‰ Ø´Ø±ÙˆØ· Ø§Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù… ÙˆØ³ÙŠØ§Ø³Ø© Ø§Ù„Ø®ØµÙˆØµÙŠØ©');
         }
 
         return errors;
@@ -905,7 +878,7 @@
           <div class="flex items-start gap-3">
             <span class="material-symbols-outlined text-red-500 text-2xl">warning</span>
             <div class="flex-1">
-              <p class="font-bold text-slate-900 mb-1">يرجى تصحيح الأخطاء التالية:</p>
+              <p class="font-bold text-slate-900 mb-1">ÙŠØ±Ø¬Ù‰ ØªØµØ­ÙŠØ­ Ø§Ù„Ø£Ø®Ø·Ø§Ø¡ Ø§Ù„ØªØ§Ù„ÙŠØ©:</p>
               <ul class="list-disc list-inside text-sm text-red-600 space-y-0.5">
                 ${errors.map(e => '<li>' + e + '</li>').join('')}
               </ul>
@@ -1052,7 +1025,7 @@
         doSave().then(function() {
           loadingState.classList.add('hidden');
           successState.classList.remove('hidden');
-          AmanToast.success('تم تسجيل البلاغ بنجاح');
+          AmanToast.success('ØªÙ… ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¨Ù„Ø§Øº Ø¨Ù†Ø¬Ø§Ø­');
         });
       };
 
@@ -1073,5 +1046,5 @@
   <script src="assets/js/data.js"></script>
   <script src="assets/js/api.js"></script>
 <script src="assets/js/backtotop.js"></script>
-</body>
+<script src="assets/js/navbar.js"></script></body>
 </html>
