@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>تفاصيل الحالة - أمان</title>
+
+  <!-- Tailwind CSS v3 CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Google Fonts: Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Material Symbols CDN -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- Leaflet (OpenStreetMap) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            cairo: ['Cairo', 'sans-serif']
+          },
+          colors: {
+            // Standard aman colors
+            'aman-blue': '#1e40af',
+            'aman-dark-blue': '#1e3a8a',
+            'aman-red': '#dc2626',
+            'aman-gray': '#64748b',
+
+            // Material 3 palette
+            'primary': '#1e40af',
+            'on-primary': '#ffffff',
+            'primary-container': '#1e40af',
+            'on-primary-container': '#1e3a8a',
+            'secondary-container': '#e0e7ff',
+            'on-secondary-container': '#1e3a8a',
+            'error-container': '#fee2e2',
+            'on-error-container': '#991b1b',
+            'surface-container': '#f1f5f9',
+            'surface-container-low': '#f8fafc',
+            'surface-container-lowest': '#ffffff',
+            'surface-container-high': '#e2e8f0',
+            'on-surface': '#1e293b',
+            'on-surface-variant': '#64748b',
+            'outline-variant': '#e2e8f0'
+          },
+          fontSize: {
+            'headline-lg': ['2rem', { lineHeight: '2.5rem', fontWeight: '800' }]
+          },
+          maxWidth: {
+            'container-max': '1280px'
+          },
+          spacing: {
+            'margin-desktop': '1rem'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-cairo text-slate-800">
+
+  <!-- ============================================
+       HEADER (exact from index.html lines 31-61)
+       ============================================ -->
+  <header class="sticky top-0 z-50 bg-white shadow-sm border-b border-slate-100">
+    <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Right Side: Logo -->
+      <div class="flex items-center gap-2">
+        <img alt="Aman Logo" class="h-12 w-auto object-contain"
+             src="https://lh3.googleusercontent.com/aida/AP1WRLtsAXYg1KpXLlTbNo5XPskZZWcMhTNS8Q_n8HtJ10BcoAD7GrZNEb6JxilmDa9_rHgMCbnHoShK4m3FLnvtLl1Ah-iklPabORDFndHZr4ARAmn8dAhPGk73Kq22Fj9hys9l1SQWSb11vBklIpdFdP2nWE20WcJhL8BKma7xAQXYx-eTUwg9ehj-jPuWOzMY4uPSG18iHRW497Qtcq0OgIoT6omS3w0rvQBklL7UR1XNtKoqfvqs3elxo0G9" />
+        <div class="flex flex-col">
+          <span class="text-xl font-bold text-aman-blue leading-none">أمان</span>
+          <span class="text-[10px] text-aman-gray">معاً لنعيد الأمل</span>
+        </div>
+      </div>
+
+      <!-- Center: Navigation Links -->
+      <ul class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <li><a class="hover:text-aman-blue transition-colors" href="index.html">الرئيسية</a></li>
+        <li><a class="text-aman-blue border-b-2 border-aman-blue pb-1" href="missing.html">المفقودين</a></li>
+        <li><a class="hover:text-aman-blue transition-colors" href="reports.html">البلاغات والمشاهدات</a></li>
+        <li><a class="hover:text-aman-blue transition-colors" href="about.html">من نحن</a></li>
+        <li><a class="hover:text-aman-blue transition-colors" href="contact.html">اتصل بنا</a></li>
+      </ul>
+
+      <!-- Left Side: Auth Buttons -->
+      <div class="flex items-center gap-3">
+        <button id="signupBtn" class="px-5 py-2 text-sm font-bold text-white bg-aman-blue rounded-md hover:bg-aman-dark-blue transition-all">إنشاء حساب</button>
+        <button id="loginBtn" class="px-5 py-2 text-sm font-bold text-aman-blue border border-aman-blue rounded-md hover:bg-blue-50 transition-all">تسجيل الدخول</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============================================
+       MAIN CONTENT (New Material 3 design)
+       ============================================ -->
+  <main class="max-w-container-max mx-auto px-margin-desktop py-12">
+    <!-- Breadcrumb / Title -->
+    <div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <div>
+        <a class="flex items-center text-primary gap-2 hover:underline mb-2 group" href="missing.html">
+          <span class="material-symbols-outlined transition-transform group-hover:-translate-x-1">arrow_forward</span>
+          <span class="font-medium">العودة إلى القائمة</span>
+        </a>
+        <h1 class="font-headline-lg text-headline-lg text-on-surface">تفاصيل الحالة</h1>
+      </div>
+      <div id="statusBadge" class="flex items-center gap-3 bg-error-container text-on-error-container px-4 py-2 rounded-full font-bold text-sm">
+        <span class="material-symbols-outlined text-sm">priority_high</span>
+        حالة مفقودة - استجابة عاجلة
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      <!-- Profile Column -->
+      <!-- Lightbox Overlay -->
+      <div id="lightboxOverlay" class="fixed inset-0 z-[100] bg-black/90 hidden items-center justify-center cursor-pointer">
+        <button class="absolute top-4 left-4 text-white p-2 hover:bg-white/10 rounded-full transition-colors z-10">
+          <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+        <img id="lightboxImage" class="max-w-[90vw] max-h-[90vh] object-contain rounded-2xl shadow-2xl" src="" alt="تكبير الصورة" />
+      </div>
+
+      <div class="lg:col-span-5 space-y-8">
+        <div class="bg-white border border-outline-variant rounded-2xl overflow-hidden shadow-sm">
+          <img id="profileImage" class="w-full h-[550px] object-cover cursor-pointer hover:opacity-95 transition-opacity" alt="صورة المفقود" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2YP29_JM7AjedeyCDLs2RqnkAdI6UI2o9Ax-N4l7g3aPQ9eyocTM5kvdtNMcWpIpINf3Apg15LfuFxaoH_b6ToU4G1abcl3IuDSmIkGTIRME6ICo2Lc-yYhnsJ1cpmFz3MWMKwIBoY3BaKYSz73aJsWkRtRhEwz24wnIoaZodyPpinIJBC8yst0ksp1wtXg8oR7YA_e8wvIYlMQ16bHFg9UsXj-QnL86qAngdbKsCXsbzQUsHKiY5IEaQw66f-yt2we3WnyoqijVj">
+          <div class="p-8 bg-surface-container-lowest">
+            <div class="flex justify-between items-center">
+              <div>
+                <h2 id="personName" class="text-3xl font-bold text-primary mb-1">سارة محمد علي</h2>
+                <p class="text-on-surface-variant flex items-center gap-1">
+                  <span class="material-symbols-outlined text-sm">calendar_today</span>
+                  <span id="personSince">فقدت في 12 مايو 2024</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Share -->
+        <div class="bg-secondary-container p-8 rounded-2xl border border-outline-variant">
+          <h3 class="text-xl font-bold text-on-secondary-container mb-3 flex items-center gap-2">
+            <span class="material-symbols-outlined">campaign</span>
+            ساعدنا في النشر
+          </h3>
+          <p class="text-on-secondary-container opacity-80 mb-6 leading-relaxed">
+            مشاركتك للحالة قد تكون السبب في عودتها لأهلها. كل مشاركة تصنع فارقاً في عملية البحث.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a id="shareFacebook" target="_blank" class="flex-1 py-3.5 bg-white text-primary rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-surface-container-low transition-colors shadow-sm" href="#">
+              <span class="material-symbols-outlined">share</span> فيسبوك
+            </a>
+            <a id="shareWhatsapp" target="_blank" class="flex-1 py-3.5 bg-white text-primary rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-surface-container-low transition-colors shadow-sm" href="#">
+              <span class="material-symbols-outlined">chat</span> واتساب
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Details Column -->
+      <div class="lg:col-span-7 space-y-8">
+        <!-- Bento Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant flex items-center gap-5">
+            <div class="w-14 h-14 rounded-xl bg-primary-container flex items-center justify-center text-white shrink-0">
+              <span class="material-symbols-outlined text-3xl">face</span>
+            </div>
+            <div>
+              <p class="text-on-surface-variant font-medium text-sm">العمر الحالي</p>
+              <p id="personAge" class="text-2xl font-bold text-on-surface">20 سنة</p>
+            </div>
+          </div>
+          <div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant flex items-center gap-5">
+            <div class="w-14 h-14 rounded-xl bg-primary-container flex items-center justify-center text-white shrink-0">
+              <span class="material-symbols-outlined text-3xl">pin_drop</span>
+            </div>
+            <div>
+              <p class="text-on-surface-variant font-medium text-sm">آخر مكان تواجد</p>
+              <p id="personLocation" class="text-2xl font-bold text-on-surface">الدقي، الجيزة</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Descriptive Details -->
+        <div class="bg-white p-8 rounded-2xl border border-outline-variant shadow-sm">
+          <h3 class="text-xl font-bold text-primary mb-8 flex items-center gap-2 border-b border-outline-variant pb-4">
+            <span class="material-symbols-outlined">fact_check</span>
+            الأوصاف التفصيلية
+          </h3>
+          <div class="grid gap-8">
+            <div class="flex gap-4">
+              <div class="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0"></div>
+              <div>
+                <h4 class="font-bold text-on-surface mb-1">الملابس وقت الاختفاء:</h4>
+                <p id="personDescription" class="text-on-surface-variant leading-relaxed">كانت ترتدي عباءة سوداء مع حجاب أبيض وحقيبة يد بنية اللون وحذاء رياضي أبيض.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0"></div>
+              <div>
+                <h4 class="font-bold text-on-surface mb-1">علامات مميزة:</h4>
+                <p id="personFeatures" class="text-on-surface-variant leading-relaxed">شامة صغيرة أسفل العين اليمنى، وترتدي نظارة طبية بإطار أسود نحيف.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0"></div>
+              <div>
+                <h4 class="font-bold text-on-surface mb-1">الحالة الصحية:</h4>
+                <p id="personHealth" class="text-on-surface-variant leading-relaxed">جيدة جداً، لا تعاني من أي أمراض مزمنة أو اضطرابات نفسية معروفة.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map View -->
+        <div class="bg-white rounded-2xl border border-outline-variant overflow-hidden shadow-sm">
+          <div class="p-6 border-b border-outline-variant bg-surface-container-lowest">
+            <h3 class="font-bold text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined">map</span>
+              آخر إحداثيات معروفة للموقع
+            </h3>
+          </div>
+          <div id="mapContainer" class="h-72 rounded-b-2xl relative cursor-pointer"></div>
+          <div class="p-4 bg-surface-container-lowest border-t border-outline-variant flex items-center justify-between">
+            <div class="flex items-center gap-2 text-sm text-on-surface-variant">
+              <span class="material-symbols-outlined text-base">pin_drop</span>
+              <span id="mapCoords">30.0371° N, 31.2104° E</span>
+            </div>
+            <a id="gmapLink" href="#" target="_blank" class="text-primary font-bold text-sm flex items-center gap-1 hover:underline">
+              افتح في Google Maps
+              <span class="material-symbols-outlined text-base">open_in_new</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Linked Sightings -->
+        <div id="linkedSightings" class="hidden bg-amber-50 border border-amber-200 rounded-2xl p-6">
+          <h3 class="text-lg font-bold text-amber-800 mb-4 flex items-center gap-2">
+            <span class="material-symbols-outlined">visibility</span>
+            بلاغات مشاهدة مرتبطة
+          </h3>
+          <div id="sightingsList" class="space-y-3"></div>
+        </div>
+
+        <!-- Contact Card -->
+        <div id="contactCard" class="hidden bg-secondary-container p-6 rounded-2xl border border-outline-variant flex items-center gap-4">
+          <span class="material-symbols-outlined text-3xl text-on-secondary-container">call</span>
+          <div>
+            <p class="text-sm text-on-secondary-container opacity-70">رقم التواصل للإبلاغ</p>
+            <p id="personContact" class="text-xl font-bold text-on-secondary-container" dir="ltr">01234567890</p>
+          </div>
+        </div>
+
+        <!-- Report Form -->
+        <div class="bg-primary text-on-primary p-10 rounded-2xl shadow-xl relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-white/20"></div>
+          <div class="flex items-start gap-6 mb-10">
+            <div class="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 shrink-0">
+              <span class="material-symbols-outlined text-4xl">contact_support</span>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold mb-2">هل لديك أي معلومات مفيدة؟</h3>
+              <p class="opacity-80 leading-relaxed">تواصلك الصادق قد ينهي معاناة أسرة كاملة. نضمن لك السرية التامة وحماية بياناتك.</p>
+            </div>
+          </div>
+          <form id="reportForm" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div class="space-y-2">
+                <label class="text-sm font-bold opacity-90 mr-1">الاسم الكامل (اختياري)</label>
+                <input id="infoName" class="w-full bg-white/10 border border-white/20 rounded-xl py-3.5 px-5 text-white placeholder-white/40 focus:bg-white/20 focus:ring-2 focus:ring-white/30 transition-all outline-none" placeholder="مثال: أحمد محمود" type="text">
+              </div>
+              <div class="space-y-2">
+                <label class="text-sm font-bold opacity-90 mr-1">رقم الهاتف للتواصل</label>
+                <input id="infoPhone" required class="w-full bg-white/10 border border-white/20 rounded-xl py-3.5 px-5 text-white placeholder-white/40 focus:bg-white/20 focus:ring-2 focus:ring-white/30 transition-all outline-none" placeholder="01XXXXXXXXX" type="tel">
+              </div>
+            </div>
+            <div class="space-y-2">
+              <label class="text-sm font-bold opacity-90 mr-1">تفاصيل المعلومات</label>
+              <textarea id="infoText" required class="w-full bg-white/10 border border-white/20 rounded-xl py-4 px-5 text-white placeholder-white/40 focus:bg-white/20 focus:ring-2 focus:ring-white/30 transition-all outline-none" placeholder="اكتب ما رأيته أو أي معلومات قد تساعدنا (المكان، الزمان، الحالة)..." rows="4"></textarea>
+            </div>
+            <div class="flex flex-col sm:flex-row items-center gap-4 pt-2">
+              <button class="w-full sm:flex-1 py-4 bg-white text-primary font-bold rounded-xl hover:bg-surface-container-low transition-all active:scale-[0.98] shadow-lg shadow-black/20" type="submit" id="submitBtn">
+                <span id="submitText">إرسال المعلومات الآن</span>
+                <span id="submitSpinner" class="hidden inline-flex items-center gap-2">
+                  <span class="w-4 h-4 border-2 border-primary border-t-transparent rounded-full animate-spin"></span>
+                  جاري الإرسال...
+                </span>
+              </button>
+              <button class="w-full sm:w-auto flex items-center justify-center gap-3 border border-white/30 px-8 py-4 rounded-xl hover:bg-white/10 transition-colors font-bold" type="button">
+                <span class="material-symbols-outlined">upload_file</span>
+                إرفاق صورة
+              </button>
+            </div>
+            <div id="formSuccess" class="hidden bg-white/20 backdrop-blur rounded-xl p-6 text-center">
+              <span class="material-symbols-outlined text-5xl mb-2">check_circle</span>
+              <p class="text-xl font-bold">تم استلام معلوماتك بنجاح</p>
+              <p class="opacity-80">سنقوم بمراجعتها والتواصل معك إن لزم الأمر</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Impact Section -->
+  <section class="bg-surface-container py-20 mt-12">
+    <div class="max-w-container-max mx-auto px-margin-desktop">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-primary mb-4">مجتمع أمان في أرقام</h2>
+        <p class="text-on-surface-variant max-w-2xl mx-auto">نعمل معاً يداً بيد لإعادة الروابط الأسرية المفقودة من خلال التكنولوجيا والتعاون المجتمعي.</p>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-8 bg-white rounded-2xl border border-outline-variant text-center shadow-sm hover:shadow-md transition-shadow">
+          <p class="text-4xl font-black text-primary mb-2">1,250+</p>
+          <p class="text-on-surface-variant font-bold">حالة عادت لأهلها</p>
+        </div>
+        <div class="p-8 bg-white rounded-2xl border border-outline-variant text-center shadow-sm hover:shadow-md transition-shadow">
+          <p class="text-4xl font-black text-primary mb-2">342</p>
+          <p class="text-on-surface-variant font-bold">بلاغ نشط حالياً</p>
+        </div>
+        <div class="p-8 bg-white rounded-2xl border border-outline-variant text-center shadow-sm hover:shadow-md transition-shadow">
+          <p class="text-4xl font-black text-primary mb-2">2,980+</p>
+          <p class="text-on-surface-variant font-bold">بلاغ تم التحقق منه</p>
+        </div>
+        <div class="p-8 bg-white rounded-2xl border border-outline-variant text-center shadow-sm hover:shadow-md transition-shadow">
+          <p class="text-4xl font-black text-primary mb-2">45k</p>
+          <p class="text-on-surface-variant font-bold">متطوع مسجل</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER (exact from index.html lines 417-496)
+       ============================================ -->
+  <footer class="bg-slate-900 text-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+
+        <!-- Brand -->
+        <div class="col-span-1">
+          <div class="flex items-center gap-2 mb-6">
+            <img alt="Aman Logo" class="h-10 w-auto brightness-0 invert"
+                 src="https://lh3.googleusercontent.com/aida/AP1WRLtsAXYg1KpXLlTbNo5XPskZZWcMhTNS8Q_n8HtJ10BcoAD7GrZNEb6JxilmDa9_rHgMCbnHoShK4m3FLnvtLl1Ah-iklPabORDFndHZr4ARAmn8dAhPGk73Kq22Fj9hys9l1SQWSb11vBklIpdFdP2nWE20WcJhL8BKma7xAQXYx-eTUwg9ehj-jPuWOzMY4uPSG18iHRW497Qtcq0OgIoT6omS3w0rvQBklL7UR1XNtKoqfvqs3elxo0G9" />
+            <span class="text-2xl font-bold">أمان</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            منصة مجتمعية غير ربحية تهدف إلى مساعدة العائلات في العثور على مفقوديهم من خلال التعاون والمصداقية.
+          </p>
+          <div class="flex gap-4">
+            <a class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-aman-blue transition-colors" href="#">
+              <svg fill="currentColor" height="20" viewBox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+              </svg>
+            </a>
+            <a class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-aman-blue transition-colors" href="#">
+              <svg fill="currentColor" height="20" viewBox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h5 class="text-lg font-bold mb-6">روابط سريعة</h5>
+          <ul class="space-y-4 text-slate-400 text-sm">
+            <li><a class="hover:text-white transition-colors" href="index.html">الرئيسية</a></li>
+            <li><a class="hover:text-white transition-colors" href="missing.html">المفقودين</a></li>
+            <li><a class="hover:text-white transition-colors" href="reports.html">البلاغات والمشاهدات</a></li>
+            <li><a class="hover:text-white transition-colors" href="report-case.html">تقديم بلاغ</a></li>
+              <li><a class="hover:text-white transition-colors" href="report-sighting.html">الإبلاغ عن مشاهدة</a></li>
+            <li><a class="hover:text-white transition-colors" href="about.html">من نحن</a></li>
+            <li><a class="hover:text-white transition-colors" href="contact.html">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div>
+          <h5 class="text-lg font-bold mb-6">معلومات قانونية</h5>
+          <ul class="space-y-4 text-slate-400 text-sm">
+            <li><a class="hover:text-white transition-colors" href="terms.html">شروط الاستخدام</a></li>
+            <li><a class="hover:text-white transition-colors" href="privacy.html">سياسة الخصوصية</a></li>
+            <li><a class="hover:text-white transition-colors" href="disclaimer.html">إخلاء المسؤولية</a></li>
+            <li><a class="hover:text-white transition-colors" href="faq.html">الأسئلة الشائعة</a></li>
+          </ul>
+        </div>
+
+        <!-- Emergency Numbers -->
+        <div>
+          <h5 class="text-lg font-bold mb-6">أرقام الطوارئ في مصر</h5>
+          <ul class="space-y-4 text-slate-400 text-sm">
+            <li class="flex items-center justify-between">
+              <span>الشرطة</span>
+              <span class="font-bold text-white">122</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>النجدة</span>
+              <span class="font-bold text-white">123</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>الإسعاف</span>
+              <span class="font-bold text-white">123</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>خط نجدة الطفل</span>
+              <span class="font-bold text-white">16000</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="pt-8 border-t border-slate-800 text-center text-slate-500 text-xs">
+        جميع الحقوق محفوظة © 2026 © دليل المفقودين
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       JAVASCRIPT
+       ============================================ -->
+   <script src="assets/js/data.js"></script>
+<script src="assets/js/toast.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/notifications.js"></script>
+<script src="assets/js/matching.js"></script>
+<script>
+    (function () {
+      'use strict';
+
+      // ---------- Read URL params ----------
+      function getParams() {
+        var p = new URLSearchParams(window.location.search);
+        return {
+          name: p.get('name') || 'سارة محمد علي',
+          age: p.get('age') || '20 سنة',
+          gender: p.get('gender') || 'أنثى',
+          location: p.get('location') || 'الدقي، الجيزة',
+          since: p.get('since') || 'فقدت في 12 مايو 2024',
+          description: p.get('description') || 'كانت ترتدي عباءة سوداء مع حجاب أبيض وحقيبة يد بنية اللون وحذاء رياضي أبيض.',
+          features: p.get('features') || 'شامة صغيرة أسفل العين اليمنى، وترتدي نظارة طبية بإطار أسود نحيف.',
+          health: p.get('health') || 'جيدة جداً، لا تعاني من أي أمراض مزمنة أو اضطرابات نفسية معروفة.',
+          status: p.get('status') || 'missing',
+          contact: p.get('contact') || '',
+          image: p.get('image') || '',
+          coords: p.get('coords') || '30.0371° N, 31.2104° E'
+        };
+      }
+
+      var params = getParams();
+
+      // ---------- Lightbox ----------
+      window.openLightbox = function(src) {
+        if (!src) return;
+        document.getElementById('lightboxImage').src = src;
+        document.getElementById('lightboxOverlay').classList.remove('hidden');
+        document.getElementById('lightboxOverlay').classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      };
+      window.closeLightbox = function() {
+        document.getElementById('lightboxOverlay').classList.add('hidden');
+        document.getElementById('lightboxOverlay').classList.remove('flex');
+        document.body.style.overflow = '';
+      };
+      document.getElementById('lightboxOverlay').addEventListener('click', window.closeLightbox);
+      document.querySelector('#lightboxOverlay button').addEventListener('click', function(e) { e.stopPropagation(); window.closeLightbox(); });
+
+      // ---------- Populate DOM ----------
+      if (params.image) {
+        document.getElementById('profileImage').src = params.image;
+      }
+      document.getElementById('personName').textContent = params.name;
+      document.getElementById('personSince').textContent = params.since;
+      document.getElementById('personAge').textContent = params.age;
+      document.getElementById('personLocation').textContent = params.location;
+      document.getElementById('mapCoords').textContent = params.coords;
+      document.getElementById('personDescription').textContent = params.description;
+      document.getElementById('personFeatures').textContent = params.features;
+      document.getElementById('personHealth').textContent = params.health;
+
+      // ---------- Status badge ----------
+      var badge = document.getElementById('statusBadge');
+      if (params.status === 'found') {
+        badge.innerHTML = '<span class="material-symbols-outlined text-sm">check_circle</span> تم العثور عليه - الحمد لله';
+        badge.className = 'flex items-center gap-3 bg-green-100 text-green-800 px-4 py-2 rounded-full font-bold text-sm';
+      } else {
+        badge.innerHTML = '<span class="material-symbols-outlined text-sm">priority_high</span> حالة مفقودة - استجابة عاجلة';
+        badge.className = 'flex items-center gap-3 bg-error-container text-on-error-container px-4 py-2 rounded-full font-bold text-sm';
+      }
+
+      // ---------- Contact ----------
+      var contactCard = document.getElementById('contactCard');
+      var contactEl = document.getElementById('personContact');
+      if (params.contact) {
+        contactCard.classList.remove('hidden');
+        contactEl.textContent = params.contact;
+      }
+
+      // ---------- Page title ----------
+      document.title = 'تفاصيل الحالة: ' + params.name + ' - أمان';
+
+      // ---------- Share buttons ----------
+      var shareUrl = encodeURIComponent(window.location.href);
+      var shareText = encodeURIComponent('حالة مفقود: ' + params.name + ' - أمان');
+      document.getElementById('shareFacebook').href = 'https://www.facebook.com/sharer/sharer.php?u=' + shareUrl + '&quote=' + shareText;
+      document.getElementById('shareWhatsapp').href = 'https://wa.me/?text=' + shareText + '%20' + shareUrl;
+
+      // ---------- Interactive Map (Leaflet + Google Maps) ----------
+      var lat = 30.0371, lng = 31.2104;
+      var coordsMatch = params.coords.match(/([-+]?\d+\.?\d*)/g);
+      if (coordsMatch && coordsMatch.length >= 2) {
+        lat = parseFloat(coordsMatch[0]);
+        lng = parseFloat(coordsMatch[1]);
+      }
+      var gmapUrl = 'https://www.google.com/maps/dir/?api=1&destination=' + lat + ',' + lng;
+      document.getElementById('gmapLink').href = gmapUrl;
+
+      var map = L.map('mapContainer', { zoomControl: false }).setView([lat, lng], 15);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+      var marker = L.marker([lat, lng]).addTo(map);
+
+      map.on('click', function () { window.open(gmapUrl, '_blank'); });
+      marker.on('click', function () { window.open(gmapUrl, '_blank'); });
+
+      // ---------- Auth buttons ----------
+      document.getElementById('signupBtn').addEventListener('click', function () {
+        window.location.href = 'signup.html';
+      });
+      document.getElementById('loginBtn').addEventListener('click', function () {
+        window.location.href = 'login.html';
+      });
+
+      // ---------- Linked Sightings (from API) ----------
+      (async function() {
+        try {
+          var sightings = await AmanAPI.getSightingsForMissing(params.name);
+          if (sightings && sightings.length > 0) {
+            var linkedSection = document.getElementById('linkedSightings');
+            var sightingsList = document.getElementById('sightingsList');
+            if (linkedSection && sightingsList) {
+              linkedSection.classList.remove('hidden');
+              sightings.forEach(function(s) {
+                var item = document.createElement('div');
+                item.className = 'bg-white rounded-xl p-4 border border-amber-100 flex items-start gap-3';
+                item.innerHTML =
+                  '<div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 shrink-0">' +
+                    '<span class="material-symbols-outlined text-sm">person</span>' +
+                  '</div>' +
+                  '<div class="flex-1">' +
+                    '<p class="font-bold text-sm text-slate-800">' + (s.reporter || 'مبلغ') + '</p>' +
+                    '<p class="text-xs text-slate-500 mt-1">' + (s.location || '') + ' · ' + (s.date || '') + '</p>' +
+                    '<p class="text-sm text-slate-600 mt-2">' + (s.description || '') + '</p>' +
+                  '</div>';
+                sightingsList.appendChild(item);
+              });
+            }
+          }
+        } catch(e) { /* API unavailable, skip sightings */ }
+      })();
+
+      // ---------- Form submission ----------
+      var form = document.getElementById('reportForm');
+      var submitText = document.getElementById('submitText');
+      var submitSpinner = document.getElementById('submitSpinner');
+      var formSuccess = document.getElementById('formSuccess');
+      var submitBtn = document.getElementById('submitBtn');
+      var infoPhone = document.getElementById('infoPhone');
+      var infoText = document.getElementById('infoText');
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        var phone = infoPhone.value.trim();
+        var text = infoText.value.trim();
+        if (!phone) { AmanToast.error('يرجى إدخال رقم الهاتف للتواصل'); infoPhone.focus(); return; }
+        if (phone.length < 10) { AmanToast.error('رقم الهاتف غير صحيح'); infoPhone.focus(); return; }
+        if (!text) { AmanToast.error('يرجى كتابة تفاصيل المعلومات'); infoText.focus(); return; }
+
+        submitText.classList.add('hidden');
+        submitSpinner.classList.remove('hidden');
+        submitBtn.disabled = true;
+
+        try {
+          await AmanAPI.createSighting(new FormData(form));
+          form.reset();
+          form.querySelectorAll('input, textarea').forEach(function (el) { el.style.display = 'none'; });
+          submitBtn.style.display = 'none';
+          form.querySelector('button[type="button"]').style.display = 'none';
+          formSuccess.classList.remove('hidden');
+          AmanToast.success('تم استلام معلوماتك بنجاح');
+        } catch (err) {
+          AmanToast.error('حدث خطأ أثناء الإرسال. حاول مرة أخرى.');
+        } finally {
+          submitSpinner.classList.add('hidden');
+          submitText.classList.remove('hidden');
+          submitBtn.disabled = false;
+        }
+      });
+
+    })();
+  </script>
+<script src="assets/js/backtotop.js"></script>
+</body>
+</html>
