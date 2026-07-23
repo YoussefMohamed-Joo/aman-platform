@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>تقديم بلاغ - أمان</title>
+
+  <!-- Google Fonts: IBM Plex Sans Arabic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Material Symbols -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- Tailwind CSS v3 -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"IBM Plex Sans Arabic"', 'sans-serif'],
+          },
+          colors: {
+            'aman-blue': '#1e40af',
+            'aman-dark-blue': '#1e3a8a',
+            'aman-red': '#dc2626',
+            'aman-gray': '#64748b',
+            'm3-primary': '#006b5a',
+            'm3-on-primary': '#ffffff',
+            'm3-primary-container': '#86f7da',
+            'm3-surface': '#fbf9f9',
+            'm3-surface-variant': '#dae5e0',
+            'm3-on-surface': '#1a1c1b',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * { font-family: 'IBM Plex Sans Arabic', sans-serif; }
+    body { direction: rtl; }
+    .glass-card {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.5);
+    }
+    .step-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.875rem;
+      transition: all 0.3s;
+      flex-shrink: 0;
+    }
+    .step-line {
+      flex: 1;
+      height: 3px;
+      border-radius: 2px;
+      transition: background 0.3s;
+    }
+    .step-card {
+      display: none;
+      animation: fadeSlideIn 0.35s ease;
+    }
+    .step-card.active { display: block; }
+    @keyframes fadeSlideIn {
+      0% { opacity: 0; transform: translateY(12px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .upload-zone {
+      border: 2px dashed #cbd5e1;
+      border-radius: 16px;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .upload-zone:hover,
+    .upload-zone.dragover {
+      border-color: #1e40af;
+      background: #eff6ff;
+    }
+    .upload-zone.has-image {
+      border-color: #22c55e;
+      background: #f0fdf4;
+    }
+    .upload-zone-sm {
+      border: 2px dashed #e2e8f0;
+      border-radius: 12px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .upload-zone-sm:hover,
+    .upload-zone-sm.dragover {
+      border-color: #1e40af;
+      background: #eff6ff;
+    }
+    .upload-zone-sm.has-image {
+      border-color: #22c55e;
+      background: #f0fdf4;
+    }
+    .loading-spinner {
+      width: 48px;
+      height: 48px;
+      border: 4px solid #e2e8f0;
+      border-top-color: #1e40af;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .success-check {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: #dcfce7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
+    .success-check .material-symbols-outlined {
+      font-size: 40px;
+      color: #16a34a;
+    }
+    .form-input:focus {
+      border-color: #1e40af;
+      box-shadow: 0 0 0 3px rgba(30,64,175,0.15);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-blue-50 text-slate-800 min-h-screen">
+
+  <!-- ============================================
+       HEADER (exact from index.html lines 31-61)
+       ============================================ -->
+  <header class="sticky top-0 z-50 bg-white shadow-sm border-b border-slate-100">
+    <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Right Side: Logo -->
+      <div class="flex items-center gap-2">
+        <img alt="Aman Logo" class="h-12 w-auto object-contain"
+             src="https://lh3.googleusercontent.com/aida/AP1WRLtsAXYg1KpXLlTbNo5XPskZZWcMhTNS8Q_n8HtJ10BcoAD7GrZNEb6JxilmDa9_rHgMCbnHoShK4m3FLnvtLl1Ah-iklPabORDFndHZr4ARAmn8dAhPGk73Kq22Fj9hys9l1SQWSb11vBklIpdFdP2nWE20WcJhL8BKma7xAQXYx-eTUwg9ehj-jPuWOzMY4uPSG18iHRW497Qtcq0OgIoT6omS3w0rvQBklL7UR1XNtKoqfvqs3elxo0G9" />
+        <div class="flex flex-col">
+          <span class="text-xl font-bold text-aman-blue leading-none">أمان</span>
+          <span class="text-[10px] text-aman-gray">معاً لنعيد الأمل</span>
+        </div>
+      </div>
+
+      <!-- Center: Navigation Links -->
+      <ul class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <li><a class="hover:text-aman-blue transition-colors" href="index.html">الرئيسية</a></li>
+        <li><a class="hover:text-aman-blue transition-colors" href="missing.html">المفقودين</a></li>
+        <li><a class="text-aman-blue border-b-2 border-aman-blue pb-1" href="reports.html">البلاغات والمشاهدات</a></li>
+        <li><a class="hover:text-aman-blue transition-colors" href="about.html">من نحن</a></li>
+        <li><a class="hover:text-aman-blue transition-colors" href="contact.html">اتصل بنا</a></li>
+      </ul>
+
+      <!-- Left Side: Auth Buttons -->
+      <div class="flex items-center gap-3">
+        <button onclick="window.location.href='signup.html'" class="px-5 py-2 text-sm font-bold text-white bg-aman-blue rounded-md hover:bg-aman-dark-blue transition-all">إنشاء حساب</button>
+        <button onclick="window.location.href='login.html'" class="px-5 py-2 text-sm font-bold text-aman-blue border border-aman-blue rounded-md hover:bg-blue-50 transition-all">تسجيل الدخول</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============================================
+       MAIN CONTENT - Multi-Step Form
+       ============================================ -->
+  <main class="container mx-auto px-4 py-10 max-w-4xl">
+
+    <!-- Breadcrumb / Title -->
+    <div class="text-center mb-10">
+      <div class="flex items-center justify-center gap-2 text-aman-blue mb-2">
+        <span class="material-symbols-outlined text-3xl">assignment_add</span>
+        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900">تقديم بلاغ عن مفقود</h1>
+      </div>
+      <p class="text-slate-500 text-sm">املأ البيانات التالية لتقديم بلاغ رسمي عن حالة فقدان. جميع البيانات تُعامل بسرية تامة.</p>
+    </div>
+
+    <!-- ===================== -->
+    <!-- Step Progress Indicator -->
+    <!-- ===================== -->
+    <div class="glass-card rounded-2xl shadow-lg p-6 mb-8">
+      <div class="flex items-center gap-2 md:gap-4">
+
+        <!-- Step 1 -->
+        <div class="flex items-center gap-2 md:gap-4 flex-1">
+          <div class="step-circle bg-aman-blue text-white shadow-md" id="stepCircle1">1</div>
+          <div class="hidden sm:block">
+            <p class="text-xs text-slate-400">الخطوة 1</p>
+            <p class="text-sm font-bold text-slate-800" id="stepLabel1">البيانات الشخصية</p>
+          </div>
+        </div>
+        <div class="step-line bg-slate-200" id="stepLine1"></div>
+
+        <!-- Step 2 -->
+        <div class="flex items-center gap-2 md:gap-4 flex-1">
+          <div class="step-circle bg-slate-200 text-slate-500" id="stepCircle2">2</div>
+          <div class="hidden sm:block">
+            <p class="text-xs text-slate-400">الخطوة 2</p>
+            <p class="text-sm font-bold text-slate-800" id="stepLabel2">تفاصيل الاختفاء</p>
+          </div>
+        </div>
+        <div class="step-line bg-slate-200" id="stepLine2"></div>
+
+        <!-- Step 3 -->
+        <div class="flex items-center gap-2 md:gap-4 flex-1">
+          <div class="step-circle bg-slate-200 text-slate-500" id="stepCircle3">3</div>
+          <div class="hidden sm:block">
+            <p class="text-xs text-slate-400">الخطوة 3</p>
+            <p class="text-sm font-bold text-slate-800" id="stepLabel3">الصور والوثائق</p>
+          </div>
+        </div>
+        <div class="step-line bg-slate-200" id="stepLine3"></div>
+
+        <!-- Step 4 -->
+        <div class="flex items-center gap-2 md:gap-4 flex-1">
+          <div class="step-circle bg-slate-200 text-slate-500" id="stepCircle4">4</div>
+          <div class="hidden sm:block">
+            <p class="text-xs text-slate-400">الخطوة 4</p>
+            <p class="text-sm font-bold text-slate-800" id="stepLabel4">بيانات المبلغ</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===================== -->
+    <!-- Form -->
+    <!-- ===================== -->
+    <form id="reportForm" novalidate>
+
+      <!-- ===== STEP 1: البيانات الشخصية ===== -->
+      <div class="step-card active" id="step1">
+        <div class="glass-card rounded-2xl shadow-lg p-6 md:p-8">
+          <div class="flex items-center gap-3 mb-8">
+            <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-aman-blue">
+              <span class="material-symbols-outlined">person</span>
+            </div>
+            <div>
+              <h2 class="text-xl font-bold text-slate-900">البيانات الشخصية للمفقود</h2>
+              <p class="text-sm text-slate-500">أدخل المعلومات الأساسية عن الشخص المفقود</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="md:col-span-2">
+              <label class="block text-sm font-bold text-slate-700 mb-2">الاسم الرباعي للمفقود <span class="text-aman-red">*</span></label>
+              <input type="text" id="fullName" required
+                     class="form-input w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-white/80 focus:outline-none transition-all text-sm"
+                     placeholder="مثال: أحمد محمد علي حسن" />
+              <p class="text-xs text-slate-400 mt-1">يُفضل كتابة الاسم كاملاً رباعياً</p>
+            </div>
+
+            <div>
+              <label class="block text-sm font-bold text-slate-700 mb-2">العمر التقريبي <span class="text-aman-red">*</span></label>
+              <input type="number" id="age" required min="1" max="120"
+                     class="form-input w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-white/80 focus:outline-none transition-all text-sm"
+                     placeholder="مثال: 25" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-bold text-slate-700 mb-2">الجنس <span class="text-aman-red">*</span></label>
+              <select id="gender" required
+                      class="form-input w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-white/80 focus:outline-none transition-all text-sm appearance-none">
+                <option value="">-- اختر --</option>
+                <option value="ذكر">ذكر</option>
+                <option value="أنثى">أنثى</option>
+              </select>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-bold text-slate-700 mb-2">الحالة الصحية</label>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <label class="flex items-center gap-3 p-4 rounded-xl border border-slate-200 cursor-pointer hover:border-aman-blue transition-all has-[:checked]:border-aman-blue has-[:checked]:bg-blue-50">
+                  <input type="radio" name="health" value="جيدة" class="accent-aman-blue" />
+                  <div>
+                    <span class="text-sm font-semibold">جيدة</span>
+                    <p class="text-xs text-slate-400">لا توجد مشاكل صحية</p>
+                  </div>
+                </label>
+                <label class="flex items-center gap-3 p-4 rounded-xl border border-slate-200 cursor-pointer hover:border-aman-blue transition-all has-[:checked]:border-aman-blue has-[:checked]:bg-blue-50">
+                  <input type="radio" name="health" value="متوسطة" class="accent-aman-blue" />
+                  <div>
+                    <span class="text-sm font-semibold">متوسطة</span>
+                    <p class="text-xs text-slate-400">بحاجة لرعاية صحية</p>
+                  </div>
+                </label>
+                <label class="flex items-center gap-3 p-4 rounded-xl border border-slate-200 cursor-pointer hover:border-aman-blue transition-all has-[:checked]:border-aman-blue has-[:checked]:bg-blue-50">
+                  <input type="radio" name="health" value="حرجة" class="accent-aman-blue" />
+                  <div>
+                    <span class="text-sm font-semibold">حرجة</span>
+                    <p class="text-xs text-slate-400">حالة طبية طارئة</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-end mt-6">
+          <button type="button" onclick="nextStep()"
+                  class="px-8 py-3.5 bg-aman-blue text-white font-bold rounded-xl hover:bg-aman-dark-blue transition-all flex items-center gap-2 shadow-md">
+            التالي
+            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ===== STEP 2: تفاصيل الاختفاء ===== -->
+      <div class="step-card" id="step2">
+        <div class="glass-card rounded-2xl shadow-lg p-6 md:p-8">
+          <div class="flex items-center gap-3 mb-8">
+            <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-aman-blue">
+              <span class="material-symbols-outlined">search</span>
+            </div>
+            <div>
+              <h2 class="text-xl font-bold text-slate-900">تفاصيل الاختفاء</h2>
+              <p class="text-sm text-slate-500">أدخل المعلومات المتعلقة بمكان وزمان الاختفاء</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-bold text-slate-700 mb-2">تاريخ الاختفاء <span class="text-aman-red">*</span></label>
+              <input type="date" id="disappearanceDate" required
+                     class="form-input w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-white/80 focus:outline-none transition-all text-sm" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-bold text-slate-700 mb-2">المحافظة / المدينة <span class="text-aman-red">*</span></label>
+              <select id="city" required
+                      class="form-input w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-white/80 focus:outline-none transition-all text-sm appearance-none">
+                <option value="">-- اختر المحافظة --</option>
+                <option value="القاهرة">القاهرة</option>
+                <option value="الإسكندرية">الإسكندرية</option>
+                <option value="الجيزة">الجيزة</option>
+                <option value="الدقهلية">الدقهلية</option>
+                <option value="الشرقية">الشرقية</option>
+                <option value="القليوبية">القليوبية</option>
+                <option value="الغربية">الغربية</option>
+                <option value="المنوفية">المنوفية</option>
+                <option value="البحيرة">البحيرة</option>
+                <option value="كفر الشيخ">كفر الشيخ</option>
+                <option value="دمياط">دمياط</option>
+                <option value="بورسعيد">بورسعيد</option>
+                <option value="الإسماعيلية">الإسماعيلية</option>
+                <option value="السويس">السويس</option>
+                <option value="بني سويف">بني سويف</option>
+                <option value="الفيوم">الفيوم</option>
+                <option value="المنيا">المنيا</option>
+                <option value="أسيوط">أسيوط</option>
+                <option value="سوهاج">سوهاج</option>
+                <option value="قنا">قنا</option>
+                <option value="الأقصر">الأقصر</option>
+                <option value="أسوان">أسوان</option>
+                <option value="الوادي الجديد">الوادي الجديد</option>
+                <option value="مرسى مطروح">مرسى مطروح</option>
+                <option value="شمال سيناء">شمال سيناء</option>
+                <option value="جنوب سيناء">جنوب سيناء</option>
+                <option value="البحر الأحمر">البحر الأحمر</option>
+              </select>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-bold text-slate-700 mb-2">وصف ملابس المفقود <span class="text-aman-red">*</span></label>
+              <textarea id="clothingDescription" required rows="4"
+                        class="form-input w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-white/80 focus:outline-none transition-all text-sm resize-none"
+                        placeholder="اذكر تفاصيل الملابس التي كان يرتديها وقت الاختفاء (الألوان، النوع، العلامات المميزة...)"></textarea>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-bold text-slate-700 mb-2">تفاصيل إضافية</label>
+              <textarea id="extraDetails" rows="3"
+                        class="form-input w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-white/80 focus:outline-none transition-all text-sm resize-none"
+                        placeholder="أي معلومات إضافية قد تساعد في البحث (اختياري)"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-between mt-6">
+          <button type="button" onclick="prevStep()"
+                  class="px-8 py-3.5 border border-slate-300 text-slate-700 font-bold rounded-xl hover:bg-slate-50 transition-all flex items-center gap-2">
+            <span class="material-symbols-outlined text-lg">arrow_back</span>
+            السابق
+          </button>
+          <button type="button" onclick="nextStep()"
+                  class="px-8 py-3.5 bg-aman-blue text-white font-bold rounded-xl hover:bg-aman-dark-blue transition-all flex items-center gap-2 shadow-md">
+            التالي
+            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ===== STEP 3: الصور والوثائق ===== -->
+      <div class="step-card" id="step3">
+        <div class="glass-card rounded-2xl shadow-lg p-6 md:p-8">
+          <div class="flex items-center gap-3 mb-8">
+            <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-aman-blue">
+              <span class="material-symbols-outlined">image</span>
+            </div>
+            <div>
+              <h2 class="text-xl font-bold text-slate-900">الصور والوثائق</h2>
+              <p class="text-sm text-slate-500">أضف صورة للمفقود أو أي وثائق قد تساعد (اختياري)</p>
+            </div>
+          </div>
+
+          <!-- Upload Zone -->
+          <div class="space-y-4">
+            <!-- Person Photo -->
+            <div class="bg-white border border-slate-200 rounded-xl p-4">
+              <label class="block text-sm font-bold text-slate-700 mb-3 flex items-center gap-2">
+                <span class="material-symbols-outlined text-aman-blue">person</span>
+                صورة الشخص المفقود
+                <span class="text-xs text-slate-400 font-normal">(اختياري)</span>
+              </label>
+              <div class="upload-zone-sm" data-target="personPreview" data-input="personInput">
+                <input type="file" class="image-input hidden" accept="image/*" data-target="personPreview" />
+                <div class="upload-placeholder text-center py-6">
+                  <span class="material-symbols-outlined text-3xl text-slate-300">add_photo_alternate</span>
+                  <p class="text-sm text-slate-500 mt-2">اختر صورة أو اسحبها</p>
+                </div>
+                <div class="upload-preview hidden relative"></div>
+              </div>
+            </div>
+
+            <!-- Clothing Photo -->
+            <div class="bg-white border border-slate-200 rounded-xl p-4">
+              <label class="block text-sm font-bold text-slate-700 mb-3 flex items-center gap-2">
+                <span class="material-symbols-outlined text-aman-blue">checkroom</span>
+                صورة الملابس التي كان يرتديها
+                <span class="text-xs text-slate-400 font-normal">(اختياري)</span>
+              </label>
+              <div class="upload-zone-sm" data-target="clothingPreview" data-input="clothingInput">
+                <input type="file" class="image-input hidden" accept="image/*" data-target="clothingPreview" />
+                <div class="upload-placeholder text-center py-6">
+                  <span class="material-symbols-outlined text-3xl text-slate-300">checkroom</span>
+                  <p class="text-sm text-slate-500 mt-2">صورة القميص، البنطلون، الحذاء...</p>
+                </div>
+                <div class="upload-preview hidden relative"></div>
+              </div>
+            </div>
+
+            <!-- Features Photo -->
+            <div class="bg-white border border-slate-200 rounded-xl p-4">
+              <label class="block text-sm font-bold text-slate-700 mb-3 flex items-center gap-2">
+                <span class="material-symbols-outlined text-aman-blue">tattoo</span>
+                علامات فارقة (وشم، وحمة، ندبة)
+                <span class="text-xs text-slate-400 font-normal">(اختياري)</span>
+              </label>
+              <div class="upload-zone-sm" data-target="featurePreview" data-input="featureInput">
+                <input type="file" class="image-input hidden" accept="image/*" data-target="featurePreview" />
+                <div class="upload-placeholder text-center py-6">
+                  <span class="material-symbols-outlined text-3xl text-slate-300">tattoo</span>
+                  <p class="text-sm text-slate-500 mt-2">صورة الوشم، الوحمة، الندبة...</p>
+                </div>
+                <div class="upload-preview hidden relative"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-xl flex items-start gap-3">
+            <span class="material-symbols-outlined text-amber-600">info</span>
+            <div>
+              <p class="text-sm text-amber-800 font-bold mb-1">نصيحة: الصور تزيد فرص التعرف</p>
+              <p class="text-xs text-amber-700">كلما زادت الصور المرفوعة (شخص + ملابس + علامات فارقة)، زادت دقة نظام البحث البصري في إيجاد التطابقات مع بلاغات المشاهدات.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-between mt-6">
+          <button type="button" onclick="prevStep()"
+                  class="px-8 py-3.5 border border-slate-300 text-slate-700 font-bold rounded-xl hover:bg-slate-50 transition-all flex items-center gap-2">
+            <span class="material-symbols-outlined text-lg">arrow_back</span>
+            السابق
+          </button>
+          <button type="button" onclick="nextStep()"
+                  class="px-8 py-3.5 bg-aman-blue text-white font-bold rounded-xl hover:bg-aman-dark-blue transition-all flex items-center gap-2 shadow-md">
+            التالي
+            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ===== STEP 4: بيانات المبلغ ===== -->
+      <div class="step-card" id="step4">
+        <div class="glass-card rounded-2xl shadow-lg p-6 md:p-8">
+          <div class="flex items-center gap-3 mb-8">
+            <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-aman-blue">
+              <span class="material-symbols-outlined">badge</span>
+            </div>
+            <div>
+              <h2 class="text-xl font-bold text-slate-900">بيانات المبلغ</h2>
+              <p class="text-sm text-slate-500">معلومات الشخص المُقدم للبلاغ (سيتم التعامل معها بسرية)</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-bold text-slate-700 mb-2">اسم المبلغ <span class="text-aman-red">*</span></label>
+              <input type="text" id="reporterName" required
+                     class="form-input w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-white/80 focus:outline-none transition-all text-sm"
+                     placeholder="الاسم الكامل" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-bold text-slate-700 mb-2">رقم الهاتف <span class="text-aman-red">*</span></label>
+              <input type="tel" id="phone" required
+                     class="form-input w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-white/80 focus:outline-none transition-all text-sm"
+                     placeholder="مثال: 01012345678" />
+              <p class="text-xs text-slate-400 mt-1">يجب أن يكون 10 أرقام على الأقل</p>
+            </div>
+
+            <div>
+              <label class="block text-sm font-bold text-slate-700 mb-2">البريد الإلكتروني</label>
+              <input type="email" id="email"
+                     class="form-input w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-white/80 focus:outline-none transition-all text-sm"
+                     placeholder="example@email.com" />
+              <p class="text-xs text-slate-400 mt-1">اختياري - للتواصل في حال وجود مستجدات</p>
+            </div>
+
+            <div>
+              <label class="block text-sm font-bold text-slate-700 mb-2">صلة القرابة</label>
+              <select id="relation"
+                      class="form-input w-full px-4 py-3.5 rounded-xl border border-slate-300 bg-white/80 focus:outline-none transition-all text-sm appearance-none">
+                <option value="">-- اختر --</option>
+                <option value="أب">أب</option>
+                <option value="أم">أم</option>
+                <option value="أخ">أخ</option>
+                <option value="أخت">أخت</option>
+                <option value="قريب">قريب</option>
+                <option value="جار">جار</option>
+                <option value="صديق">صديق</option>
+                <option value="آخر">آخر</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Terms Checkbox -->
+          <div class="mt-6 p-4 bg-slate-50 rounded-xl border border-slate-200">
+            <label class="flex items-start gap-3 cursor-pointer">
+              <input type="checkbox" id="agreeTerms" required class="mt-1 accent-aman-blue" />
+              <p class="text-sm text-slate-600 leading-relaxed">
+                أقر بأن جميع المعلومات المذكورة أعلاه صحيحة ودقيقة، وأتحمل المسؤولية القانونية الكاملة عن صحة هذا البلاغ. كما أوافق على
+                <a href="terms.html" class="text-aman-blue underline font-semibold">شروط الاستخدام</a> و
+                <a href="privacy.html" class="text-aman-blue underline font-semibold">سياسة الخصوصية</a>.
+              </p>
+            </label>
+          </div>
+
+          <!-- Error Display -->
+          <div id="formErrors" class="mt-4 hidden">
+            <div class="p-4 bg-red-50 border border-red-200 rounded-xl text-sm text-red-700 flex items-start gap-3">
+              <span class="material-symbols-outlined text-red-500">error</span>
+              <ul id="errorList" class="list-disc list-inside space-y-1"></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-between mt-6">
+          <button type="button" onclick="prevStep()"
+                  class="px-8 py-3.5 border border-slate-300 text-slate-700 font-bold rounded-xl hover:bg-slate-50 transition-all flex items-center gap-2">
+            <span class="material-symbols-outlined text-lg">arrow_back</span>
+            السابق
+          </button>
+          <button type="button" onclick="submitReport()"
+                  class="px-8 py-3.5 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all flex items-center gap-2 shadow-md">
+            <span class="material-symbols-outlined text-lg">send</span>
+            إرسال البلاغ
+          </button>
+        </div>
+      </div>
+
+    </form>
+
+    <!-- ===================== -->
+    <!-- Loading / Success Overlay -->
+    <!-- ===================== -->
+    <div id="submitOverlay" class="fixed inset-0 z-[200] bg-black/60 hidden items-center justify-center p-4">
+      <div class="bg-white rounded-3xl shadow-2xl max-w-md w-full p-10 text-center">
+
+        <!-- Loading State -->
+        <div id="loadingState">
+          <div class="loading-spinner mx-auto mb-6"></div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">جاري إرسال البلاغ</h3>
+          <p class="text-sm text-slate-500">يرجى الانتظار قليلاً... يتم معالجة طلبك</p>
+        </div>
+
+        <!-- Success State -->
+        <div id="successState" class="hidden">
+          <div class="success-check mb-6">
+            <span class="material-symbols-outlined">check</span>
+          </div>
+          <h3 class="text-2xl font-extrabold text-slate-900 mb-2">تم إرسال البلاغ بنجاح!</h3>
+          <p class="text-sm text-slate-500 mb-2">شكراً لك. تم استلام بلاغك وسيتم مراجعته من قبل فريق أمان.</p>
+          <p class="text-sm text-slate-400 mb-8">سيتم إعلامكم بأي مستجدات عبر وسائل التواصل المسجلة.</p>
+          <div class="flex flex-col gap-3">
+            <a href="index.html"
+               class="w-full py-3 bg-aman-blue text-white font-bold rounded-xl hover:bg-aman-dark-blue transition-all text-center">
+              العودة إلى الرئيسية
+            </a>
+            <button onclick="location.reload()"
+                    class="w-full py-3 border-2 border-aman-blue text-aman-blue font-bold rounded-xl hover:bg-blue-50 transition-all">
+              تقديم بلاغ آخر
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===================== -->
+    <!-- Tip Cards -->
+    <!-- ===================== -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+
+      <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-slate-100 shadow-sm flex items-start gap-4">
+        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-aman-blue shrink-0">
+          <span class="material-symbols-outlined">lock</span>
+        </div>
+        <div>
+          <h4 class="text-base font-bold text-slate-900 mb-1">خصوصية البيانات</h4>
+          <p class="text-sm text-slate-500 leading-relaxed">
+            جميع البيانات التي تقدمها في هذا النموذج محمية وفقاً لسياسة الخصوصية ولن تُستخدم إلا لغرض المساعدة في البحث عن المفقود.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-slate-100 shadow-sm flex items-start gap-4">
+        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-aman-blue shrink-0">
+          <span class="material-symbols-outlined">support_agent</span>
+        </div>
+        <div>
+          <h4 class="text-base font-bold text-slate-900 mb-1">تحتاج مساعدة؟</h4>
+          <p class="text-sm text-slate-500 leading-relaxed">
+            إذا كنت تواجه صعوبة في تعبئة النموذج، يمكنك الاتصال بفريق الدعم على الرقم <span class="font-bold text-aman-blue">16000</span> أو زيارة صفحة <a href="contact.html" class="text-aman-blue underline">اتصل بنا</a>.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER (exact from index.html lines 417-496)
+       ============================================ -->
+  <footer class="bg-slate-900 text-white pt-16 pb-8 mt-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+
+        <!-- Brand -->
+        <div class="col-span-1">
+          <div class="flex items-center gap-2 mb-6">
+            <img alt="Aman Logo" class="h-10 w-auto brightness-0 invert"
+                 src="https://lh3.googleusercontent.com/aida/AP1WRLtsAXYg1KpXLlTbNo5XPskZZWcMhTNS8Q_n8HtJ10BcoAD7GrZNEb6JxilmDa9_rHgMCbnHoShK4m3FLnvtLl1Ah-iklPabORDFndHZr4ARAmn8dAhPGk73Kq22Fj9hys9l1SQWSb11vBklIpdFdP2nWE20WcJhL8BKma7xAQXYx-eTUwg9ehj-jPuWOzMY4uPSG18iHRW497Qtcq0OgIoT6omS3w0rvQBklL7UR1XNtKoqfvqs3elxo0G9" />
+            <span class="text-2xl font-bold">أمان</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            منصة مجتمعية غير ربحية تهدف إلى مساعدة العائلات في العثور على مفقوديهم من خلال التعاون والمصداقية.
+          </p>
+          <div class="flex gap-4">
+            <a class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-aman-blue transition-colors" href="#">
+              <svg fill="currentColor" height="20" viewBox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+              </svg>
+            </a>
+            <a class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-aman-blue transition-colors" href="#">
+              <svg fill="currentColor" height="20" viewBox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h5 class="text-lg font-bold mb-6">روابط سريعة</h5>
+          <ul class="space-y-4 text-slate-400 text-sm">
+            <li><a class="hover:text-white transition-colors" href="index.html">الرئيسية</a></li>
+            <li><a class="hover:text-white transition-colors" href="missing.html">المفقودين</a></li>
+            <li><a class="hover:text-white transition-colors" href="reports.html">البلاغات والمشاهدات</a></li>
+            <li><a class="hover:text-white transition-colors" href="report-case.html">تقديم بلاغ</a></li>
+              <li><a class="hover:text-white transition-colors" href="report-sighting.html">الإبلاغ عن مشاهدة</a></li>
+            <li><a class="hover:text-white transition-colors" href="about.html">من نحن</a></li>
+            <li><a class="hover:text-white transition-colors" href="contact.html">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div>
+          <h5 class="text-lg font-bold mb-6">معلومات قانونية</h5>
+          <ul class="space-y-4 text-slate-400 text-sm">
+            <li><a class="hover:text-white transition-colors" href="terms.html">شروط الاستخدام</a></li>
+            <li><a class="hover:text-white transition-colors" href="privacy.html">سياسة الخصوصية</a></li>
+            <li><a class="hover:text-white transition-colors" href="disclaimer.html">إخلاء المسؤولية</a></li>
+            <li><a class="hover:text-white transition-colors" href="faq.html">الأسئلة الشائعة</a></li>
+          </ul>
+        </div>
+
+        <!-- Emergency Numbers -->
+        <div>
+          <h5 class="text-lg font-bold mb-6">أرقام الطوارئ في مصر</h5>
+          <ul class="space-y-4 text-slate-400 text-sm">
+            <li class="flex items-center justify-between">
+              <span>الشرطة</span>
+              <span class="font-bold text-white">122</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>النجدة</span>
+              <span class="font-bold text-white">123</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>الإسعاف</span>
+              <span class="font-bold text-white">123</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>خط نجدة الطفل</span>
+              <span class="font-bold text-white">16000</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="pt-8 border-t border-slate-800 text-center text-slate-500 text-xs">
+        جميع الحقوق محفوظة &copy; 2026 &copy; دليل المفقودين
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       JAVASCRIPT
+       ============================================ -->
+  <script src="assets/js/sanitize.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/toast.js"></script>
+  <script src="assets/js/notifications.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script>
+    (function() {
+      'use strict';
+
+      // ---------- State ----------
+      let currentStep = 1;
+      const totalSteps = 4;
+
+      // DOM refs
+      const stepCards = {
+        1: document.getElementById('step1'),
+        2: document.getElementById('step2'),
+        3: document.getElementById('step3'),
+        4: document.getElementById('step4'),
+      };
+      const circles = {
+        1: document.getElementById('stepCircle1'),
+        2: document.getElementById('stepCircle2'),
+        3: document.getElementById('stepCircle3'),
+        4: document.getElementById('stepCircle4'),
+      };
+      const lines = {
+        1: document.getElementById('stepLine1'),
+        2: document.getElementById('stepLine2'),
+        3: document.getElementById('stepLine3'),
+      };
+      const labels = {
+        1: document.getElementById('stepLabel1'),
+        2: document.getElementById('stepLabel2'),
+        3: document.getElementById('stepLabel3'),
+        4: document.getElementById('stepLabel4'),
+      };
+
+      // ---------- Step rendering ----------
+      function updateSteps() {
+        for (let i = 1; i <= totalSteps; i++) {
+          const circle = circles[i];
+          const line = lines[i];
+          const label = labels[i];
+
+          // Show/hide cards
+          stepCards[i].classList.toggle('active', i === currentStep);
+
+          // Circle state
+          circle.classList.remove('bg-aman-blue', 'text-white', 'shadow-md', 'bg-slate-200', 'text-slate-500', 'bg-green-500', 'shadow-sm');
+          if (i < currentStep) {
+            // Completed
+            circle.classList.add('bg-green-500', 'text-white', 'shadow-sm');
+            circle.textContent = '✓';
+          } else if (i === currentStep) {
+            // Active
+            circle.classList.add('bg-aman-blue', 'text-white', 'shadow-md');
+            circle.textContent = i;
+          } else {
+            // Future
+            circle.classList.add('bg-slate-200', 'text-slate-500');
+            circle.textContent = i;
+          }
+
+          // Line state
+          if (line) {
+            line.classList.remove('bg-aman-blue', 'bg-green-500', 'bg-slate-200');
+            if (i < currentStep) {
+              line.classList.add('bg-green-500');
+            } else if (i === currentStep) {
+              line.classList.add('bg-aman-blue');
+            } else {
+              line.classList.add('bg-slate-200');
+            }
+          }
+
+          // Label bold state
+          if (label) {
+            label.classList.toggle('text-slate-800', i <= currentStep);
+            label.classList.toggle('text-slate-400', i > currentStep);
+          }
+        }
+
+        // Scroll to top of form
+        document.getElementById('reportForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      // ---------- Validation ----------
+      function validateStep(step) {
+        const errors = [];
+
+        if (step === 1) {
+          const name = document.getElementById('fullName').value.trim();
+          const age = document.getElementById('age').value.trim();
+          const gender = document.getElementById('gender').value;
+
+          if (!name) errors.push('الاسم الرباعي للمفقود مطلوب');
+          if (!age) errors.push('العمر التقريبي مطلوب');
+          else if (parseInt(age) < 1 || parseInt(age) > 120) errors.push('العمر يجب أن يكون بين 1 و 120');
+          if (!gender) errors.push('الجنس مطلوب');
+        }
+
+        if (step === 2) {
+          const date = document.getElementById('disappearanceDate').value;
+          const city = document.getElementById('city').value;
+          const clothing = document.getElementById('clothingDescription').value.trim();
+
+          if (!date) errors.push('تاريخ الاختفاء مطلوب');
+          if (!city) errors.push('المحافظة / المدينة مطلوبة');
+          if (!clothing) errors.push('وصف ملابس المفقود مطلوب');
+        }
+
+        if (step === 3) {
+          // Image upload is optional - no validation needed
+        }
+
+        if (step === 4) {
+          const name = document.getElementById('reporterName').value.trim();
+          const phone = document.getElementById('phone').value.trim();
+          const agree = document.getElementById('agreeTerms').checked;
+
+          if (!name) errors.push('اسم المبلغ مطلوب');
+          if (!phone) errors.push('رقم الهاتف مطلوب');
+          else if (phone.replace(/\s/g, '').length < 10) errors.push('رقم الهاتف يجب أن يحتوي على 10 أرقام على الأقل');
+          else if (!/^\d{10,}$/.test(phone.replace(/\s/g, ''))) errors.push('رقم الهاتف يجب أن يحتوي على أرقام فقط');
+          if (!agree) errors.push('يجب الموافقة على شروط الاستخدام وسياسة الخصوصية');
+        }
+
+        return errors;
+      }
+
+      // ---------- Navigation ----------
+      window.nextStep = function() {
+        const errors = validateStep(currentStep);
+        if (errors.length > 0) {
+          errors.forEach(function(msg) { AmanToast.error(msg); });
+          return;
+        }
+        if (currentStep < totalSteps) {
+          currentStep++;
+          updateSteps();
+        }
+      };
+
+      window.prevStep = function() {
+        if (currentStep > 1) {
+          currentStep--;
+          updateSteps();
+        }
+      };
+
+      // ---------- Toast notification ----------
+      function showToast(errors) {
+        // Remove existing toast
+        const old = document.getElementById('errorToast');
+        if (old) old.remove();
+
+        const toast = document.createElement('div');
+        toast.id = 'errorToast';
+        toast.className = 'fixed top-24 left-1/2 -translate-x-1/2 z-[150] bg-white rounded-2xl shadow-2xl border border-red-200 p-5 max-w-md w-full animate-bounce-in';
+        toast.innerHTML = `
+          <div class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-red-500 text-2xl">warning</span>
+            <div class="flex-1">
+              <p class="font-bold text-slate-900 mb-1">يرجى تصحيح الأخطاء التالية:</p>
+              <ul class="list-disc list-inside text-sm text-red-600 space-y-0.5">
+                ${errors.map(e => '<li>' + e + '</li>').join('')}
+              </ul>
+            </div>
+            <button onclick="this.closest('#errorToast').remove()" class="text-slate-400 hover:text-slate-600">
+              <span class="material-symbols-outlined">close</span>
+            </button>
+          </div>
+        `;
+        document.body.appendChild(toast);
+        setTimeout(() => { const t = document.getElementById('errorToast'); if (t) t.remove(); }, 5000);
+
+        // Add bounce animation
+        const style = document.createElement('style');
+        style.textContent = `
+          @keyframes bounce-in {
+            0% { opacity: 0; transform: translate(-50%, -20px); }
+            50% { opacity: 1; transform: translate(-50%, 4px); }
+            70% { transform: translate(-50%, -2px); }
+            100% { opacity: 1; transform: translate(-50%, 0); }
+          }
+          .animate-bounce-in { animation: bounce-in 0.4s ease; }
+        `;
+        document.head.appendChild(style);
+      }
+
+      // ---------- Multi-Image Upload ----------
+      window.uploadedImages = { person: null, clothing: null, features: null };
+
+      document.querySelectorAll('.upload-zone-sm').forEach(function(zone) {
+        var targetKey = zone.getAttribute('data-target');
+        var input = zone.querySelector('.image-input');
+        var placeholder = zone.querySelector('.upload-placeholder');
+        var preview = zone.querySelector('.upload-preview');
+
+        function showPreview(file) {
+          var reader = new FileReader();
+          reader.onload = function(ev) {
+            preview.innerHTML =
+              '<div class="relative inline-block p-3">' +
+                '<img src="' + ev.target.result + '" class="max-h-32 rounded-lg shadow-sm" />' +
+                '<button type="button" class="absolute top-0 right-0 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center shadow hover:bg-red-600 text-xs remove-img">' +
+                  '<span class="material-symbols-outlined text-sm">close</span>' +
+                '</button>' +
+              '</div>';
+            placeholder.classList.add('hidden');
+            preview.classList.remove('hidden');
+            zone.classList.add('has-image');
+            window.uploadedImages[targetKey.replace(/Preview$/, '')] = file;
+
+            preview.querySelector('.remove-img').addEventListener('click', function(e) {
+              e.stopPropagation();
+              window.uploadedImages[targetKey.replace(/Preview$/, '')] = null;
+              input.value = '';
+              preview.innerHTML = '';
+              placeholder.classList.remove('hidden');
+              preview.classList.add('hidden');
+              zone.classList.remove('has-image');
+            });
+          };
+          reader.readAsDataURL(file);
+        }
+
+        zone.addEventListener('click', function() { input.click(); });
+
+        zone.addEventListener('dragover', function(e) { e.preventDefault(); this.classList.add('dragover'); });
+        zone.addEventListener('dragleave', function() { this.classList.remove('dragover'); });
+        zone.addEventListener('drop', function(e) {
+          e.preventDefault();
+          this.classList.remove('dragover');
+          if (e.dataTransfer.files.length > 0) showPreview(e.dataTransfer.files[0]);
+        });
+
+        input.addEventListener('change', function() {
+          if (this.files.length > 0) showPreview(this.files[0]);
+        });
+      });
+
+      // ---------- Submit ----------
+      window.submitReport = function() {
+        const errors = validateStep(4);
+        if (errors.length > 0) {
+          errors.forEach(function(msg) { AmanToast.error(msg); });
+          return;
+        }
+
+        // Gather form data
+        var fullName = document.getElementById('fullName').value.trim();
+        var age = document.getElementById('age').value.trim();
+        var gender = document.getElementById('gender').value;
+        var governorate = document.getElementById('city').value;
+        var location = document.getElementById('clothingDescription').value.trim();
+        var description = document.getElementById('extraDetails').value.trim();
+        var date = document.getElementById('disappearanceDate').value;
+        var reporterName = document.getElementById('reporterName').value.trim();
+        var reporterPhone = document.getElementById('phone').value.trim();
+        var healthEl = document.querySelector('input[name="health"]:checked');
+        var health = healthEl ? healthEl.value : '';
+
+        // Save via API + localStorage
+        function doSave() {
+          return new Promise(function(resolve) {
+            if (typeof AmanAPI !== 'undefined') {
+              var fd = new FormData();
+              fd.append('name', fullName);
+              fd.append('age', age);
+              fd.append('gender', gender);
+              fd.append('governorate', governorate);
+              fd.append('location', location);
+              fd.append('description', description);
+              fd.append('health', health);
+              fd.append('date', date);
+              fd.append('reporter', reporterName);
+              fd.append('contact', reporterPhone);
+              if (window.uploadedImages && window.uploadedImages.person) fd.append('image', window.uploadedImages.person);
+              if (window.uploadedImages && window.uploadedImages.clothing) fd.append('clothingImage', window.uploadedImages.clothing);
+              if (window.uploadedImages && window.uploadedImages.features) fd.append('featureImage', window.uploadedImages.features);
+              AmanAPI.createMissing(fd).then(resolve).catch(function() {
+                fallbackSave();
+                resolve();
+              });
+            } else { fallbackSave(); resolve(); }
+          });
+        }
+        function fallbackSave() {
+          if (typeof AmanData !== 'undefined') {
+            AmanData.addMissingReport({
+              name: fullName, age: age, gender: gender, governorate: governorate,
+              location: location, description: description, health: health, date: date,
+              since: '', contact: reporterPhone, reporter: reporterName,
+              features: '', image: '', status: 'searching', reportStatus: 'pending', coords: ''
+            });
+          }
+        }
+
+        const overlay = document.getElementById('submitOverlay');
+        const loadingState = document.getElementById('loadingState');
+        const successState = document.getElementById('successState');
+        overlay.classList.remove('hidden');
+        overlay.classList.add('flex');
+        loadingState.classList.remove('hidden');
+        successState.classList.add('hidden');
+
+        doSave().then(function() {
+          loadingState.classList.add('hidden');
+          successState.classList.remove('hidden');
+          AmanToast.success('تم تسجيل البلاغ بنجاح');
+        });
+      };
+
+      // ---------- Init ----------
+      updateSteps();
+
+      // Set max date for disappearance date to today
+      const dateInput = document.getElementById('disappearanceDate');
+      if (dateInput) {
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.setAttribute('max', today);
+      }
+
+    })();
+  </script>
+
+  <script src="assets/js/sanitize.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/api.js"></script>
+<script src="assets/js/backtotop.js"></script>
+</body>
+</html>
