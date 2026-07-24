@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Ø£Ù…Ø§Ù† - Ø§Ù„Ù…ÙÙ‚ÙˆØ¯ÙŠÙ†</title>
+  <title>أمان - المفقودين</title>
 
   <!-- Tailwind CSS v3 CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -35,10 +35,10 @@
   <section class="hero-gradient pt-20 pb-32 relative overflow-hidden">
     <div class="container mx-auto px-4 text-center">
       <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">
-        Ø§Ù„Ø¨Ø­Ø« Ø¹Ù† Ø§Ù„Ù…ÙÙ‚ÙˆØ¯ÙŠÙ†
+        البحث عن المفقودين
       </h1>
       <p class="text-lg md:text-xl text-slate-700 max-w-2xl mx-auto mb-12">
-        ØªØµÙØ­ Ø­Ø§Ù„Ø§Øª Ø§Ù„Ù…ÙÙ‚ÙˆØ¯ÙŠÙ† Ø§Ù„Ù…Ø¨Ù„Øº Ø¹Ù†Ù‡Ø§ØŒ Ø§Ø³ØªØ®Ø¯Ù… Ø§Ù„ÙÙ„Ø§ØªØ± Ù„Ù„Ø¨Ø­Ø« Ø­Ø³Ø¨ Ø§Ù„Ø§Ø³Ù… Ø£Ùˆ Ø§Ù„Ù…Ø­Ø§ÙØ¸Ø© Ø£Ùˆ Ø§Ù„Ø¹Ù…Ø±ØŒ ÙˆØ³Ø§Ø¹Ø¯ ÙÙŠ Ø¥Ø¹Ø§Ø¯ØªÙ‡Ù… Ø¥Ù„Ù‰ Ø£Ù‡Ù„Ù‡Ù….
+        تصفح حالات المفقودين المبلغ عنها، استخدم الفلاتر للبحث حسب الاسم أو المحافظة أو العمر، وساعد في إعادتهم إلى أهلهم.
       </p>
 
       <!-- Search / Filter Bar -->
@@ -48,7 +48,7 @@
           <!-- Search Input -->
           <div class="lg:col-span-2 relative">
             <input class="w-full pr-10 pl-4 py-4 rounded-xl border-slate-200 focus:ring-aman-blue focus:border-aman-blue text-sm"
-                   placeholder="Ø§Ø¨Ø­Ø« Ø¨Ø§Ù„Ø§Ø³Ù…..." type="text" id="searchInput" />
+                   placeholder="ابحث بالاسم..." type="text" id="searchInput" />
             <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">
               <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
@@ -59,33 +59,33 @@
           <!-- Location Dropdown -->
           <div class="relative">
             <select class="w-full pr-10 pl-4 py-4 rounded-xl border-slate-200 focus:ring-aman-blue focus:border-aman-blue text-sm appearance-none" id="locationFilter">
-              <option value="">ÙƒÙ„ Ø§Ù„Ù…Ø­Ø§ÙØ¸Ø§Øª</option>
-              <option>Ø§Ù„Ù‚Ø§Ù‡Ø±Ø©</option>
-              <option>Ø§Ù„Ø¥Ø³ÙƒÙ†Ø¯Ø±ÙŠØ©</option>
-              <option>Ø§Ù„Ø¬ÙŠØ²Ø©</option>
-              <option>Ø§Ù„Ø´Ø±Ù‚ÙŠØ©</option>
-              <option>Ø§Ù„Ø¯Ù‚Ù‡Ù„ÙŠØ©</option>
-              <option>Ø§Ù„Ø¨Ø­ÙŠØ±Ø©</option>
-              <option>Ø§Ù„Ù…Ù†ÙŠØ§</option>
-              <option>Ø§Ù„Ù‚Ù„ÙŠÙˆØ¨ÙŠØ©</option>
-              <option>Ø³ÙˆÙ‡Ø§Ø¬</option>
-              <option>ÙƒÙØ± Ø§Ù„Ø´ÙŠØ®</option>
-              <option>Ø§Ù„ÙÙŠÙˆÙ…</option>
-              <option>Ø£Ø³ÙŠÙˆØ·</option>
-              <option>Ø§Ù„Ù…Ù†ÙˆÙÙŠØ©</option>
-              <option>Ø¨Ù†ÙŠ Ø³ÙˆÙŠÙ</option>
-              <option>Ù‚Ù†Ø§</option>
-              <option>Ø§Ù„ØºØ±Ø¨ÙŠØ©</option>
-              <option>Ø¨ÙˆØ±Ø³Ø¹ÙŠØ¯</option>
-              <option>Ø§Ù„Ø¥Ø³Ù…Ø§Ø¹ÙŠÙ„ÙŠØ©</option>
-              <option>Ø£Ø³ÙˆØ§Ù†</option>
-              <option>Ø§Ù„Ø£Ù‚ØµØ±</option>
-              <option>Ø¯Ù…ÙŠØ§Ø·</option>
-              <option>Ù…Ø·Ø±ÙˆØ­</option>
-              <option>Ø§Ù„ÙˆØ§Ø¯ÙŠ Ø§Ù„Ø¬Ø¯ÙŠØ¯</option>
-              <option>Ø´Ù…Ø§Ù„ Ø³ÙŠÙ†Ø§Ø¡</option>
-              <option>Ø¬Ù†ÙˆØ¨ Ø³ÙŠÙ†Ø§Ø¡</option>
-              <option>Ø§Ù„Ø¨Ø­Ø± Ø§Ù„Ø£Ø­Ù…Ø±</option>
+              <option value="">كل المحافظات</option>
+              <option>القاهرة</option>
+              <option>الإسكندرية</option>
+              <option>الجيزة</option>
+              <option>الشرقية</option>
+              <option>الدقهلية</option>
+              <option>البحيرة</option>
+              <option>المنيا</option>
+              <option>القليوبية</option>
+              <option>سوهاج</option>
+              <option>كفر الشيخ</option>
+              <option>الفيوم</option>
+              <option>أسيوط</option>
+              <option>المنوفية</option>
+              <option>بني سويف</option>
+              <option>قنا</option>
+              <option>الغربية</option>
+              <option>بورسعيد</option>
+              <option>الإسماعيلية</option>
+              <option>أسوان</option>
+              <option>الأقصر</option>
+              <option>دمياط</option>
+              <option>مطروح</option>
+              <option>الوادي الجديد</option>
+              <option>شمال سيناء</option>
+              <option>جنوب سيناء</option>
+              <option>البحر الأحمر</option>
             </select>
             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">
               <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -98,9 +98,9 @@
           <!-- Gender Filter -->
           <div class="relative">
             <select class="w-full pr-10 pl-4 py-4 rounded-xl border-slate-200 focus:ring-aman-blue focus:border-aman-blue text-sm appearance-none" id="genderFilter">
-              <option value="">Ø§Ù„Ø¬Ù†Ø³: Ø§Ù„ÙƒÙ„</option>
-              <option value="male">Ø°ÙƒØ±</option>
-              <option value="female">Ø£Ù†Ø«Ù‰</option>
+              <option value="">الجنس: الكل</option>
+              <option value="male">ذكر</option>
+              <option value="female">أنثى</option>
             </select>
             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">
               <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -112,13 +112,13 @@
           <!-- Age Filter -->
           <div class="relative">
             <select class="w-full pr-10 pl-4 py-4 rounded-xl border-slate-200 focus:ring-aman-blue focus:border-aman-blue text-sm appearance-none" id="ageFilter">
-              <option value="">ÙƒÙ„ Ø§Ù„Ø£Ø¹Ù…Ø§Ø±</option>
-              <option value="0-6">Ø±Ø¶Ù‘Ø¹ (0-6)</option>
-              <option value="7-12">Ø£Ø·ÙØ§Ù„ (7-12)</option>
-              <option value="13-17">Ù…Ø±Ø§Ù‡Ù‚ÙŠÙ† (13-17)</option>
-              <option value="18-30">Ø´Ø¨Ø§Ø¨ (18-30)</option>
-              <option value="31-50">Ø¨Ø§Ù„ØºÙŠÙ† (31-50)</option>
-              <option value="51+">ÙƒØ¨Ø§Ø± Ø§Ù„Ø³Ù† (51+)</option>
+              <option value="">كل الأعمار</option>
+              <option value="0-6">رضّع (0-6)</option>
+              <option value="7-12">أطفال (7-12)</option>
+              <option value="13-17">مراهقين (13-17)</option>
+              <option value="18-30">شباب (18-30)</option>
+              <option value="31-50">بالغين (31-50)</option>
+              <option value="51+">كبار السن (51+)</option>
             </select>
             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">
               <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -130,9 +130,9 @@
           <!-- Status Filter -->
           <div class="relative">
             <select class="w-full pr-10 pl-4 py-4 rounded-xl border-slate-200 focus:ring-aman-blue focus:border-aman-blue text-sm appearance-none" id="statusFilter">
-              <option value="">Ø§Ù„Ø­Ø§Ù„Ø©: Ø§Ù„ÙƒÙ„</option>
-              <option value="searching">Ø¬Ø§Ø±ÙŠ Ø§Ù„Ø¨Ø­Ø«</option>
-              <option value="found">ØªÙ… Ø§Ù„Ø¹Ø«ÙˆØ±</option>
+              <option value="">الحالة: الكل</option>
+              <option value="searching">جاري البحث</option>
+              <option value="found">تم العثور</option>
             </select>
             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">
               <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -149,10 +149,10 @@
             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
             </svg>
-            Ø§Ø¨Ø­Ø«
+            ابحث
           </button>
           <button class="border-2 border-slate-300 text-slate-600 font-bold px-8 py-3 rounded-xl hover:bg-slate-50 transition-all" id="resetBtn">
-            Ø¥Ø¹Ø§Ø¯Ø© ØªØ¹ÙŠÙŠÙ†
+            إعادة تعيين
           </button>
         </div>
       </div>
@@ -163,282 +163,282 @@
   <section class="py-16 container mx-auto px-4">
     <div class="flex justify-between items-end mb-10">
       <div>
-        <h2 class="text-3xl font-extrabold text-slate-900 border-r-4 border-aman-blue pr-4">Ø­Ø§Ù„Ø§Øª Ø§Ù„Ù…ÙÙ‚ÙˆØ¯ÙŠÙ†</h2>
-        <p class="text-slate-500 mt-2 text-sm">ÙŠØªÙ… ØªØ­Ø¯ÙŠØ« Ø§Ù„Ù‚Ø§Ø¦Ù…Ø© Ø¨Ø§Ø³ØªÙ…Ø±Ø§Ø± Ø¨Ù†Ø§Ø¡Ù‹ Ø¹Ù„Ù‰ Ø§Ù„Ø¨Ù„Ø§ØºØ§Øª Ø§Ù„ÙˆØ§Ø±Ø¯Ø©</p>
+        <h2 class="text-3xl font-extrabold text-slate-900 border-r-4 border-aman-blue pr-4">حالات المفقودين</h2>
+        <p class="text-slate-500 mt-2 text-sm">يتم تحديث القائمة باستمرار بناءً على البلاغات الواردة</p>
       </div>
-      <span class="text-aman-blue font-bold text-sm bg-blue-50 px-4 py-2 rounded-lg" id="resultsCount">8 Ø­Ø§Ù„Ø©</span>
+      <span class="text-aman-blue font-bold text-sm bg-blue-50 px-4 py-2 rounded-lg" id="resultsCount">8 حالة</span>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="cardsGrid">
 
       <!-- Card 1 -->
-      <div class="case-card bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md transition-shadow" data-name="Ø³Ø§Ø±Ø© Ù…Ø­Ù…Ø¯ Ø¹Ù„ÙŠ" data-governorate="Ø§Ù„Ø¬ÙŠØ²Ø©" data-gender="female" data-age="20" data-status="searching" data-since="5 Ø£ÙŠØ§Ù…" data-location="Ø§Ù„Ø¬ÙŠØ²Ø© - Ø§Ù„Ø¯Ù‚ÙŠ" data-description="ÙÙÙ‚Ø¯Øª Ø¨Ø§Ù„Ù‚Ø±Ø¨ Ù…Ù† Ù…Ø­Ø·Ø© Ù…ØªØ±Ùˆ Ø§Ù„Ø¯Ù‚ÙŠ. ØªØ±ØªØ¯ÙŠ Ø¹Ø¨Ø§Ø¡Ø© Ø²Ø±Ù‚Ø§Ø¡. Ø¢Ø®Ø± Ù…Ø´Ø§Ù‡Ø¯Ø© ÙƒØ§Ù†Øª Ø¹Ù†Ø¯ Ø§Ù„Ù…ÙƒØªØ¨Ø© Ø§Ù„Ø¹Ø§Ù…Ø©. Ù„Ø¯ÙŠÙ‡Ø§ ÙˆØ´Ù… ØµØºÙŠØ± Ø¹Ù„Ù‰ ÙŠØ¯Ù‡Ø§ Ø§Ù„ÙŠØ³Ø±Ù‰." data-contact="01234567890">
+      <div class="case-card bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md transition-shadow" data-name="سارة محمد علي" data-governorate="الجيزة" data-gender="female" data-age="20" data-status="searching" data-since="5 أيام" data-location="الجيزة - الدقي" data-description="فُقدت بالقرب من محطة مترو الدقي. ترتدي عباءة زرقاء. آخر مشاهدة كانت عند المكتبة العامة. لديها وشم صغير على يدها اليسرى." data-contact="01234567890">
         <div class="relative h-64">
-          <img alt="ØµÙˆØ±Ø© Ø´Ø®Øµ" class="w-full h-full object-cover"
+          <img alt="صورة شخص" class="w-full h-full object-cover"
                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNDjm06lASfXCe47JcvtkZ_qH1NNqplI_cdaFcGW7tAeEwfFe9uKloRdne9qmvDZGwCFOZaQTac0r3ckSQi092xjyBj-mT9TwaTHAJKgT6geM1P8kPkm2wnbZ1wZzROBHdgKqaZfV405JI7dHzu_9Pu_ucbmlaP7DMMR59BgbFtj2K9Jb_mVLGO0MgGClYXZFZDmYMuHUrCk9Kihx7Oq4N8uHLkC5XkVW9u2YZgW7woA-CH3Uz-UWZhIfgixEA_dToRX-4WrM9q_17" />
-          <span class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">Ø¬Ø§Ø±ÙŠ Ø§Ù„Ø¨Ø­Ø«</span>
+          <span class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">جاري البحث</span>
         </div>
         <div class="p-5">
-          <h4 class="text-xl font-bold text-center mb-4">Ø³Ø§Ø±Ø© Ù…Ø­Ù…Ø¯ Ø¹Ù„ÙŠ</h4>
+          <h4 class="text-xl font-bold text-center mb-4">سارة محمد علي</h4>
           <div class="space-y-2 text-sm text-slate-600 mb-6">
             <div class="flex justify-between">
-              <span>Ø§Ù„Ø¹Ù…Ø±: 20 Ø³Ù†Ø©</span>
-              <span>Ø§Ù„Ù†ÙˆØ¹: Ø£Ù†Ø«Ù‰</span>
+              <span>العمر: 20 سنة</span>
+              <span>النوع: أنثى</span>
             </div>
             <div class="flex items-center gap-2">
               <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
               </svg>
-              Ù…ÙÙ‚ÙˆØ¯Ø© Ù…Ù†Ø°: 5 Ø£ÙŠØ§Ù…
+              مفقودة منذ: 5 أيام
             </div>
             <div class="flex items-center gap-2">
               <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
               </svg>
-              Ø¢Ø®Ø± Ù…ÙƒØ§Ù†: Ø§Ù„Ø¬ÙŠØ²Ø© - Ø§Ù„Ø¯Ù‚ÙŠ
+              آخر مكان: الجيزة - الدقي
             </div>
           </div>
           <div class="flex gap-2">
-            <a class="flex-1 py-2 border-2 border-aman-blue text-aman-blue font-bold rounded-lg hover:bg-blue-50 transition-colors text-center text-sm detail-btn" href="#">Ø¹Ø±Ø¶ Ø§Ù„ØªÙØ§ØµÙŠÙ„</a>
-            <a class="flex-1 py-2 bg-aman-blue text-white font-bold rounded-lg hover:bg-aman-dark-blue transition-colors text-center text-sm sighting-btn" href="#">Ø§Ù„Ø¥Ø¨Ù„Ø§Øº Ø¹Ù† Ù…Ø´Ø§Ù‡Ø¯Ø©</a>
+            <a class="flex-1 py-2 border-2 border-aman-blue text-aman-blue font-bold rounded-lg hover:bg-blue-50 transition-colors text-center text-sm detail-btn" href="#">عرض التفاصيل</a>
+            <a class="flex-1 py-2 bg-aman-blue text-white font-bold rounded-lg hover:bg-aman-dark-blue transition-colors text-center text-sm sighting-btn" href="#">الإبلاغ عن مشاهدة</a>
           </div>
         </div>
       </div>
 
       <!-- Card 2 -->
-      <div class="case-card bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md transition-shadow" data-name="ÙŠÙˆØ³Ù Ø£Ø­Ù…Ø¯ Ù…Ø­Ù…ÙˆØ¯" data-governorate="Ø§Ù„Ù‚Ø§Ù‡Ø±Ø©" data-gender="male" data-age="15" data-status="searching" data-since="3 Ø£ÙŠØ§Ù…" data-location="Ø§Ù„Ù‚Ø§Ù‡Ø±Ø© - Ù…Ø¯ÙŠÙ†Ø© Ù†ØµØ±" data-description="Ø´ÙˆÙ‡Ø¯ Ø¢Ø®Ø± Ù…Ø±Ø© Ø£Ù…Ø§Ù… Ù…Ø¯Ø±Ø³ØªÙ‡ Ø§Ù„Ø§Ø¨ØªØ¯Ø§Ø¦ÙŠØ© Ø¨Ø¹Ø¯ Ø§Ù†ØªÙ‡Ø§Ø¡ Ø§Ù„Ø¯ÙˆØ§Ù… Ø§Ù„Ù…Ø¯Ø±Ø³ÙŠ. ÙƒØ§Ù† ÙŠØ±ØªØ¯ÙŠ Ø²ÙŠØ§Ù‹ Ø±ÙŠØ§Ø¶ÙŠØ§Ù‹ Ø£Ø²Ø±Ù‚." data-contact="01122334455">
+      <div class="case-card bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md transition-shadow" data-name="يوسف أحمد محمود" data-governorate="القاهرة" data-gender="male" data-age="15" data-status="searching" data-since="3 أيام" data-location="القاهرة - مدينة نصر" data-description="شوهد آخر مرة أمام مدرسته الابتدائية بعد انتهاء الدوام المدرسي. كان يرتدي زياً رياضياً أزرق." data-contact="01122334455">
         <div class="relative h-64">
-          <img alt="ØµÙˆØ±Ø© Ø´Ø®Øµ" class="w-full h-full object-cover"
+          <img alt="صورة شخص" class="w-full h-full object-cover"
                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtO79O21Kg2i9WBCRfeQG-lEZ1Hd9ulouso1I3xtkZA_9fWQG3jh2J0gLQfZTdpblXGPckHE25XWcuFRP3DjUUwXOqCRjLuR3jmDslnQlBudFdv0iSOrFyPRl0cpYiXqr9OgbHHqS9yBfafhIQYJ66tCOD2gVbh1n1m7Uxo6fJ3Ntib3yYhaJtalbk8cZCty8XdXf-Apph2RI_3gsid-MJndGO2Nvr0e3GcWbFoFBs7n_0Pp-FN9QT8Dy_bpHmRH4wFzB0WGXHKdPP" />
-          <span class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">Ø¬Ø§Ø±ÙŠ Ø§Ù„Ø¨Ø­Ø«</span>
+          <span class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">جاري البحث</span>
         </div>
         <div class="p-5">
-          <h4 class="text-xl font-bold text-center mb-4">ÙŠÙˆØ³Ù Ø£Ø­Ù…Ø¯ Ù…Ø­Ù…ÙˆØ¯</h4>
+          <h4 class="text-xl font-bold text-center mb-4">يوسف أحمد محمود</h4>
           <div class="space-y-2 text-sm text-slate-600 mb-6">
             <div class="flex justify-between">
-              <span>Ø§Ù„Ø¹Ù…Ø±: 15 Ø³Ù†Ø©</span>
-              <span>Ø§Ù„Ù†ÙˆØ¹: Ø°ÙƒØ±</span>
+              <span>العمر: 15 سنة</span>
+              <span>النوع: ذكر</span>
             </div>
             <div class="flex items-center gap-2">
               <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
               </svg>
-              Ù…ÙÙ‚ÙˆØ¯ Ù…Ù†Ø°: 3 Ø£ÙŠØ§Ù…
+              مفقود منذ: 3 أيام
             </div>
             <div class="flex items-center gap-2">
               <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
               </svg>
-              Ø¢Ø®Ø± Ù…ÙƒØ§Ù†: Ø§Ù„Ù‚Ø§Ù‡Ø±Ø© - Ù…Ø¯ÙŠÙ†Ø© Ù†ØµØ±
+              آخر مكان: القاهرة - مدينة نصر
             </div>
           </div>
           <div class="flex gap-2">
-            <a class="flex-1 py-2 border-2 border-aman-blue text-aman-blue font-bold rounded-lg hover:bg-blue-50 transition-colors text-center text-sm detail-btn" href="#">Ø¹Ø±Ø¶ Ø§Ù„ØªÙØ§ØµÙŠÙ„</a>
-            <a class="flex-1 py-2 bg-aman-blue text-white font-bold rounded-lg hover:bg-aman-dark-blue transition-colors text-center text-sm sighting-btn" href="#">Ø§Ù„Ø¥Ø¨Ù„Ø§Øº Ø¹Ù† Ù…Ø´Ø§Ù‡Ø¯Ø©</a>
+            <a class="flex-1 py-2 border-2 border-aman-blue text-aman-blue font-bold rounded-lg hover:bg-blue-50 transition-colors text-center text-sm detail-btn" href="#">عرض التفاصيل</a>
+            <a class="flex-1 py-2 bg-aman-blue text-white font-bold rounded-lg hover:bg-aman-dark-blue transition-colors text-center text-sm sighting-btn" href="#">الإبلاغ عن مشاهدة</a>
           </div>
         </div>
       </div>
 
       <!-- Card 3 -->
-      <div class="case-card bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md transition-shadow" data-name="Ø­Ø³Ù† Ø¹Ø¨Ø¯ Ø§Ù„Ù„Ù‡" data-governorate="Ø¨Ù†ÙŠ Ø³ÙˆÙŠÙ" data-gender="male" data-age="60" data-status="searching" data-since="7 Ø£ÙŠØ§Ù…" data-location="Ø¨Ù†ÙŠ Ø³ÙˆÙŠÙ - Ø§Ù„ÙƒÙˆØ±Ù†ÙŠØ´" data-description="Ø±Ø¬Ù„ Ù…Ø³Ù† ÙŠØ¹Ø§Ù†ÙŠ Ù…Ù† Ù…Ø±Ø¶ Ø§Ù„Ø²Ù‡Ø§ÙŠÙ…Ø±. Ø¢Ø®Ø± Ù…Ø´Ø§Ù‡Ø¯Ø© Ø£Ø«Ù†Ø§Ø¡ Ø³ÙŠØ±Ù‡ Ø¹Ù„Ù‰ ÙƒÙˆØ±Ù†ÙŠØ´ Ø§Ù„Ù†ÙŠÙ„. ÙƒØ§Ù† ÙŠØ±ØªØ¯ÙŠ Ø¬Ù„Ø¨Ø§Ø¨Ø§Ù‹ Ø£Ø¨ÙŠØ¶ ÙˆØ¹Ù…Ø©." data-contact="01099887766">
+      <div class="case-card bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md transition-shadow" data-name="حسن عبد الله" data-governorate="بني سويف" data-gender="male" data-age="60" data-status="searching" data-since="7 أيام" data-location="بني سويف - الكورنيش" data-description="رجل مسن يعاني من مرض الزهايمر. آخر مشاهدة أثناء سيره على كورنيش النيل. كان يرتدي جلباباً أبيض وعمة." data-contact="01099887766">
         <div class="relative h-64">
-          <img alt="ØµÙˆØ±Ø© Ø´Ø®Øµ" class="w-full h-full object-cover"
+          <img alt="صورة شخص" class="w-full h-full object-cover"
                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPn2-s5u_JFKOn-bav4hj_RAtLf4a5ApGS7tkmp__wxePx5Y7x9yJGKDECxaJ7aFWQNxFmbTSVQi0Ai37_MRF9MptS8vyCJH9BgfdYGtQdM7nZBeI96Zpdjqac0A316RF0jZHKAxHWaZVcxl70gWleVPmHZOz_J4I5ZCdy3zdd6OJSNAd_Yv6QD3qfHz581MyLFmlY0Jy0HVBmRUIquAgMXsWArMPZFk8O-sI3SfdFkTY9V1stcmhOpxa8orwYL17HohmW9-9y4G-9" />
-          <span class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">Ø¬Ø§Ø±ÙŠ Ø§Ù„Ø¨Ø­Ø«</span>
+          <span class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">جاري البحث</span>
         </div>
         <div class="p-5">
-          <h4 class="text-xl font-bold text-center mb-4">Ø­Ø³Ù† Ø¹Ø¨Ø¯ Ø§Ù„Ù„Ù‡</h4>
+          <h4 class="text-xl font-bold text-center mb-4">حسن عبد الله</h4>
           <div class="space-y-2 text-sm text-slate-600 mb-6">
             <div class="flex justify-between">
-              <span>Ø§Ù„Ø¹Ù…Ø±: 60 Ø³Ù†Ø©</span>
-              <span>Ø§Ù„Ù†ÙˆØ¹: Ø°ÙƒØ±</span>
+              <span>العمر: 60 سنة</span>
+              <span>النوع: ذكر</span>
             </div>
             <div class="flex items-center gap-2">
               <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
               </svg>
-              Ù…ÙÙ‚ÙˆØ¯ Ù…Ù†Ø°: 7 Ø£ÙŠØ§Ù…
+              مفقود منذ: 7 أيام
             </div>
             <div class="flex items-center gap-2">
               <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
               </svg>
-              Ø¢Ø®Ø± Ù…ÙƒØ§Ù†: Ø¨Ù†ÙŠ Ø³ÙˆÙŠÙ - Ø§Ù„ÙƒÙˆØ±Ù†ÙŠØ´
+              آخر مكان: بني سويف - الكورنيش
             </div>
           </div>
           <div class="flex gap-2">
-            <a class="flex-1 py-2 border-2 border-aman-blue text-aman-blue font-bold rounded-lg hover:bg-blue-50 transition-colors text-center text-sm detail-btn" href="#">Ø¹Ø±Ø¶ Ø§Ù„ØªÙØ§ØµÙŠÙ„</a>
-            <a class="flex-1 py-2 bg-aman-blue text-white font-bold rounded-lg hover:bg-aman-dark-blue transition-colors text-center text-sm sighting-btn" href="#">Ø§Ù„Ø¥Ø¨Ù„Ø§Øº Ø¹Ù† Ù…Ø´Ø§Ù‡Ø¯Ø©</a>
+            <a class="flex-1 py-2 border-2 border-aman-blue text-aman-blue font-bold rounded-lg hover:bg-blue-50 transition-colors text-center text-sm detail-btn" href="#">عرض التفاصيل</a>
+            <a class="flex-1 py-2 bg-aman-blue text-white font-bold rounded-lg hover:bg-aman-dark-blue transition-colors text-center text-sm sighting-btn" href="#">الإبلاغ عن مشاهدة</a>
           </div>
         </div>
       </div>
 
       <!-- Card 4 -->
-      <div class="case-card bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md transition-shadow" data-name="Ù…Ù†Ø© Ø§Ù„Ù„Ù‡ Ù…Ø­Ù…Ø¯" data-governorate="Ø§Ù„Ø¥Ø³ÙƒÙ†Ø¯Ø±ÙŠØ©" data-gender="female" data-age="9" data-status="found" data-since="ÙŠÙˆÙ…ÙŠÙ†" data-location="Ø§Ù„Ø¥Ø³ÙƒÙ†Ø¯Ø±ÙŠØ© - Ø§Ù„Ø¹Ø¬Ù…ÙŠ" data-description="Ø·ÙÙ„Ø© Ø¹Ù…Ø±Ù‡Ø§ 9 Ø³Ù†ÙˆØ§ØªØŒ ØªÙ… Ø§Ù„Ø¹Ø«ÙˆØ± Ø¹Ù„ÙŠÙ‡Ø§ Ø¨ÙØ¶Ù„ ØªØ¹Ø§ÙˆÙ† Ø§Ù„Ù…Ø¬ØªÙ…Ø¹. ÙƒØ§Ù†Øª ØªØ±ØªØ¯ÙŠ ÙØ³ØªØ§Ù†Ø§Ù‹ ÙˆØ±Ø¯ÙŠØ§Ù‹. ÙÙÙ‚Ø¯Øª Ø¹Ù„Ù‰ Ø´Ø§Ø·Ø¦ Ø§Ù„Ø¹Ø¬Ù…ÙŠ. Ø§Ù„Ø­Ù…Ø¯ Ù„Ù„Ù‡ ØªÙ…Øª Ø¥Ø¹Ø§Ø¯ØªÙ‡Ø§ Ù„Ø£Ø³Ø±ØªÙ‡Ø§." data-contact="01223344556">
+      <div class="case-card bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md transition-shadow" data-name="منة الله محمد" data-governorate="الإسكندرية" data-gender="female" data-age="9" data-status="found" data-since="يومين" data-location="الإسكندرية - العجمي" data-description="طفلة عمرها 9 سنوات، تم العثور عليها بفضل تعاون المجتمع. كانت ترتدي فستاناً وردياً. فُقدت على شاطئ العجمي. الحمد لله تمت إعادتها لأسرتها." data-contact="01223344556">
         <div class="relative h-64">
-          <img alt="ØµÙˆØ±Ø© Ø´Ø®Øµ" class="w-full h-full object-cover"
+          <img alt="صورة شخص" class="w-full h-full object-cover"
                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLdgq7-quJeGY1aBsmWqA9mvVSsDvuNQilViTohDTYl6PV5hasJjK5ADZRjWasGkFzjpCGTgqsCAFqdVHSOJMIPdDWfevGbKwSalGov2nIumSbGSy17VupF0cdPbC7YETEXl7dQQbT46cNCLhQ_Uajq6Msrsq5OHTh4BpnGqKorIqMuyeqmF4gUzsDbKYs3TO8t7ejZc2YXy2tjsX7MBO0V9LE1LT70bgFzcK3zOT7R17GbCa1NpctFBF8GiTxBF13xGHxRhgBkias" />
-          <span class="absolute top-4 right-4 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full">ØªÙ… Ø§Ù„Ø¹Ø«ÙˆØ±</span>
+          <span class="absolute top-4 right-4 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full">تم العثور</span>
         </div>
         <div class="p-5">
-          <h4 class="text-xl font-bold text-center mb-4">Ù…Ù†Ø© Ø§Ù„Ù„Ù‡ Ù…Ø­Ù…Ø¯</h4>
+          <h4 class="text-xl font-bold text-center mb-4">منة الله محمد</h4>
           <div class="space-y-2 text-sm text-slate-600 mb-6">
             <div class="flex justify-between">
-              <span>Ø§Ù„Ø¹Ù…Ø±: 9 Ø³Ù†ÙˆØ§Øª</span>
-              <span>Ø§Ù„Ù†ÙˆØ¹: Ø£Ù†Ø«Ù‰</span>
+              <span>العمر: 9 سنوات</span>
+              <span>النوع: أنثى</span>
             </div>
             <div class="flex items-center gap-2">
               <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
               </svg>
-              Ù…ÙÙ‚ÙˆØ¯Ø© Ù…Ù†Ø°: ÙŠÙˆÙ…ÙŠÙ†
+              مفقودة منذ: يومين
             </div>
             <div class="flex items-center gap-2">
               <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
               </svg>
-              Ø¢Ø®Ø± Ù…ÙƒØ§Ù†: Ø§Ù„Ø¥Ø³ÙƒÙ†Ø¯Ø±ÙŠØ© - Ø§Ù„Ø¹Ø¬Ù…ÙŠ
+              آخر مكان: الإسكندرية - العجمي
             </div>
           </div>
           <div class="flex gap-2">
-            <a class="flex-1 py-2 border-2 border-aman-blue text-aman-blue font-bold rounded-lg hover:bg-blue-50 transition-colors text-center text-sm detail-btn" href="#">Ø¹Ø±Ø¶ Ø§Ù„ØªÙØ§ØµÙŠÙ„</a>
-            <a class="flex-1 py-2 bg-aman-blue text-white font-bold rounded-lg hover:bg-aman-dark-blue transition-colors text-center text-sm sighting-btn" href="#">Ø§Ù„Ø¥Ø¨Ù„Ø§Øº Ø¹Ù† Ù…Ø´Ø§Ù‡Ø¯Ø©</a>
+            <a class="flex-1 py-2 border-2 border-aman-blue text-aman-blue font-bold rounded-lg hover:bg-blue-50 transition-colors text-center text-sm detail-btn" href="#">عرض التفاصيل</a>
+            <a class="flex-1 py-2 bg-aman-blue text-white font-bold rounded-lg hover:bg-aman-dark-blue transition-colors text-center text-sm sighting-btn" href="#">الإبلاغ عن مشاهدة</a>
           </div>
         </div>
       </div>
 
       <!-- Card 5 -->
-      <div class="case-card bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md transition-shadow" data-name="Ù†ÙˆØ±Ø§ Ø£Ø­Ù…Ø¯ Ø¹Ø«Ù…Ø§Ù†" data-governorate="Ø§Ù„Ø´Ø±Ù‚ÙŠØ©" data-gender="female" data-age="35" data-status="searching" data-since="10 Ø£ÙŠØ§Ù…" data-location="Ø§Ù„Ø´Ø±Ù‚ÙŠØ© - Ø§Ù„Ø²Ù‚Ø§Ø²ÙŠÙ‚" data-description="Ù…ÙÙ‚ÙˆØ¯Ø© Ù…Ù† Ù…Ù†Ø·Ù‚Ø© Ø§Ù„Ø²Ù‚Ø§Ø²ÙŠÙ‚. ØªÙ… Ø±Ø¤ÙŠØªÙ‡Ø§ Ø¢Ø®Ø± Ù…Ø±Ø© ÙÙŠ Ø³ÙˆÙ‚ Ø§Ù„Ø®Ø¶Ø§Ø± Ø§Ù„Ù…Ø±ÙƒØ²ÙŠ. ØªØ±ØªØ¯ÙŠ Ø­Ø¬Ø§Ø¨Ø§Ù‹ Ø£Ø³ÙˆØ¯ ÙˆÙ…Ø¹Ø·ÙØ§Ù‹ Ø¨Ù†ÙŠØ§Ù‹." data-contact="01556677889">
+      <div class="case-card bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md transition-shadow" data-name="نورا أحمد عثمان" data-governorate="الشرقية" data-gender="female" data-age="35" data-status="searching" data-since="10 أيام" data-location="الشرقية - الزقازيق" data-description="مفقودة من منطقة الزقازيق. تم رؤيتها آخر مرة في سوق الخضار المركزي. ترتدي حجاباً أسود ومعطفاً بنياً." data-contact="01556677889">
         <div class="relative h-64">
-          <img alt="ØµÙˆØ±Ø© Ø´Ø®Øµ" class="w-full h-full object-cover"
+          <img alt="صورة شخص" class="w-full h-full object-cover"
                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNDjm06lASfXCe47JcvtkZ_qH1NNqplI_cdaFcGW7tAeEwfFe9uKloRdne9qmvDZGwCFOZaQTac0r3ckSQi092xjyBj-mT9TwaTHAJKgT6geM1P8kPkm2wnbZ1wZzROBHdgKqaZfV405JI7dHzu_9Pu_ucbmlaP7DMMR59BgbFtj2K9Jb_mVLGO0MgGClYXZFZDmYMuHUrCk9Kihx7Oq4N8uHLkC5XkVW9u2YZgW7woA-CH3Uz-UWZhIfgixEA_dToRX-4WrM9q_17" />
-          <span class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">Ø¬Ø§Ø±ÙŠ Ø§Ù„Ø¨Ø­Ø«</span>
+          <span class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">جاري البحث</span>
         </div>
         <div class="p-5">
-          <h4 class="text-xl font-bold text-center mb-4">Ù†ÙˆØ±Ø§ Ø£Ø­Ù…Ø¯ Ø¹Ø«Ù…Ø§Ù†</h4>
+          <h4 class="text-xl font-bold text-center mb-4">نورا أحمد عثمان</h4>
           <div class="space-y-2 text-sm text-slate-600 mb-6">
             <div class="flex justify-between">
-              <span>Ø§Ù„Ø¹Ù…Ø±: 35 Ø³Ù†Ø©</span>
-              <span>Ø§Ù„Ù†ÙˆØ¹: Ø£Ù†Ø«Ù‰</span>
+              <span>العمر: 35 سنة</span>
+              <span>النوع: أنثى</span>
             </div>
             <div class="flex items-center gap-2">
               <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
               </svg>
-              Ù…ÙÙ‚ÙˆØ¯Ø© Ù…Ù†Ø°: 10 Ø£ÙŠØ§Ù…
+              مفقودة منذ: 10 أيام
             </div>
             <div class="flex items-center gap-2">
               <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
               </svg>
-              Ø¢Ø®Ø± Ù…ÙƒØ§Ù†: Ø§Ù„Ø´Ø±Ù‚ÙŠØ© - Ø§Ù„Ø²Ù‚Ø§Ø²ÙŠÙ‚
+              آخر مكان: الشرقية - الزقازيق
             </div>
           </div>
           <div class="flex gap-2">
-            <a class="flex-1 py-2 border-2 border-aman-blue text-aman-blue font-bold rounded-lg hover:bg-blue-50 transition-colors text-center text-sm detail-btn" href="#">Ø¹Ø±Ø¶ Ø§Ù„ØªÙØ§ØµÙŠÙ„</a>
-            <a class="flex-1 py-2 bg-aman-blue text-white font-bold rounded-lg hover:bg-aman-dark-blue transition-colors text-center text-sm sighting-btn" href="#">Ø§Ù„Ø¥Ø¨Ù„Ø§Øº Ø¹Ù† Ù…Ø´Ø§Ù‡Ø¯Ø©</a>
+            <a class="flex-1 py-2 border-2 border-aman-blue text-aman-blue font-bold rounded-lg hover:bg-blue-50 transition-colors text-center text-sm detail-btn" href="#">عرض التفاصيل</a>
+            <a class="flex-1 py-2 bg-aman-blue text-white font-bold rounded-lg hover:bg-aman-dark-blue transition-colors text-center text-sm sighting-btn" href="#">الإبلاغ عن مشاهدة</a>
           </div>
         </div>
       </div>
 
       <!-- Card 6 -->
-      <div class="case-card bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md transition-shadow" data-name="Ø¹Ù„ÙŠ Ø­Ø³Ù† Ù…ØµØ·ÙÙ‰" data-governorate="Ø£Ø³ÙˆØ§Ù†" data-gender="male" data-age="45" data-status="found" data-since="14 ÙŠÙˆÙ…" data-location="Ø£Ø³ÙˆØ§Ù† - Ø§Ù„Ù…Ø¯ÙŠÙ†Ø©" data-description="ØªÙ… Ø§Ù„Ø¹Ø«ÙˆØ± Ø¹Ù„ÙŠÙ‡ ÙÙŠ Ù…Ø¯ÙŠÙ†Ø© Ø£Ø³ÙˆØ§Ù†. ÙƒØ§Ù† ÙÙŠ Ø±Ø­Ù„Ø© Ø¹Ù…Ù„ ÙˆÙÙ‚Ø¯ Ø§Ù„Ø§ØªØµØ§Ù„ Ø¨Ø³Ø¨Ø¨ Ù…Ø´ÙƒÙ„Ø© ÙÙŠ Ù‡Ø§ØªÙÙ‡. Ø§Ù„Ø­Ù…Ø¯ Ù„Ù„Ù‡ ØªÙ… Ø§Ù„ØªÙˆØ§ØµÙ„ Ù…Ø¹ Ø£Ø³Ø±ØªÙ‡." data-contact="01012345678">
+      <div class="case-card bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md transition-shadow" data-name="علي حسن مصطفى" data-governorate="أسوان" data-gender="male" data-age="45" data-status="found" data-since="14 يوم" data-location="أسوان - المدينة" data-description="تم العثور عليه في مدينة أسوان. كان في رحلة عمل وفقد الاتصال بسبب مشكلة في هاتفه. الحمد لله تم التواصل مع أسرته." data-contact="01012345678">
         <div class="relative h-64">
-          <img alt="ØµÙˆØ±Ø© Ø´Ø®Øµ" class="w-full h-full object-cover"
+          <img alt="صورة شخص" class="w-full h-full object-cover"
                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtO79O21Kg2i9WBCRfeQG-lEZ1Hd9ulouso1I3xtkZA_9fWQG3jh2J0gLQfZTdpblXGPckHE25XWcuFRP3DjUUwXOqCRjLuR3jmDslnQlBudFdv0iSOrFyPRl0cpYiXqr9OgbHHqS9yBfafhIQYJ66tCOD2gVbh1n1m7Uxo6fJ3Ntib3yYhaJtalbk8cZCty8XdXf-Apph2RI_3gsid-MJndGO2Nvr0e3GcWbFoFBs7n_0Pp-FN9QT8Dy_bpHmRH4wFzB0WGXHKdPP" />
-          <span class="absolute top-4 right-4 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full">ØªÙ… Ø§Ù„Ø¹Ø«ÙˆØ±</span>
+          <span class="absolute top-4 right-4 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full">تم العثور</span>
         </div>
         <div class="p-5">
-          <h4 class="text-xl font-bold text-center mb-4">Ø¹Ù„ÙŠ Ø­Ø³Ù† Ù…ØµØ·ÙÙ‰</h4>
+          <h4 class="text-xl font-bold text-center mb-4">علي حسن مصطفى</h4>
           <div class="space-y-2 text-sm text-slate-600 mb-6">
             <div class="flex justify-between">
-              <span>Ø§Ù„Ø¹Ù…Ø±: 45 Ø³Ù†Ø©</span>
-              <span>Ø§Ù„Ù†ÙˆØ¹: Ø°ÙƒØ±</span>
+              <span>العمر: 45 سنة</span>
+              <span>النوع: ذكر</span>
             </div>
             <div class="flex items-center gap-2">
               <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
               </svg>
-              Ù…ÙÙ‚ÙˆØ¯ Ù…Ù†Ø°: 14 ÙŠÙˆÙ…
+              مفقود منذ: 14 يوم
             </div>
             <div class="flex items-center gap-2">
               <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
               </svg>
-              Ø¢Ø®Ø± Ù…ÙƒØ§Ù†: Ø£Ø³ÙˆØ§Ù† - Ø§Ù„Ù…Ø¯ÙŠÙ†Ø©
+              آخر مكان: أسوان - المدينة
             </div>
           </div>
           <div class="flex gap-2">
-            <a class="flex-1 py-2 border-2 border-aman-blue text-aman-blue font-bold rounded-lg hover:bg-blue-50 transition-colors text-center text-sm detail-btn" href="#">Ø¹Ø±Ø¶ Ø§Ù„ØªÙØ§ØµÙŠÙ„</a>
-            <a class="flex-1 py-2 bg-aman-blue text-white font-bold rounded-lg hover:bg-aman-dark-blue transition-colors text-center text-sm sighting-btn" href="#">Ø§Ù„Ø¥Ø¨Ù„Ø§Øº Ø¹Ù† Ù…Ø´Ø§Ù‡Ø¯Ø©</a>
+            <a class="flex-1 py-2 border-2 border-aman-blue text-aman-blue font-bold rounded-lg hover:bg-blue-50 transition-colors text-center text-sm detail-btn" href="#">عرض التفاصيل</a>
+            <a class="flex-1 py-2 bg-aman-blue text-white font-bold rounded-lg hover:bg-aman-dark-blue transition-colors text-center text-sm sighting-btn" href="#">الإبلاغ عن مشاهدة</a>
           </div>
         </div>
       </div>
 
       <!-- Card 7 -->
-      <div class="case-card bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md transition-shadow" data-name="Ù…Ø±ÙŠÙ… Ø®Ø§Ù„Ø¯ Ø¥Ø¨Ø±Ø§Ù‡ÙŠÙ…" data-governorate="Ø§Ù„Ø¯Ù‚Ù‡Ù„ÙŠØ©" data-gender="female" data-age="6" data-status="searching" data-since="ÙŠÙˆÙ… ÙˆØ§Ø­Ø¯" data-location="Ø§Ù„Ù…Ù†ØµÙˆØ±Ø© - Ù…Ø±ÙƒØ² Ø§Ù„Ù…Ø¯ÙŠÙ†Ø©" data-description="Ø·ÙÙ„Ø© ØµØºÙŠØ±Ø© Ø¹Ù…Ø±Ù‡Ø§ 6 Ø³Ù†ÙˆØ§ØªØŒ ÙÙÙ‚Ø¯Øª ÙÙŠ Ø§Ù„Ù…Ù†ØµÙˆØ±Ø©. ØªØ±ØªØ¯ÙŠ ÙØ³ØªØ§Ù†Ø§Ù‹ Ø£ØµÙØ± ÙˆØ­Ø°Ø§Ø¡Ù‹ Ø£Ø¨ÙŠØ¶. Ø¢Ø®Ø± Ù…Ø´Ø§Ù‡Ø¯Ø© ÙƒØ§Ù†Øª ÙÙŠ Ù…Ø¯ÙŠÙ†Ø© Ø§Ù„Ù…Ù„Ø§Ù‡ÙŠ." data-contact="01234567891">
+      <div class="case-card bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md transition-shadow" data-name="مريم خالد إبراهيم" data-governorate="الدقهلية" data-gender="female" data-age="6" data-status="searching" data-since="يوم واحد" data-location="المنصورة - مركز المدينة" data-description="طفلة صغيرة عمرها 6 سنوات، فُقدت في المنصورة. ترتدي فستاناً أصفر وحذاءً أبيض. آخر مشاهدة كانت في مدينة الملاهي." data-contact="01234567891">
         <div class="relative h-64">
-          <img alt="ØµÙˆØ±Ø© Ø´Ø®Øµ" class="w-full h-full object-cover"
+          <img alt="صورة شخص" class="w-full h-full object-cover"
                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPn2-s5u_JFKOn-bav4hj_RAtLf4a5ApGS7tkmp__wxePx5Y7x9yJGKDECxaJ7aFWQNxFmbTSVQi0Ai37_MRF9MptS8vyCJH9BgfdYGtQdM7nZBeI96Zpdjqac0A316RF0jZHKAxHWaZVcxl70gWleVPmHZOz_J4I5ZCdy3zdd6OJSNAd_Yv6QD3qfHz581MyLFmlY0Jy0HVBmRUIquAgMXsWArMPZFk8O-sI3SfdFkTY9V1stcmhOpxa8orwYL17HohmW9-9y4G-9" />
-          <span class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">Ø¬Ø§Ø±ÙŠ Ø§Ù„Ø¨Ø­Ø«</span>
+          <span class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">جاري البحث</span>
         </div>
         <div class="p-5">
-          <h4 class="text-xl font-bold text-center mb-4">Ù…Ø±ÙŠÙ… Ø®Ø§Ù„Ø¯ Ø¥Ø¨Ø±Ø§Ù‡ÙŠÙ…</h4>
+          <h4 class="text-xl font-bold text-center mb-4">مريم خالد إبراهيم</h4>
           <div class="space-y-2 text-sm text-slate-600 mb-6">
             <div class="flex justify-between">
-              <span>Ø§Ù„Ø¹Ù…Ø±: 6 Ø³Ù†ÙˆØ§Øª</span>
-              <span>Ø§Ù„Ù†ÙˆØ¹: Ø£Ù†Ø«Ù‰</span>
+              <span>العمر: 6 سنوات</span>
+              <span>النوع: أنثى</span>
             </div>
             <div class="flex items-center gap-2">
               <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
               </svg>
-              Ù…ÙÙ‚ÙˆØ¯Ø© Ù…Ù†Ø°: ÙŠÙˆÙ… ÙˆØ§Ø­Ø¯
+              مفقودة منذ: يوم واحد
             </div>
             <div class="flex items-center gap-2">
               <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
               </svg>
-              Ø¢Ø®Ø± Ù…ÙƒØ§Ù†: Ø§Ù„Ø¯Ù‚Ù‡Ù„ÙŠØ© - Ø§Ù„Ù…Ù†ØµÙˆØ±Ø©
+              آخر مكان: الدقهلية - المنصورة
             </div>
           </div>
           <div class="flex gap-2">
-            <a class="flex-1 py-2 border-2 border-aman-blue text-aman-blue font-bold rounded-lg hover:bg-blue-50 transition-colors text-center text-sm detail-btn" href="#">Ø¹Ø±Ø¶ Ø§Ù„ØªÙØ§ØµÙŠÙ„</a>
-            <a class="flex-1 py-2 bg-aman-blue text-white font-bold rounded-lg hover:bg-aman-dark-blue transition-colors text-center text-sm sighting-btn" href="#">Ø§Ù„Ø¥Ø¨Ù„Ø§Øº Ø¹Ù† Ù…Ø´Ø§Ù‡Ø¯Ø©</a>
+            <a class="flex-1 py-2 border-2 border-aman-blue text-aman-blue font-bold rounded-lg hover:bg-blue-50 transition-colors text-center text-sm detail-btn" href="#">عرض التفاصيل</a>
+            <a class="flex-1 py-2 bg-aman-blue text-white font-bold rounded-lg hover:bg-aman-dark-blue transition-colors text-center text-sm sighting-btn" href="#">الإبلاغ عن مشاهدة</a>
           </div>
         </div>
       </div>
 
       <!-- Card 8 -->
-      <div class="case-card bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md transition-shadow" data-name="Ø£Ø­Ù…Ø¯ Ø§Ù„Ø³ÙŠØ¯ Ø¹Ø¨Ø¯ Ø§Ù„Ø±Ø­Ù…Ù†" data-governorate="Ø§Ù„Ù‚Ø§Ù‡Ø±Ø©" data-gender="male" data-age="28" data-status="searching" data-since="8 Ø£ÙŠØ§Ù…" data-location="Ø§Ù„Ù‚Ø§Ù‡Ø±Ø© - Ø§Ù„Ù…Ø¹Ø§Ø¯ÙŠ" data-description="Ù…ÙÙ‚ÙˆØ¯ Ù…Ù† Ù…Ù†Ø·Ù‚Ø© Ø§Ù„Ù…Ø¹Ø§Ø¯ÙŠ. Ø¢Ø®Ø± Ù…Ø´Ø§Ù‡Ø¯Ø© ÙƒØ§Ù†Øª ÙÙŠ Ø´Ø§Ø±Ø¹ 9 Ù‚Ø±Ø¨ Ù…Ø­Ø·Ø© Ù…ØªØ±Ùˆ Ø§Ù„Ù…Ø¹Ø§Ø¯ÙŠ. ÙƒØ§Ù† ÙŠØ±ØªØ¯ÙŠ Ø¬ÙŠÙ†Ø² Ø£Ø²Ø±Ù‚ ÙˆÙ‚Ù…ÙŠØµØ§Ù‹ Ø±Ù…Ø§Ø¯ÙŠØ§Ù‹." data-contact="01100998877">
+      <div class="case-card bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md transition-shadow" data-name="أحمد السيد عبد الرحمن" data-governorate="القاهرة" data-gender="male" data-age="28" data-status="searching" data-since="8 أيام" data-location="القاهرة - المعادي" data-description="مفقود من منطقة المعادي. آخر مشاهدة كانت في شارع 9 قرب محطة مترو المعادي. كان يرتدي جينز أزرق وقميصاً رمادياً." data-contact="01100998877">
         <div class="relative h-64">
-          <img alt="ØµÙˆØ±Ø© Ø´Ø®Øµ" class="w-full h-full object-cover"
+          <img alt="صورة شخص" class="w-full h-full object-cover"
                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLdgq7-quJeGY1aBsmWqA9mvVSsDvuNQilViTohDTYl6PV5hasJjK5ADZRjWasGkFzjpCGTgqsCAFqdVHSOJMIPdDWfevGbKwSalGov2nIumSbGSy17VupF0cdPbC7YETEXl7dQQbT46cNCLhQ_Uajq6Msrsq5OHTh4BpnGqKorIqMuyeqmF4gUzsDbKYs3TO8t7ejZc2YXy2tjsX7MBO0V9LE1LT70bgFzcK3zOT7R17GbCa1NpctFBF8GiTxBF13xGHxRhgBkias" />
-          <span class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">Ø¬Ø§Ø±ÙŠ Ø§Ù„Ø¨Ø­Ø«</span>
+          <span class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">جاري البحث</span>
         </div>
         <div class="p-5">
-          <h4 class="text-xl font-bold text-center mb-4">Ø£Ø­Ù…Ø¯ Ø§Ù„Ø³ÙŠØ¯ Ø¹Ø¨Ø¯ Ø§Ù„Ø±Ø­Ù…Ù†</h4>
+          <h4 class="text-xl font-bold text-center mb-4">أحمد السيد عبد الرحمن</h4>
           <div class="space-y-2 text-sm text-slate-600 mb-6">
             <div class="flex justify-between">
-              <span>Ø§Ù„Ø¹Ù…Ø±: 28 Ø³Ù†Ø©</span>
-              <span>Ø§Ù„Ù†ÙˆØ¹: Ø°ÙƒØ±</span>
+              <span>العمر: 28 سنة</span>
+              <span>النوع: ذكر</span>
             </div>
             <div class="flex items-center gap-2">
               <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
               </svg>
-              Ù…ÙÙ‚ÙˆØ¯ Ù…Ù†Ø°: 8 Ø£ÙŠØ§Ù…
+              مفقود منذ: 8 أيام
             </div>
             <div class="flex items-center gap-2">
               <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
               </svg>
-              Ø¢Ø®Ø± Ù…ÙƒØ§Ù†: Ø§Ù„Ù‚Ø§Ù‡Ø±Ø© - Ø§Ù„Ù…Ø¹Ø§Ø¯ÙŠ
+              آخر مكان: القاهرة - المعادي
             </div>
           </div>
           <div class="flex gap-2">
-            <a class="flex-1 py-2 border-2 border-aman-blue text-aman-blue font-bold rounded-lg hover:bg-blue-50 transition-colors text-center text-sm detail-btn" href="#">Ø¹Ø±Ø¶ Ø§Ù„ØªÙØ§ØµÙŠÙ„</a>
-            <a class="flex-1 py-2 bg-aman-blue text-white font-bold rounded-lg hover:bg-aman-dark-blue transition-colors text-center text-sm sighting-btn" href="#">Ø§Ù„Ø¥Ø¨Ù„Ø§Øº Ø¹Ù† Ù…Ø´Ø§Ù‡Ø¯Ø©</a>
+            <a class="flex-1 py-2 border-2 border-aman-blue text-aman-blue font-bold rounded-lg hover:bg-blue-50 transition-colors text-center text-sm detail-btn" href="#">عرض التفاصيل</a>
+            <a class="flex-1 py-2 bg-aman-blue text-white font-bold rounded-lg hover:bg-aman-dark-blue transition-colors text-center text-sm sighting-btn" href="#">الإبلاغ عن مشاهدة</a>
           </div>
         </div>
       </div>
@@ -448,13 +448,13 @@
     <!-- Pagination -->
     <div class="mt-12 flex justify-center">
       <nav class="flex items-center gap-2">
-        <a class="px-4 py-2 rounded-lg border border-slate-200 text-slate-400 opacity-50 cursor-not-allowed" href="#">Ø§Ù„Ø³Ø§Ø¨Ù‚</a>
+        <a class="px-4 py-2 rounded-lg border border-slate-200 text-slate-400 opacity-50 cursor-not-allowed" href="#">السابق</a>
         <a class="px-4 py-2 rounded-lg bg-aman-blue text-white font-bold" href="#">1</a>
         <a class="px-4 py-2 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 transition-colors" href="#">2</a>
         <a class="px-4 py-2 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 transition-colors" href="#">3</a>
         <span class="px-2 text-slate-400">...</span>
         <a class="px-4 py-2 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 transition-colors" href="#">12</a>
-        <a class="px-4 py-2 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 transition-colors" href="#">Ø§Ù„ØªØ§Ù„ÙŠ</a>
+        <a class="px-4 py-2 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 transition-colors" href="#">التالي</a>
       </nav>
     </div>
   </section>
@@ -469,20 +469,20 @@
           </svg>
         </div>
         <div>
-          <h3 class="text-xl font-extrabold text-slate-800">Ù„Ø¯ÙŠÙƒ Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø¹Ù† Ø£Ø­Ø¯ Ø§Ù„Ù…ÙÙ‚ÙˆØ¯ÙŠÙ†ØŸ</h3>
-          <p class="text-slate-600">ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ù„Ø¥Ø¨Ù„Ø§Øº Ø¹Ù† Ù…Ø´Ø§Ù‡Ø¯Ø© Ø£Ùˆ Ù…Ø´Ø§Ø±ÙƒØ© Ø£ÙŠ Ù…Ø¹Ù„ÙˆÙ…Ø© Ù‚Ø¯ ØªØ³Ø§Ø¹Ø¯ ÙÙŠ Ø§Ù„Ø¹Ø«ÙˆØ± Ø¹Ù„ÙŠÙ‡Ù….</p>
+          <h3 class="text-xl font-extrabold text-slate-800">لديك معلومات عن أحد المفقودين؟</h3>
+          <p class="text-slate-600">يمكنك الإبلاغ عن مشاهدة أو مشاركة أي معلومة قد تساعد في العثور عليهم.</p>
         </div>
       </div>
       <div class="flex gap-4">
         <a class="bg-aman-red hover:bg-red-700 text-white px-8 py-3 rounded-lg font-bold shadow-md transition-all flex items-center gap-2" href="/reports">
-          <span class="text-xl">+</span> Ø§Ù„Ø¥Ø¨Ù„Ø§Øº Ø¹Ù† Ø­Ø§Ù„Ø© ÙÙ‚Ø¯Ø§Ù†
+          <span class="text-xl">+</span> الإبلاغ عن حالة فقدان
         </a>
         <a class="border-2 border-aman-red text-aman-red hover:bg-red-50 px-8 py-3 rounded-lg font-bold transition-all flex items-center gap-2" href="/reports">
           <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
             <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
           </svg>
-          Ø¨Ù„Ø§Øº Ø¹Ù† Ù…Ø´Ø§Ù‡Ø¯Ø©
+          بلاغ عن مشاهدة
         </a>
       </div>
     </div>
@@ -498,10 +498,10 @@
           <div class="flex items-center gap-2 mb-6">
             <img alt="Aman Logo" class="h-10 w-auto brightness-0 invert"
                  src="https://lh3.googleusercontent.com/aida/AP1WRLtsAXYg1KpXLlTbNo5XPskZZWcMhTNS8Q_n8HtJ10BcoAD7GrZNEb6JxilmDa9_rHgMCbnHoShK4m3FLnvtLl1Ah-iklPabORDFndHZr4ARAmn8dAhPGk73Kq22Fj9hys9l1SQWSb11vBklIpdFdP2nWE20WcJhL8BKma7xAQXYx-eTUwg9ehj-jPuWOzMY4uPSG18iHRW497Qtcq0OgIoT6omS3w0rvQBklL7UR1XNtKoqfvqs3elxo0G9" />
-            <span class="text-2xl font-bold">Ø£Ù…Ø§Ù†</span>
+            <span class="text-2xl font-bold">أمان</span>
           </div>
           <p class="text-slate-400 text-sm leading-relaxed mb-6">
-            Ù…Ù†ØµØ© Ù…Ø¬ØªÙ…Ø¹ÙŠØ© ØºÙŠØ± Ø±Ø¨Ø­ÙŠØ© ØªÙ‡Ø¯Ù Ø¥Ù„Ù‰ Ù…Ø³Ø§Ø¹Ø¯Ø© Ø§Ù„Ø¹Ø§Ø¦Ù„Ø§Øª ÙÙŠ Ø§Ù„Ø¹Ø«ÙˆØ± Ø¹Ù„Ù‰ Ù…ÙÙ‚ÙˆØ¯ÙŠÙ‡Ù… Ù…Ù† Ø®Ù„Ø§Ù„ Ø§Ù„ØªØ¹Ø§ÙˆÙ† ÙˆØ§Ù„Ù…ØµØ¯Ø§Ù‚ÙŠØ©.
+            منصة مجتمعية غير ربحية تهدف إلى مساعدة العائلات في العثور على مفقوديهم من خلال التعاون والمصداقية.
           </p>
           <div class="flex gap-4">
             <a class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-aman-blue transition-colors" href="#">
@@ -519,47 +519,47 @@
 
         <!-- Quick Links -->
         <div>
-          <h5 class="text-lg font-bold mb-6">Ø±ÙˆØ§Ø¨Ø· Ø³Ø±ÙŠØ¹Ø©</h5>
+          <h5 class="text-lg font-bold mb-6">روابط سريعة</h5>
           <ul class="space-y-4 text-slate-400 text-sm">
-            <li><a class="hover:text-white transition-colors" href="/index">Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©</a></li>
-            <li><a class="hover:text-white transition-colors" href="/missing">Ø§Ù„Ù…ÙÙ‚ÙˆØ¯ÙŠÙ†</a></li>
-            <li><a class="hover:text-white transition-colors" href="/reports">Ø§Ù„Ø¨Ù„Ø§ØºØ§Øª ÙˆØ§Ù„Ù…Ø´Ø§Ù‡Ø¯Ø§Øª</a></li>
-            <li><a class="hover:text-white transition-colors" href="/report-case">ØªÙ‚Ø¯ÙŠÙ… Ø¨Ù„Ø§Øº</a></li>
-              <li><a class="hover:text-white transition-colors" href="/report-sighting">Ø§Ù„Ø¥Ø¨Ù„Ø§Øº Ø¹Ù† Ù…Ø´Ø§Ù‡Ø¯Ø©</a></li>
-            <li><a class="hover:text-white transition-colors" href="/about">Ù…Ù† Ù†Ø­Ù†</a></li>
-            <li><a class="hover:text-white transition-colors" href="/contact">Ø§ØªØµÙ„ Ø¨Ù†Ø§</a></li>
+            <li><a class="hover:text-white transition-colors" href="/index">الرئيسية</a></li>
+            <li><a class="hover:text-white transition-colors" href="/missing">المفقودين</a></li>
+            <li><a class="hover:text-white transition-colors" href="/reports">البلاغات والمشاهدات</a></li>
+            <li><a class="hover:text-white transition-colors" href="/report-case">تقديم بلاغ</a></li>
+              <li><a class="hover:text-white transition-colors" href="/report-sighting">الإبلاغ عن مشاهدة</a></li>
+            <li><a class="hover:text-white transition-colors" href="/about">من نحن</a></li>
+            <li><a class="hover:text-white transition-colors" href="/contact">اتصل بنا</a></li>
           </ul>
         </div>
 
         <!-- Legal -->
         <div>
-          <h5 class="text-lg font-bold mb-6">Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ù‚Ø§Ù†ÙˆÙ†ÙŠØ©</h5>
+          <h5 class="text-lg font-bold mb-6">معلومات قانونية</h5>
           <ul class="space-y-4 text-slate-400 text-sm">
-            <li><a class="hover:text-white transition-colors" href="/terms">Ø´Ø±ÙˆØ· Ø§Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù…</a></li>
-            <li><a class="hover:text-white transition-colors" href="/privacy">Ø³ÙŠØ§Ø³Ø© Ø§Ù„Ø®ØµÙˆØµÙŠØ©</a></li>
-            <li><a class="hover:text-white transition-colors" href="/disclaimer">Ø¥Ø®Ù„Ø§Ø¡ Ø§Ù„Ù…Ø³Ø¤ÙˆÙ„ÙŠØ©</a></li>
-            <li><a class="hover:text-white transition-colors" href="/faq">Ø§Ù„Ø£Ø³Ø¦Ù„Ø© Ø§Ù„Ø´Ø§Ø¦Ø¹Ø©</a></li>
+            <li><a class="hover:text-white transition-colors" href="/terms">شروط الاستخدام</a></li>
+            <li><a class="hover:text-white transition-colors" href="/privacy">سياسة الخصوصية</a></li>
+            <li><a class="hover:text-white transition-colors" href="/disclaimer">إخلاء المسؤولية</a></li>
+            <li><a class="hover:text-white transition-colors" href="/faq">الأسئلة الشائعة</a></li>
           </ul>
         </div>
 
         <!-- Emergency Numbers -->
         <div>
-          <h5 class="text-lg font-bold mb-6">Ø£Ø±Ù‚Ø§Ù… Ø§Ù„Ø·ÙˆØ§Ø±Ø¦ ÙÙŠ Ù…ØµØ±</h5>
+          <h5 class="text-lg font-bold mb-6">أرقام الطوارئ في مصر</h5>
           <ul class="space-y-4 text-slate-400 text-sm">
             <li class="flex items-center justify-between">
-              <span>Ø§Ù„Ø´Ø±Ø·Ø©</span>
+              <span>الشرطة</span>
               <span class="font-bold text-white">122</span>
             </li>
             <li class="flex items-center justify-between">
-              <span>Ø§Ù„Ù†Ø¬Ø¯Ø©</span>
+              <span>النجدة</span>
               <span class="font-bold text-white">123</span>
             </li>
             <li class="flex items-center justify-between">
-              <span>Ø§Ù„Ø¥Ø³Ø¹Ø§Ù</span>
+              <span>الإسعاف</span>
               <span class="font-bold text-white">123</span>
             </li>
             <li class="flex items-center justify-between">
-              <span>Ø®Ø· Ù†Ø¬Ø¯Ø© Ø§Ù„Ø·ÙÙ„</span>
+              <span>خط نجدة الطفل</span>
               <span class="font-bold text-white">16000</span>
             </li>
           </ul>
@@ -567,7 +567,7 @@
 
       </div>
       <div class="pt-8 border-t border-slate-800 text-center text-slate-500 text-xs">
-        Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø­Ù‚ÙˆÙ‚ Ù…Ø­ÙÙˆØ¸Ø© Â© 2026 Â© Ø¯Ù„ÙŠÙ„ Ø§Ù„Ù…ÙÙ‚ÙˆØ¯ÙŠÙ†
+        جميع الحقوق محفوظة © 2026 © دليل المفقودين
       </div>
     </div>
   </footer>
@@ -580,5 +580,5 @@
   <script src="assets/js/api.js"></script>
   <script src="assets/js/missing.js"></script>
 <script src="assets/js/backtotop.js"></script>
-<script src="assets/js/navbar.js"></script><script src="assets/js/error-logger.js"></script></body>
+<script src="assets/js/error-logger.js"></script></body>
 </html>
