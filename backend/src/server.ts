@@ -673,6 +673,21 @@ app.use((req: Request, res: Response, _next: NextFunction) => {
   res.sendFile(path.join(__dirname, '..', '..', 'index.html'));
 });
 
+// ─── Client Error Logging (from browser) ─────────────────
+app.post('/api/log-client-error', (req: Request, res: Response) => {
+  try {
+    const errors = Array.isArray(req.body) ? req.body : [req.body];
+    for (const e of errors) {
+      const msg = e.message || e.stack || JSON.stringify(e);
+      const stack = e.stack || '';
+      const ip = (req as any).clientIp || '';
+      const userId = (req as any).user?.id || 0;
+      db.logError({ level: 'error', context: 'CLIENT:' + (e.type || 'window.onerror'), message: msg, stack, ip, userId, url: e.url || req.originalUrl });
+    }
+    res.json({ ok: true });
+  } catch (err: any) { logError('CLIENT-ERROR-LOG', err); res.status(500).json({ error: 'فشل تسجيل الخطأ' }); }
+});
+
 // ─── Error Handler with Logging ────────────────────────────
 app.use((err: unknown, req: Request, res: Response, _next: NextFunction) => {
   const ctx = 'HTTP';
