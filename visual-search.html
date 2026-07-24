@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Ø£Ù…Ø§Ù† - Ø§Ù„Ø¨Ø­Ø« Ø¨Ø§Ù„ØµÙˆØ±Ø©</title>
+  <title>أمان - البحث بالصورة</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" />
@@ -44,11 +44,11 @@
     <div class="container mx-auto px-4 text-center relative z-10">
       <div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-blue-200 rounded-full px-5 py-2 text-sm font-semibold text-aman-blue mb-8 shadow-sm">
         <span class="material-symbols-outlined text-base">image_search</span>
-        ØªÙ‚Ù†ÙŠØ© Ø§Ù„Ø¨Ø­Ø« Ø§Ù„Ø¨ØµØ±ÙŠ
+        تقنية البحث البصري
       </div>
-      <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">Ø§Ù„Ø¨Ø­Ø« Ø¨Ø§Ù„ØµÙˆØ±Ø©</h1>
+      <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">البحث بالصورة</h1>
       <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-4 leading-relaxed">
-        Ø§Ø±ÙØ¹ ØµÙˆØ±Ø© Ù„Ù„Ø´Ø®Øµ Ø§Ù„Ù…ÙÙ‚ÙˆØ¯ Ø£Ùˆ Ù‚Ø·Ø¹Ø© Ù…Ù„Ø§Ø¨Ø³ Ø£Ùˆ ÙˆØ´Ù…Ø§Ù‹ Ø£Ùˆ Ø£ÙŠ Ø¹Ù„Ø§Ù…Ø© ÙØ§Ø±Ù‚Ø© â€” ÙˆÙ†Ø¸Ø§Ù…Ù†Ø§ ÙŠØ¨Ø­Ø« Ø¹Ù† Ø§Ù„ØªØ·Ø§Ø¨Ù‚Ø§Øª Ø§Ù„Ø¨ØµØ±ÙŠØ© ÙÙŠ Ù‚Ø§Ø¹Ø¯Ø© Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ø¨Ù„Ø§ØºØ§Øª.
+        ارفع صورة للشخص المفقود أو قطعة ملابس أو وشماً أو أي علامة فارقة — ونظامنا يبحث عن التطابقات البصرية في قاعدة بيانات البلاغات.
       </p>
     </div>
   </section>
@@ -63,45 +63,45 @@
           <div class="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
             <span class="material-symbols-outlined text-4xl text-aman-blue">image_search</span>
           </div>
-          <p class="text-lg font-bold text-slate-700 mb-2">Ø§Ø±ÙØ¹ ØµÙˆØ±Ø© Ù„Ù„Ø¨Ø­Ø«</p>
-          <p class="text-sm text-slate-400 mb-4">Ø§Ø³Ø­Ø¨ Ø§Ù„ØµÙˆØ±Ø© Ù‡Ù†Ø§ Ø£Ùˆ Ø§Ø¶ØºØ· Ù„Ù„Ø§Ø®ØªÙŠØ§Ø±</p>
+          <p class="text-lg font-bold text-slate-700 mb-2">ارفع صورة للبحث</p>
+          <p class="text-sm text-slate-400 mb-4">اسحب الصورة هنا أو اضغط للاختيار</p>
           <button type="button" id="uploadBtn" class="bg-aman-blue text-white px-8 py-3 rounded-xl font-bold shadow-md hover:bg-aman-dark-blue transition-all inline-flex items-center gap-2">
             <span class="material-symbols-outlined text-lg">add_photo_alternate</span>
-            Ø§Ø®ØªÙŠØ§Ø± ØµÙˆØ±Ø©
+            اختيار صورة
           </button>
           <input id="fileInput" type="file" accept="image/*" class="hidden" />
         </div>
         <div id="uploadPreview" class="hidden">
           <img id="previewImg" class="max-h-64 mx-auto rounded-2xl shadow-md mb-4" />
-          <button type="button" id="changeBtn" class="text-aman-blue text-sm font-bold hover:underline">ØªØºÙŠÙŠØ± Ø§Ù„ØµÙˆØ±Ø©</button>
+          <button type="button" id="changeBtn" class="text-aman-blue text-sm font-bold hover:underline">تغيير الصورة</button>
         </div>
       </div>
 
       <!-- Search Options -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
         <div>
-          <label class="block text-sm font-bold text-slate-700 mb-2">Ù†ÙˆØ¹ Ø§Ù„ØµÙˆØ±Ø©</label>
+          <label class="block text-sm font-bold text-slate-700 mb-2">نوع الصورة</label>
           <select id="imageType" class="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-aman-blue/20 focus:border-aman-blue outline-none bg-white">
-            <option value="any">Ø£ÙŠ Ù†ÙˆØ¹</option>
-            <option value="person">ØµÙˆØ±Ø© Ø´Ø®Øµ</option>
-            <option value="clothing">Ù…Ù„Ø§Ø¨Ø³</option>
-            <option value="feature">Ø¹Ù„Ø§Ù…Ø© ÙØ§Ø±Ù‚Ø© (ÙˆØ´Ù…/ÙˆØ­Ù…Ø©/Ù†Ø¯Ø¨Ø©)</option>
+            <option value="any">أي نوع</option>
+            <option value="person">صورة شخص</option>
+            <option value="clothing">ملابس</option>
+            <option value="feature">علامة فارقة (وشم/وحمة/ندبة)</option>
           </select>
         </div>
         <div>
-          <label class="block text-sm font-bold text-slate-700 mb-2">Ø§Ù„Ø£Ù„ÙˆØ§Ù† Ø§Ù„Ø¸Ø§Ù‡Ø±Ø©</label>
-          <input id="imageColors" type="text" placeholder="Ù…Ø«Ø§Ù„: Ø£Ø²Ø±Ù‚ØŒ Ø£Ø¨ÙŠØ¶ØŒ Ø£Ø³ÙˆØ¯" class="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-aman-blue/20 focus:border-aman-blue outline-none" />
+          <label class="block text-sm font-bold text-slate-700 mb-2">الألوان الظاهرة</label>
+          <input id="imageColors" type="text" placeholder="مثال: أزرق، أبيض، أسود" class="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-aman-blue/20 focus:border-aman-blue outline-none" />
         </div>
       </div>
 
       <div class="mb-6">
-        <label class="block text-sm font-bold text-slate-700 mb-2">ÙˆØµÙ Ø¥Ø¶Ø§ÙÙŠ (Ø§Ø®ØªÙŠØ§Ø±ÙŠ)</label>
-        <textarea id="imageDescription" rows="2" placeholder"Ù…Ø«Ø§Ù„: ÙˆØ´ ØµØºÙŠØ± Ø¹Ù„Ù‰ Ø§Ù„Ø®Ø¯ Ø§Ù„Ø£ÙŠÙ…Ù†ØŒ Ù‚Ù…ÙŠØµ Ø£Ø²Ø±Ù‚ Ø¨Ø£Ø²Ø±Ø§Ø± ÙØ¶ÙŠØ©" class="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-aman-blue/20 focus:border-aman-blue outline-none resize-none"></textarea>
+        <label class="block text-sm font-bold text-slate-700 mb-2">وصف إضافي (اختياري)</label>
+        <textarea id="imageDescription" rows="2" placeholder"مثال: وش صغير على الخد الأيمن، قميص أزرق بأزرار فضية" class="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-aman-blue/20 focus:border-aman-blue outline-none resize-none"></textarea>
       </div>
 
       <button id="searchBtn" class="w-full bg-aman-blue text-white px-8 py-4 rounded-xl font-bold text-lg shadow-md hover:bg-aman-dark-blue transition-all flex items-center justify-center gap-2 disabled:opacity-50" disabled>
         <span class="material-symbols-outlined">search</span>
-        <span id="searchBtnText">Ø§Ø¨Ø­Ø« Ø¨Ø§Ù„ØµÙˆØ±Ø©</span>
+        <span id="searchBtnText">ابحث بالصورة</span>
         <span id="searchSpinner" class="hidden">
           <svg class="animate-spin h-5 w-5" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg>
         </span>
@@ -113,12 +113,12 @@
   <section id="resultsSection" class="container mx-auto px-4 py-12 hidden">
     <div class="flex items-center justify-between mb-8">
       <div>
-        <h2 class="text-2xl font-extrabold text-slate-900">Ù†ØªØ§Ø¦Ø¬ Ø§Ù„Ø¨Ø­Ø«</h2>
+        <h2 class="text-2xl font-extrabold text-slate-900">نتائج البحث</h2>
         <p id="resultsCount" class="text-slate-500 text-sm mt-1"></p>
       </div>
       <div class="flex items-center gap-2 text-sm text-slate-500">
         <span class="material-symbols-outlined text-lg">palette</span>
-        <span>Ø§Ù„Ø£Ù„ÙˆØ§Ù† Ø§Ù„Ù…Ø³ØªØ®Ù„ØµØ©: <span id="queryColors" class="font-bold text-slate-700"></span></span>
+        <span>الألوان المستخلصة: <span id="queryColors" class="font-bold text-slate-700"></span></span>
       </div>
     </div>
 
@@ -127,36 +127,36 @@
       <div class="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6">
         <span class="material-symbols-outlined text-4xl text-slate-400">search_off</span>
       </div>
-      <h3 class="text-xl font-bold text-slate-600 mb-2">Ù„Ø§ ØªÙˆØ¬Ø¯ Ù†ØªØ§Ø¦Ø¬ Ù…Ø·Ø§Ø¨Ù‚Ø©</h3>
-      <p class="text-slate-400">Ù„Ù… ÙŠØªÙ… Ø§Ù„Ø¹Ø«ÙˆØ± Ø¹Ù„Ù‰ ØªØ·Ø§Ø¨Ù‚Ø§Øª Ø¨ØµØ±ÙŠØ©. Ø­Ø§ÙˆÙ„ Ø±ÙØ¹ ØµÙˆØ±Ø© Ø£ÙˆØ¶Ø­ Ø£Ùˆ Ø¥Ø¶Ø§ÙØ© Ø£Ù„ÙˆØ§Ù† Ø£ÙƒØ«Ø±.</p>
+      <h3 class="text-xl font-bold text-slate-600 mb-2">لا توجد نتائج مطابقة</h3>
+      <p class="text-slate-400">لم يتم العثور على تطابقات بصرية. حاول رفع صورة أوضح أو إضافة ألوان أكثر.</p>
     </div>
   </section>
 
   <!-- HOW IT WORKS -->
   <section class="bg-white py-16">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-extrabold text-slate-900 mb-10 text-center">ÙƒÙŠÙ ÙŠØ¹Ù…Ù„ Ø§Ù„Ø¨Ø­Ø« Ø§Ù„Ø¨ØµØ±ÙŠØŸ</h2>
+      <h2 class="text-3xl font-extrabold text-slate-900 mb-10 text-center">كيف يعمل البحث البصري؟</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="text-center">
           <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
             <span class="material-symbols-outlined text-3xl text-aman-blue">add_photo_alternate</span>
           </div>
-          <h4 class="text-lg font-bold mb-2">Ù¡. Ø§Ø±ÙØ¹ Ø§Ù„ØµÙˆØ±Ø©</h4>
-          <p class="text-slate-500 text-sm leading-relaxed">ØµÙˆØ±Ø© Ø§Ù„Ø´Ø®Øµ Ø§Ù„Ù…ÙÙ‚ÙˆØ¯ØŒ Ø£Ùˆ Ù‚Ø·Ø¹Ø© Ø§Ù„Ù…Ù„Ø§Ø¨Ø³ Ø§Ù„ØªÙŠ ÙƒØ§Ù† ÙŠØ±ØªØ¯ÙŠÙ‡Ø§ØŒ Ø£Ùˆ ÙˆØ´Ù…Ø§Ù‹ Ø£Ùˆ ÙˆØ­Ù…Ø©.</p>
+          <h4 class="text-lg font-bold mb-2">١. ارفع الصورة</h4>
+          <p class="text-slate-500 text-sm leading-relaxed">صورة الشخص المفقود، أو قطعة الملابس التي كان يرتديها، أو وشماً أو وحمة.</p>
         </div>
         <div class="text-center">
           <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
             <span class="material-symbols-outlined text-3xl text-aman-blue">psychology</span>
           </div>
-          <h4 class="text-lg font-bold mb-2">Ù¢. Ø§Ù„Ø°ÙƒØ§Ø¡ Ø§Ù„Ø¨ØµØ±ÙŠ</h4>
-          <p class="text-slate-500 text-sm leading-relaxed">Ø§Ù„Ù†Ø¸Ø§Ù… ÙŠØ­Ù„Ù„ Ø§Ù„Ø£Ù„ÙˆØ§Ù† ÙˆØ§Ù„Ø¨ØµÙ…Ø© Ø§Ù„Ø±Ù‚Ù…ÙŠØ© Ù„Ù„ØµÙˆØ±Ø© ÙˆÙŠÙ‚Ø§Ø±Ù†Ù‡Ø§ Ø¨ÙƒÙ„ Ø§Ù„ØµÙˆØ± ÙÙŠ Ù‚Ø§Ø¹Ø¯Ø© Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª.</p>
+          <h4 class="text-lg font-bold mb-2">٢. الذكاء البصري</h4>
+          <p class="text-slate-500 text-sm leading-relaxed">النظام يحلل الألوان والبصمة الرقمية للصورة ويقارنها بكل الصور في قاعدة البيانات.</p>
         </div>
         <div class="text-center">
           <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
             <span class="material-symbols-outlined text-3xl text-aman-blue">travel_explore</span>
           </div>
-          <h4 class="text-lg font-bold mb-2">Ù£. Ø§Ø¹Ø±Ø¶ Ø§Ù„Ù†ØªØ§Ø¦Ø¬</h4>
-          <p class="text-slate-500 text-sm leading-relaxed">ØªØµÙØ­ Ø§Ù„Ù†ØªØ§Ø¦Ø¬ Ù…Ø±ØªØ¨Ø© Ø­Ø³Ø¨ Ù†Ø³Ø¨Ø© Ø§Ù„ØªØ´Ø§Ø¨Ù‡ Ù…Ø¹ Ø§Ù„ØªÙØ§ØµÙŠÙ„ ÙˆØ§Ù„Ø£Ù„ÙˆØ§Ù† Ø§Ù„Ù…ØªØ·Ø§Ø¨Ù‚Ø©.</p>
+          <h4 class="text-lg font-bold mb-2">٣. اعرض النتائج</h4>
+          <p class="text-slate-500 text-sm leading-relaxed">تصفح النتائج مرتبة حسب نسبة التشابه مع التفاصيل والألوان المتطابقة.</p>
         </div>
       </div>
     </div>
@@ -165,11 +165,11 @@
   <!-- CTA -->
   <section class="relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-100 py-20">
     <div class="container mx-auto px-4 text-center relative z-10">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Ø¹Ù†Ø¯Ùƒ ØµÙˆØ±Ø© Ù„Ø£Ø­Ø¯ Ø§Ù„Ù…ÙÙ‚ÙˆØ¯ÙŠÙ†ØŸ</h2>
-      <p class="text-slate-600 text-lg mb-10 max-w-lg mx-auto">Ø­ØªÙ‰ Ù„Ùˆ ÙƒØ§Ù†Øª Ø§Ù„ØµÙˆØ±Ø© Ù‚Ø¯ÙŠÙ…Ø© Ø£Ùˆ ØºÙŠØ± ÙˆØ§Ø¶Ø­Ø©ØŒ Ø§Ø±ÙØ¹Ù‡Ø§ â€” Ø§Ù„Ù†Ø¸Ø§Ù… Ù‡ÙŠØ¯ÙˆØ± Ø¹Ù„Ù‰ Ø£ÙŠ ØªØ·Ø§Ø¨Ù‚ Ø¨ØµØ±ÙŠ.</p>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">عندك صورة لأحد المفقودين؟</h2>
+      <p class="text-slate-600 text-lg mb-10 max-w-lg mx-auto">حتى لو كانت الصورة قديمة أو غير واضحة، ارفعها — النظام هيدور على أي تطابق بصري.</p>
       <a href="#dropZone" class="inline-flex items-center gap-2 bg-aman-blue hover:bg-aman-dark-blue text-white px-10 py-4 rounded-xl font-bold text-lg shadow-xl transition-all hover:shadow-2xl">
         <span class="material-symbols-outlined">image_search</span>
-        Ø§Ø¨Ø¯Ø£ Ø§Ù„Ø¨Ø­Ø« Ø¨Ø§Ù„ØµÙˆØ±Ø©
+        ابدأ البحث بالصورة
       </a>
     </div>
   </section>
@@ -181,43 +181,43 @@
         <div class="col-span-1">
           <div class="flex items-center gap-2 mb-6">
             <img alt="Aman Logo" class="h-10 w-auto brightness-0 invert" src="https://lh3.googleusercontent.com/aida/AP1WRLtsAXYg1KpXLlTbNo5XPskZZWcMhTNS8Q_n8HtJ10BcoAD7GrZNEb6JxilmDa9_rHgMCbnHoShK4m3FLnvtLl1Ah-iklPabORDFndHZr4ARAmn8dAhPGk73Kq22Fj9hys9l1SQWSb11vBklIpdFdP2nWE20WcJhL8BKma7xAQXYx-eTUwg9ehj-jPuWOzMY4uPSG18iHRW497Qtcq0OgIoT6omS3w0rvQBklL7UR1XNtKoqfvqs3elxo0G9" />
-            <span class="text-2xl font-bold">Ø£Ù…Ø§Ù†</span>
+            <span class="text-2xl font-bold">أمان</span>
           </div>
-          <p class="text-slate-400 text-sm leading-relaxed mb-6">Ù…Ù†ØµØ© Ù…Ø¬ØªÙ…Ø¹ÙŠØ© ØºÙŠØ± Ø±Ø¨Ø­ÙŠØ© ØªÙ‡Ø¯Ù Ø¥Ù„Ù‰ Ù…Ø³Ø§Ø¹Ø¯Ø© Ø§Ù„Ø¹Ø§Ø¦Ù„Ø§Øª ÙÙŠ Ø§Ù„Ø¹Ø«ÙˆØ± Ø¹Ù„Ù‰ Ù…ÙÙ‚ÙˆØ¯ÙŠÙ‡Ù… Ù…Ù† Ø®Ù„Ø§Ù„ Ø§Ù„ØªØ¹Ø§ÙˆÙ† ÙˆØ§Ù„Ù…ØµØ¯Ø§Ù‚ÙŠØ©.</p>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">منصة مجتمعية غير ربحية تهدف إلى مساعدة العائلات في العثور على مفقوديهم من خلال التعاون والمصداقية.</p>
         </div>
         <div>
-          <h5 class="text-lg font-bold mb-6">Ø±ÙˆØ§Ø¨Ø· Ø³Ø±ÙŠØ¹Ø©</h5>
+          <h5 class="text-lg font-bold mb-6">روابط سريعة</h5>
           <ul class="space-y-4 text-slate-400 text-sm">
-            <li><a class="hover:text-white transition-colors" href="/index">Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©</a></li>
-            <li><a class="hover:text-white transition-colors" href="/missing">Ø§Ù„Ù…ÙÙ‚ÙˆØ¯ÙŠÙ†</a></li>
-            <li><a class="hover:text-white transition-colors" href="/reports">Ø§Ù„Ø¨Ù„Ø§ØºØ§Øª ÙˆØ§Ù„Ù…Ø´Ø§Ù‡Ø¯Ø§Øª</a></li>
-            <li><a class="hover:text-white transition-colors" href="/visual-search">Ø§Ù„Ø¨Ø­Ø« Ø¨Ø§Ù„ØµÙˆØ±Ø©</a></li>
-            <li><a class="hover:text-white transition-colors" href="/report-case">ØªÙ‚Ø¯ÙŠÙ… Ø¨Ù„Ø§Øº</a></li>
-            <li><a class="hover:text-white transition-colors" href="/report-sighting">Ø§Ù„Ø¥Ø¨Ù„Ø§Øº Ø¹Ù† Ù…Ø´Ø§Ù‡Ø¯Ø©</a></li>
-            <li><a class="hover:text-white transition-colors" href="/about">Ù…Ù† Ù†Ø­Ù†</a></li>
-            <li><a class="hover:text-white transition-colors" href="/contact">Ø§ØªØµÙ„ Ø¨Ù†Ø§</a></li>
+            <li><a class="hover:text-white transition-colors" href="/index">الرئيسية</a></li>
+            <li><a class="hover:text-white transition-colors" href="/missing">المفقودين</a></li>
+            <li><a class="hover:text-white transition-colors" href="/reports">البلاغات والمشاهدات</a></li>
+            <li><a class="hover:text-white transition-colors" href="/visual-search">البحث بالصورة</a></li>
+            <li><a class="hover:text-white transition-colors" href="/report-case">تقديم بلاغ</a></li>
+            <li><a class="hover:text-white transition-colors" href="/report-sighting">الإبلاغ عن مشاهدة</a></li>
+            <li><a class="hover:text-white transition-colors" href="/about">من نحن</a></li>
+            <li><a class="hover:text-white transition-colors" href="/contact">اتصل بنا</a></li>
           </ul>
         </div>
         <div>
-          <h5 class="text-lg font-bold mb-6">Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ù‚Ø§Ù†ÙˆÙ†ÙŠØ©</h5>
+          <h5 class="text-lg font-bold mb-6">معلومات قانونية</h5>
           <ul class="space-y-4 text-slate-400 text-sm">
-            <li><a class="hover:text-white transition-colors" href="/terms">Ø´Ø±ÙˆØ· Ø§Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù…</a></li>
-            <li><a class="hover:text-white transition-colors" href="/privacy">Ø³ÙŠØ§Ø³Ø© Ø§Ù„Ø®ØµÙˆØµÙŠØ©</a></li>
-            <li><a class="hover:text-white transition-colors" href="/disclaimer">Ø¥Ø®Ù„Ø§Ø¡ Ø§Ù„Ù…Ø³Ø¤ÙˆÙ„ÙŠØ©</a></li>
-            <li><a class="hover:text-white transition-colors" href="/faq">Ø§Ù„Ø£Ø³Ø¦Ù„Ø© Ø§Ù„Ø´Ø§Ø¦Ø¹Ø©</a></li>
+            <li><a class="hover:text-white transition-colors" href="/terms">شروط الاستخدام</a></li>
+            <li><a class="hover:text-white transition-colors" href="/privacy">سياسة الخصوصية</a></li>
+            <li><a class="hover:text-white transition-colors" href="/disclaimer">إخلاء المسؤولية</a></li>
+            <li><a class="hover:text-white transition-colors" href="/faq">الأسئلة الشائعة</a></li>
           </ul>
         </div>
         <div>
-          <h5 class="text-lg font-bold mb-6">Ø£Ø±Ù‚Ø§Ù… Ø§Ù„Ø·ÙˆØ§Ø±Ø¦ ÙÙŠ Ù…ØµØ±</h5>
+          <h5 class="text-lg font-bold mb-6">أرقام الطوارئ في مصر</h5>
           <ul class="space-y-4 text-slate-400 text-sm">
-            <li class="flex items-center justify-between"><span>Ø§Ù„Ø´Ø±Ø·Ø©</span><span class="font-bold text-white">122</span></li>
-            <li class="flex items-center justify-between"><span>Ø§Ù„Ù†Ø¬Ø¯Ø©</span><span class="font-bold text-white">123</span></li>
-            <li class="flex items-center justify-between"><span>Ø§Ù„Ø¥Ø³Ø¹Ø§Ù</span><span class="font-bold text-white">123</span></li>
-            <li class="flex items-center justify-between"><span>Ø®Ø· Ù†Ø¬Ø¯Ø© Ø§Ù„Ø·ÙÙ„</span><span class="font-bold text-white">16000</span></li>
+            <li class="flex items-center justify-between"><span>الشرطة</span><span class="font-bold text-white">122</span></li>
+            <li class="flex items-center justify-between"><span>النجدة</span><span class="font-bold text-white">123</span></li>
+            <li class="flex items-center justify-between"><span>الإسعاف</span><span class="font-bold text-white">123</span></li>
+            <li class="flex items-center justify-between"><span>خط نجدة الطفل</span><span class="font-bold text-white">16000</span></li>
           </ul>
         </div>
       </div>
-      <div class="pt-8 border-t border-slate-800 text-center text-slate-500 text-xs">Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø­Ù‚ÙˆÙ‚ Ù…Ø­ÙÙˆØ¸Ø© Â© 2026 Â© Ø£Ù…Ø§Ù† - Ø¯Ù„ÙŠÙ„ Ø§Ù„Ù…ÙÙ‚ÙˆØ¯ÙŠÙ†</div>
+      <div class="pt-8 border-t border-slate-800 text-center text-slate-500 text-xs">جميع الحقوق محفوظة © 2026 © أمان - دليل المفقودين</div>
     </div>
   </footer>
 
@@ -296,20 +296,20 @@
 
             resultsSection.classList.remove('hidden');
             resultsGrid.innerHTML = '';
-            queryColors.textContent = res.queryColors ? res.queryColors.join('ØŒ ') : '';
+            queryColors.textContent = res.queryColors ? res.queryColors.join('، ') : '';
 
             if (!res.results || res.results.length === 0) {
               noResults.classList.remove('hidden');
-              resultsCount.textContent = 'Ù„Ø§ ØªÙˆØ¬Ø¯ Ù†ØªØ§Ø¦Ø¬';
+              resultsCount.textContent = 'لا توجد نتائج';
               return;
             }
             noResults.classList.add('hidden');
-            resultsCount.textContent = res.results.length + ' Ù†ØªÙŠØ¬Ø©';
+            resultsCount.textContent = res.results.length + ' نتيجة';
 
             res.results.forEach(function(r) {
-              var typeLabel = r.type === 'missing' ? 'Ø¨Ù„Ø§Øº ÙÙ‚Ø¯Ø§Ù†' : 'Ø¨Ù„Ø§Øº Ù…Ø´Ø§Ù‡Ø¯Ø©';
+              var typeLabel = r.type === 'missing' ? 'بلاغ فقدان' : 'بلاغ مشاهدة';
               var typeColor = r.type === 'missing' ? 'bg-red-100 text-red-700' : 'bg-indigo-100 text-indigo-700';
-              var name = r.name || 'ØºÙŠØ± Ù…Ø­Ø¯Ø¯';
+              var name = r.name || 'غير محدد';
               var img = r.image || '';
               var href = r.type === 'missing' ? 'case-detail.html?name=' + encodeURIComponent(r.name) + '&age=' + (r.age || '') + '&location=' + encodeURIComponent(r.location || '') + '&description=' + encodeURIComponent(r.description || '') + '&image=' + encodeURIComponent(img) : 'case-detail.html?name=' + encodeURIComponent(r.name || '');
 
@@ -331,7 +331,7 @@
                       '</div>' +
                     '</div>' +
                     '<div class="space-y-2 text-sm text-slate-600 mb-3">' +
-                      '<p><span class="font-semibold text-slate-700">Ø§Ù„Ù…ÙˆÙ‚Ø¹:</span> ' + (r.location || '') + '</p>' +
+                      '<p><span class="font-semibold text-slate-700">الموقع:</span> ' + (r.location || '') + '</p>' +
                       '<p class="line-clamp-2 text-xs text-slate-500">' + (r.description || '') + '</p>' +
                     '</div>' +
                     '<div class="mb-3">' + detailsHtml + '</div>' +
@@ -339,8 +339,8 @@
                       '<div class="match-bar-fill" style="width:0%;background:' + scoreColor + '" data-score="' + r.score + '"></div>' +
                     '</div>' +
                     '<div class="flex items-center justify-between">' +
-                      '<span class="text-sm font-bold" style="color:' + scoreColor + '">' + r.score + '% ØªØ·Ø§Ø¨Ù‚</span>' +
-                      '<a href="' + href + '" class="text-aman-blue text-sm font-bold hover:underline flex items-center gap-1">Ø¹Ø±Ø¶ Ø§Ù„ØªÙØ§ØµÙŠÙ„ <span class="material-symbols-outlined text-sm">arrow_forward</span></a>' +
+                      '<span class="text-sm font-bold" style="color:' + scoreColor + '">' + r.score + '% تطابق</span>' +
+                      '<a href="' + href + '" class="text-aman-blue text-sm font-bold hover:underline flex items-center gap-1">عرض التفاصيل <span class="material-symbols-outlined text-sm">arrow_forward</span></a>' +
                     '</div>' +
                   '</div>' +
                 '</div>';
@@ -357,7 +357,7 @@
             searchBtnText.classList.remove('hidden');
             searchSpinner.classList.add('hidden');
             if (typeof AmanToast !== 'undefined') {
-              AmanToast.error('Ø­Ø¯Ø« Ø®Ø·Ø£ ÙÙŠ Ø§Ù„Ø¨Ø­Ø«. ØªØ£ÙƒØ¯ Ù…Ù† Ø§ØªØµØ§Ù„ Ø§Ù„Ø³ÙŠØ±ÙØ±.');
+              AmanToast.error('حدث خطأ في البحث. تأكد من اتصال السيرفر.');
             }
           });
       });
@@ -365,11 +365,11 @@
       // Auth buttons
       document.querySelectorAll('header button').forEach(function(btn) {
         var text = btn.textContent.trim();
-        if (text.includes('Ø¥Ù†Ø´Ø§Ø¡ Ø­Ø³Ø§Ø¨')) btn.addEventListener('click', function() { window.location.href = 'signup.html'; });
-        else if (text.includes('ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„')) btn.addEventListener('click', function() { window.location.href = 'login.html'; });
+        if (text.includes('إنشاء حساب')) btn.addEventListener('click', function() { window.location.href = 'signup.html'; });
+        else if (text.includes('تسجيل الدخول')) btn.addEventListener('click', function() { window.location.href = 'login.html'; });
       });
     })();
   </script>
 <script src="assets/js/backtotop.js"></script>
-<script src="assets/js/navbar.js"></script><script src="assets/js/error-logger.js"></script></body>
+<script src="assets/js/error-logger.js"></script></body>
 </html>
